@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:kapp="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <FrameLayout android:id="@+id/bike_overview_container" android:layout_width="match_parent" android:layout_height="240dp"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/runBestBanner" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/BestBannerTextStyle"/>
+    <com.microsoft.kapp.views.TrackerStatsWidget android:id="@+id/run_details_tracker_widget" android:paddingLeft="@dimen/fragment_horizontal_padding" android:paddingRight="@dimen/fragment_horizontal_padding" android:layout_width="match_parent" android:layout_height="wrap_content" kapp:stat_style="@style/TrackerStatStyleV1"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/txtUVDisclaimer" android:paddingLeft="@dimen/fragment_horizontal_padding" android:paddingTop="@dimen/XLargeSpace" android:paddingRight="@dimen/fragment_horizontal_padding" android:paddingBottom="@dimen/XLargeSpace" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/disclaimer_uv" style="@style/SecondaryLightTextStyle"/>
+</LinearLayout>

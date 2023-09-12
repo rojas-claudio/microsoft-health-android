@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/PrimaryColor" android:layout_width="match_parent" android:layout_height="match_parent">
+    <FrameLayout android:layout_gravity="center_horizontal" android:id="@+id/circular_panel_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="30dp" android:layout_marginBottom="20dp">
+        <com.microsoft.kapp.views.CustomFontTextView android:textColor="@color/TextOnPrimaryLightColor" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@+id/goal_edit_text" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="78dp" android:text="@string/edit_goal_circular_seek_bar_header_title" style="@style/MetadataTextStyle"/>
+        <LinearLayout android:gravity="center" android:layout_gravity="bottom|center_horizontal" android:orientation="vertical" android:id="@+id/estimation_tracker" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="40dp"/>
+        <com.microsoft.kapp.views.CircularSeekBar android:layout_gravity="center_horizontal" android:id="@+id/goal_circular_seek_bar" android:layout_width="270dp" android:layout_height="270dp" app:ring_width="8dp" app:min_start_value="1000" app:seek_outer_radius="16dp" app:seek_inner_radius="3dp" app:central_text_size="46dp" app:animation_frame_delay="10"/>
+    </FrameLayout>
+    <FrameLayout android:layout_gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.microsoft.kapp.views.CustomFontTextView android:gravity="center" android:layout_gravity="center" android:id="@+id/goal_too_easy_for_you_message" android:visibility="gone" android:layout_width="270dp" android:layout_height="wrap_content" android:text="@string/edit_goal_too_easy_for_you_message" style="@style/Font_title"/>
+    </FrameLayout>
+    <View android:layout_gravity="center_horizontal" android:id="@+id/divider_horizontal" android:background="@color/PrimaryLightColor" android:layout_width="270dp" android:layout_height="1dp" android:layout_marginTop="13dp"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@+id/goal_insight" android:layout_width="270dp" android:layout_height="0dp" android:layout_marginTop="15dp" android:layout_weight="1" style="@style/PrimaryInvertedTextStyle"/>
+    <com.microsoft.kapp.widgets.ConfirmationBar android:id="@+id/confirmation_bar" android:background="@color/transparent" android:visibility="visible" app:useDiskSaveIcon="true" style="@style/ConfirmationBarStyle"/>
+    <ProgressBar android:layout_gravity="center" android:id="@+id/goal_update_progess" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:attr/progressBarStyleLarge"/>
+</LinearLayout>

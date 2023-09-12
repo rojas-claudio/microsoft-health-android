@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="50dp">
+    <com.microsoft.kapp.views.CustomFontTextView android:gravity="center" android:id="@+id/scorecard_hole_number" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginLeft="17dp" android:layout_weight="1" style="@style/GolfLegendHeaderBoldTextStyle"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:gravity="center" android:id="@+id/scorecard_hole_yards" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginLeft="12dp" android:layout_weight="1" style="@style/GolfLegendHeaderTextStyle"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:gravity="center" android:id="@+id/scorecard_hole_par" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginLeft="12dp" android:layout_weight="1" style="@style/GolfLegendHeaderTextStyle"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:gravity="center" android:id="@+id/scorecard_hole_index" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginLeft="12dp" android:layout_weight="1" style="@style/GolfLegendHeaderTextStyle"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:gravity="center" android:id="@+id/scorecard_hole_score" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginLeft="12dp" android:layout_weight="1.1" style="@style/GolfLegendHeaderTextStyle"/>
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="shinobicharts_activity_alpha">#66402a63</color>
+    <color name="shinobicharts_slightly_darker_high_activity_alpha">#e66d45ae</color>
+    <color name="shinobicharts_activity_high_alpha">#e63a2659</color>
+    <color name="shinobicharts_ghost_grey_alpha">#330e0e0e</color>
+    <color name="shinobicharts_ghost_dark_grey_alpha">#66000000</color>
+</resources>

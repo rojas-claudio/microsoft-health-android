@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/bike_splits_gps_loss_text" android:paddingTop="5dp" android:paddingBottom="5dp" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/bike_splits_estimated_due_to_gps_loss" android:paddingStart="7dp" style="@style/SecondaryLightTextStyle"/>
+</FrameLayout>

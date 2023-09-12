@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.microsoft.kapp.views.CustomFontTextView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:textSize="12sp" android:id="@+id/section_header" android:background="@drawable/bottom_divider_line" android:paddingBottom="2dp" android:layout_width="match_parent" android:layout_height="wrap_content" app:custom_font_family="SegoeUISemiBold"/>

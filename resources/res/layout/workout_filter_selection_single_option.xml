@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:paddingLeft="@dimen/fragment_horizontal_margin" android:paddingRight="@dimen/fragment_horizontal_margin" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <com.microsoft.kapp.views.CustomGlyphView android:layout_gravity="center" android:id="@+id/workout_filter_selection_checkbox" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10dp" style="@style/FiltersCheckboxGlyphStyle"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/workout_filter_selection_title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/SubheaderInvertedTextStyle"/>
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <FrameLayout android:id="@+id/fragment_content" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:textSize="@dimen/font_size_title" android:textColor="@color/black" android:id="@+id/offline_error_message" android:background="@color/white" android:paddingLeft="10dp" android:paddingRight="10dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/error_offline"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:textSize="@dimen/font_size_smallBody" android:textColor="@color/black" android:id="@+id/no_data_error_message" android:background="@color/white" android:paddingLeft="10dp" android:paddingRight="10dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/error_no_data"/>
+    <com.microsoft.kapp.widgets.Interstitial android:layout_gravity="center" android:id="@+id/fragment_progress_bar" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</FrameLayout>

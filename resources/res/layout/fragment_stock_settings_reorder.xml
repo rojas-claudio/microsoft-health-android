@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="@color/blackHigh" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:id="@+id/reorder_layout" android:paddingTop="@dimen/fragment_vertical_margin" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/fragment_horizontal_margin">
+        <com.microsoft.kapp.views.CustomFontTextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/settings_finance_reorder_title" style="@style/Font_title"/>
+        <com.microsoft.kapp.views.CustomFontTextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:text="@string/settings_finance_reorder_subtitle" style="@style/Font_smallBody"/>
+        <View android:background="@color/primary" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="27dp" android:layout_marginRight="@dimen/fragment_horizontal_margin"/>
+        <com.microsoft.kapp.views.SortableFinanceListview android:scrollbarStyle="insideInset" android:id="@+id/company_reorder" android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginRight="@dimen/fragment_horizontal_margin_minus_scrollbar" android:layout_marginBottom="@dimen/confirmation_bar_height" android:divider="@color/primary" android:dividerHeight="1dp" android:layout_weight="1" android:footerDividersEnabled="true"/>
+    </LinearLayout>
+    <com.microsoft.kapp.widgets.ConfirmationBar android:id="@+id/confirmation_bar" android:visibility="gone" android:layout_alignParentBottom="true" style="@style/ConfirmationBarStyle"/>
+</RelativeLayout>

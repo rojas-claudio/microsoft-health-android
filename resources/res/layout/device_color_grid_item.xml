@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/color_container" android:layout_width="100dp" android:layout_height="100dp">
+    <ImageView android:layout_gravity="start" android:id="@+id/base_color_container" android:layout_width="90dp" android:layout_height="100dp" android:contentDescription="@string/empty"/>
+    <ImageView android:layout_gravity="end" android:id="@+id/highlight_color_container" android:layout_width="10dp" android:layout_height="100dp" android:contentDescription="@string/empty"/>
+</FrameLayout>

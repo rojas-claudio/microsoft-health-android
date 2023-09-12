@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:id="@+id/golf_landing_rootview" android:background="@color/transparent" android:layout_width="match_parent" android:layout_height="match_parent" android:contentDescription="golf_landing_page.xml">
+    <com.microsoft.kapp.views.HeaderWithFindView android:layout_width="match_parent" android:layout_height="@dimen/golf_header_height" app:findTitleText="@string/find_a_course"/>
+    <include layout="@layout/golf_partner_connect"/>
+    <ScrollView android:id="@+id/golf_landing_scrollview" android:background="@color/primary" android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:background="@color/primary" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.microsoft.kapp.views.TextWithChevronView android:id="@+id/recent_golf_courses" android:layout_width="match_parent" android:layout_height="wrap_content" app:titleText="@string/golf_recent_courses"/>
+            <com.microsoft.kapp.views.TextWithChevronView android:id="@+id/near_by_golf_courses" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/recent_golf_courses" app:titleText="@string/golf_near_by_courses"/>
+            <com.microsoft.kapp.views.TextWithChevronView android:id="@+id/browse_by_country_region" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/near_by_golf_courses" app:titleText="@string/golf_browse_by_country_region"/>
+            <com.microsoft.kapp.views.TextWithChevronView android:id="@+id/request_a_course" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/browse_by_country_region" app:titleText="@string/golf_request_a_course"/>
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:paddingLeft="@dimen/fragment_horizontal_margin" android:paddingRight="@dimen/fragment_horizontal_margin" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="horizontal" android:paddingBottom="0dp" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/DefaultFragmentStyle">
+        <com.microsoft.kapp.views.CustomGlyphView android:textSize="18dp" android:textColor="@color/white" android:id="@+id/cancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/glyph_big_x"/>
+        <Space android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1"/>
+        <com.microsoft.kapp.views.CustomFontTextView android:textSize="18dp" android:textColor="@color/white" android:id="@+id/done_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/done" android:inputType="textAutoCorrect"/>
+    </LinearLayout>
+    <com.microsoft.kapp.views.CustomFontEditText android:gravity="top" android:id="@+id/feedback_description_text" android:background="@color/primary" android:padding="5dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="10dp" android:hint="@string/feedback_description_hint" android:scrollHorizontally="false" android:singleLine="false" android:inputType="textMultiLine"/>
+</LinearLayout>

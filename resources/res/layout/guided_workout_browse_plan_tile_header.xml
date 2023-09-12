@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:gravity="left" android:orientation="vertical" android:id="@+id/header_container" android:background="@color/top_menu_color" android:paddingLeft="@dimen/guided_workout_margin_left" android:paddingRight="@dimen/guided_workout_margin_right" android:paddingBottom="5dp" android:layout_width="match_parent" android:layout_height="@dimen/guided_workout_category_header_height">
+    <com.microsoft.kapp.views.CustomGlyphView android:id="@+id/back" android:paddingTop="10dp" android:paddingBottom="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/NavigationLeftArrowIconStyle"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:ellipsize="end" android:gravity="bottom|left" android:id="@+id/workout_name" android:paddingTop="6dp" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/PrimaryInvertedTextStyle"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/workoutStep_name" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/WorkoutNameTextStyle"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:layout_gravity="bottom" android:id="@+id/header_sub_title" android:layout_width="wrap_content" android:layout_height="match_parent" style="@style/Font_oobeTitle"/>
+</LinearLayout>

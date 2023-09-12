@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:paddingLeft="@dimen/fragment_horizontal_margin" android:paddingTop="10dp" android:paddingRight="@dimen/fragment_horizontal_margin" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.microsoft.kapp.views.CustomFontTextView android:gravity="left" android:id="@+id/circuit_header" android:paddingTop="@dimen/fragment_vertical_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/WorkoutStepHeaderTextStyle"/>
+    <View android:background="@color/workout_divider" android:paddingTop="@dimen/fragment_vertical_padding" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="5dp" android:layout_marginBottom="2dp"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/circuit_description" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" style="@style/CircuitDescriptionTextStyle"/>
+</LinearLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:paddingLeft="@dimen/guided_workout_margin_left" android:paddingRight="@dimen/guided_workout_margin_right" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/text" android:paddingTop="10dp" android:paddingBottom="6dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4dp" style="@style/CircuitDescriptionTextStyle"/>
+    <View android:background="@color/workout_divider" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginBottom="4dp"/>
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/oobe_header"/>
+    <LinearLayout android:gravity="center" android:paddingTop="@dimen/LargeSpace" android:paddingBottom="@dimen/LargeSpace" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/LargeSpace" android:layout_marginEnd="@dimen/LargeSpace">
+        <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/oobe_terms_of_service_privacy_link" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:textAlignment="textStart" style="@style/SecondaryAccentTextStyle"/>
+        <com.microsoft.kapp.views.CustomGlyphView android:gravity="center_vertical" android:paddingLeft="5dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/glyph_chevron" style="@style/SecondaryAccentTextStyle"/>
+    </LinearLayout>
+    <ImageView android:layout_gravity="center" android:background="@color/transparent" android:layout_width="@dimen/oobe_image_width" android:layout_height="@dimen/oobe_image_height" android:src="@drawable/oobe_terms_condition" android:layout_weight="1" android:contentDescription="@string/empty"/>
+    <include layout="@layout/oobe_footer"/>
+</LinearLayout>

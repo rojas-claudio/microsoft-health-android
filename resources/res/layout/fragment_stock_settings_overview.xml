@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:layout_gravity="top" android:background="@color/blackMedium" android:paddingLeft="@dimen/fragment_horizontal_padding" android:paddingRight="@dimen/fragment_horizontal_padding" android:layout_width="match_parent" android:layout_height="@dimen/app_header_bar_height">
+        <com.microsoft.kapp.views.CustomGlyphView android:id="@+id/company_stock_settings_back_button" android:layout_width="wrap_content" android:layout_height="match_parent" style="@style/NavigationLeftArrowIconStyle"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:background="@color/blackHigh" android:paddingLeft="@dimen/fragment_horizontal_padding" android:paddingTop="6dp" android:paddingRight="@dimen/fragment_horizontal_padding" android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.microsoft.kapp.views.CustomFontTextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/settings_finance_overview_title" style="@style/Font_title"/>
+        <com.microsoft.kapp.views.CustomFontTextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="@string/settings_finance_overview_subtitle" style="@style/Font_smallBody"/>
+        <View android:background="#ffffff" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="10dp"/>
+        <com.microsoft.kapp.views.CustomFontTextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/settings_finance_overview_watchlist" style="@style/Font_smallBody"/>
+        <ListView android:id="@+id/company_current_watched_stocks" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:listSelector="@color/transparent" android:cacheColorHint="@color/transparent" android:divider="@null" android:dividerHeight="0dp"/>
+    </LinearLayout>
+</LinearLayout>

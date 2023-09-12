@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/WhiteColor" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:id="@+id/oobe_header" layout="@layout/oobe_header"/>
+    <RelativeLayout android:id="@+id/updating_layout" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="@dimen/LargeSpace" android:layout_marginRight="@dimen/LargeSpace">
+        <com.microsoft.kapp.views.CustomFontTextView android:gravity="start" android:layout_gravity="start" android:id="@+id/firmware_update_progress_step" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/LargeSpace" style="@style/SecondaryLightTextStyle"/>
+        <ProgressBar android:id="@+id/firmware_update_progress_bar" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/SmallSpace" android:layout_below="@+id/firmware_update_progress_step" style="@style/UpdateProgressBarHorizontal"/>
+        <com.microsoft.kapp.views.CustomFontTextView android:textColor="@color/BlackColor" android:gravity="start" android:layout_gravity="start" android:id="@+id/firmware_update_progress_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/MediumSpace" android:layout_below="@+id/firmware_update_progress_bar" style="@style/SecondaryLightTextStyle"/>
+        <com.microsoft.kapp.views.PicassoImageView android:layout_gravity="center" android:layout_width="215dp" android:layout_height="215dp" android:layout_marginTop="44dp" android:layout_below="@+id/firmware_update_progress_message" android:layout_centerHorizontal="true" app:image_resource_id="@drawable/oobe_firmware_update"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/update_message_layout" android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.microsoft.kapp.views.PicassoImageView android:id="@+id/oobe_update_message_icon" android:layout_width="215dp" android:layout_height="215dp" android:src="@drawable/oobe_device_error" android:layout_centerInParent="true"/>
+        <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <include layout="@layout/oobe_footer"/>
+        </FrameLayout>
+    </RelativeLayout>
+</LinearLayout>

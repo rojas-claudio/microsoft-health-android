@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/WhiteColor" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/oobe_header"/>
+    <com.microsoft.kapp.widgets.Interstitial android:layout_gravity="center" android:id="@+id/interstitial" android:background="@color/WhiteColor" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:alpha="0.4"/>
+    <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@+id/device_representation_layout" android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginTop="@dimen/MediumSpace" android:layout_weight="10">
+        <LinearLayout android:orientation="vertical" android:id="@+id/neon_representation" android:background="@drawable/oobe_pairing_neon_background" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/MediumSpace">
+            <com.microsoft.kapp.views.CustomFontTextView android:textColor="@color/white" android:paddingTop="@dimen/MediumSpace" android:paddingBottom="@dimen/MediumSpace" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/device_pairing_neon_label" android:paddingStart="@dimen/LargeSpace" android:paddingEnd="@dimen/LargeSpace"/>
+            <com.microsoft.kapp.views.PicassoImageView android:background="@drawable/oobe_pairing_neon_background" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/oobe_neon_connect_band" android:scaleType="fitCenter" android:adjustViewBounds="true" android:paddingStart="@dimen/XXLargeSpace" android:paddingEnd="@dimen/XXLargeSpace"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@+id/cargo_representation" android:background="@drawable/oobe_pairing_cargo_background" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.microsoft.kapp.views.CustomFontTextView android:textColor="@color/white" android:background="@drawable/oobe_pairing_cargo_background" android:paddingTop="@dimen/MediumSpace" android:paddingBottom="@dimen/MediumSpace" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/device_pairing_cargo_label" android:paddingStart="@dimen/LargeSpace" android:paddingEnd="@dimen/LargeSpace"/>
+            <com.microsoft.kapp.views.PicassoImageView android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/oobe_cargo_connect_band" android:scaleType="fitCenter" android:adjustViewBounds="true" android:paddingStart="@dimen/XXLargeSpace" android:paddingEnd="@dimen/XXLargeSpace"/>
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/device_connection_layout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="10">
+        <ListView android:id="@+id/found_devices" android:paddingTop="10dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:listSelector="@color/transparent" android:divider="@null" android:dividerHeight="0dp"/>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/searching_gizmo" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="30dp" android:layout_centerInParent="true">
+            <com.microsoft.kapp.views.PicassoImageView android:layout_gravity="center" android:layout_width="64dp" android:layout_height="66dp" android:src="@drawable/oobe_searching_gizmo"/>
+        </LinearLayout>
+        <com.microsoft.kapp.views.PicassoImageView android:id="@+id/oobe_no_devices_found" android:visibility="gone" android:layout_width="215dp" android:layout_height="215dp" android:layout_marginTop="@dimen/LargeSpace" android:src="@drawable/oobe_device_error" android:layout_centerInParent="true"/>
+    </RelativeLayout>
+    <ProgressBar android:layout_gravity="center" android:id="@+id/loading_progress_bar" android:paddingTop="@dimen/SmallSpace" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <LinearLayout android:gravity="center" android:id="@+id/help_text_layout" android:paddingTop="@dimen/MediumSpace" android:paddingRight="@dimen/MediumSpace" android:paddingBottom="@dimen/LargeSpace" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/LargeSpace" android:layout_marginEnd="@dimen/LargeSpace">
+        <com.microsoft.kapp.views.CustomFontTextView android:textSize="@dimen/font_size_oobeSmall" android:textColor="@color/black" android:id="@+id/help_text_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pair_band_helper_text" android:textAlignment="textStart"/>
+        <com.microsoft.kapp.views.CustomGlyphView android:textSize="18dp" android:textColor="@color/black" android:gravity="center_vertical" android:id="@+id/oobe_pairing_help_text_chevron" android:paddingLeft="5dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/glyph_chevron"/>
+    </LinearLayout>
+    <include layout="@layout/oobe_footer"/>
+</LinearLayout>

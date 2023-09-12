@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <com.microsoft.kapp.views.CustomFontTextView android:gravity="left" android:id="@+id/golf_search_item_course_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:singleLine="true" style="@style/PrimaryTextStyle"/>
+    <LinearLayout android:orientation="horizontal" android:paddingBottom="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="14dp">
+        <LinearLayout android:orientation="horizontal" android:id="@+id/golf_search_item_distance_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.microsoft.kapp.views.CustomFontTextView android:gravity="left" android:id="@+id/golf_search_item_course_distance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/PrimaryLightTextStyle"/>
+            <com.microsoft.kapp.views.CustomFontTextView android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:text="@string/golf_search_item_divider" android:singleLine="true" style="@style/PrimaryLightTextStyle"/>
+        </LinearLayout>
+        <com.microsoft.kapp.views.CustomFontTextView android:gravity="left" android:id="@+id/golf_search_item_course_public_private" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/PrimaryLightTextStyle"/>
+        <com.microsoft.kapp.views.CustomFontTextView android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:text="@string/golf_search_item_divider" android:singleLine="true" style="@style/PrimaryLightTextStyle"/>
+        <com.microsoft.kapp.views.CustomGlyphView android:gravity="bottom" android:id="@+id/event_rename_state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/glyph_course" android:singleLine="true" style="@style/PrimaryLightTextStyle"/>
+        <com.microsoft.kapp.views.CustomFontTextView android:gravity="left" android:id="@+id/golf_search_item_course_holes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2dp" android:singleLine="true" style="@style/PrimaryLightTextStyle"/>
+        <com.microsoft.kapp.views.CustomFontTextView android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:text="@string/golf_search_item_divider" android:singleLine="true" style="@style/PrimaryLightTextStyle"/>
+        <com.microsoft.kapp.views.CustomFontTextView android:gravity="left" android:id="@+id/golf_search_item_course_city" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/PrimaryLightTextStyle"/>
+    </LinearLayout>
+</LinearLayout>

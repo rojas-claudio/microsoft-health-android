@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:paddingLeft="@dimen/guided_workout_margin_left" android:paddingTop="5dp" android:paddingRight="@dimen/guided_workout_margin_right" android:paddingBottom="5dp" android:layout_width="match_parent" android:layout_height="92dp">
+    <ImageView android:layout_gravity="center_vertical" android:id="@+id/workout_browse_summary_image" android:layout_width="75dp" android:layout_height="75dp" android:scaleType="centerCrop" android:contentDescription="@string/workout_browse_icon_description"/>
+    <LinearLayout android:gravity="left" android:layout_gravity="top" android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="13dp" android:layout_weight="1">
+        <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="1dp">
+            <com.microsoft.kapp.views.CustomFontTextView android:textColor="@color/workout_browse_title" android:layout_gravity="left" android:id="@+id/workout_browse_summary_title" android:paddingRight="25dp" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/PrimaryTextStyle"/>
+            <com.microsoft.kapp.views.CustomGlyphView android:textSize="@dimen/font_size_title" android:textColor="@color/guided_workout_favorite" android:layout_gravity="bottom|right" android:id="@+id/favorite_icon" android:paddingBottom="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/glyph_star_fill"/>
+        </FrameLayout>
+        <com.microsoft.kapp.views.CustomFontTextView android:textColor="@color/workout_browse_subtitle" android:id="@+id/workout_browse_summary_subtitle" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/PrimaryLightTextStyle"/>
+    </LinearLayout>
+</LinearLayout>

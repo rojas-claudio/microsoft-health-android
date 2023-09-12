@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/black" android:padding="0dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@color/black" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.microsoft.kapp.views.FilterHeaderView android:id="@+id/golf_tee_filter_header" android:layout_width="match_parent" android:layout_height="wrap_content" app:filterHeaderText="@string/golf_tee_pick_header" app:filterSubHeaderText="@string/no_value" app:closeButtonAlignment="left"/>
+        <ListView android:id="@+id/golf_tee_list" android:background="@color/black" android:paddingTop="10dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:listSelector="@android:color/transparent" android:divider="@null"/>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <View android:layout_gravity="center_vertical" android:id="@+id/txtGuidedWorkoutDataItemSeparator" android:background="@color/greySuperLight" android:visibility="gone" android:layout_width="match_parent" android:layout_height="1dp" android:layout_alignParentTop="true"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:textSize="@dimen/font_size_smallBody" android:textColor="@color/black" android:layout_gravity="center_vertical" android:id="@+id/txtDataItemTitle" android:paddingLeft="20dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="false" android:layout_below="@+id/txtGuidedWorkoutDataItemSeparator" android:layout_alignParentStart="true"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:textSize="@dimen/font_size_smallBody" android:textColor="@color/black" android:layout_gravity="center_vertical" android:id="@+id/txtDataItemUnit" android:paddingRight="20dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/txtGuidedWorkoutDataItemSeparator" android:layout_alignParentEnd="true"/>
+</RelativeLayout>

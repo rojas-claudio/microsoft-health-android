@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.microsoft.kapp.views.CustomFontTextView android:layout_gravity="center" android:id="@+id/workout_schedule_item_number" android:paddingTop="12dp" android:paddingBottom="12dp" android:layout_width="20dp" android:layout_height="wrap_content" android:layout_marginLeft="20dp" style="@style/PrimaryLightTextStyle"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+            <com.microsoft.kapp.views.CustomFontTextView android:layout_gravity="center" android:id="@+id/workout_schedule_item_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp" style="@style/PrimaryLightTextStyle"/>
+            <com.microsoft.kapp.views.CustomGlyphView android:textSize="@dimen/MediumIconSize" android:textColor="@color/PrimaryColor" android:layout_gravity="center" android:id="@+id/workout_completed_check_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="@string/glyph_check"/>
+        </LinearLayout>
+        <FrameLayout android:layout_gravity="right" android:id="@+id/container_workout_sync" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginRight="10dp">
+            <com.microsoft.kapp.views.CustomGlyphView android:textSize="@dimen/MediumIconSize" android:textColor="@color/PrimaryColor" android:layout_gravity="center" android:id="@+id/workout_schedule_item_synced" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <com.microsoft.kapp.views.CustomFontTextView android:layout_gravity="center" android:id="@+id/workout_schedule_item_on_band" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/guided_workout_on_band" style="@style/PrimaryLightTextStyle"/>
+            <ProgressBar android:layout_gravity="center" android:id="@+id/workout_schedule_item_sync_progress" android:layout_width="@dimen/font_size_title" android:layout_height="@dimen/font_size_title"/>
+        </FrameLayout>
+    </LinearLayout>
+    <View android:background="@color/LightLineColor" android:layout_width="match_parent" android:layout_height="@dimen/SmallLineSize"/>
+</LinearLayout>

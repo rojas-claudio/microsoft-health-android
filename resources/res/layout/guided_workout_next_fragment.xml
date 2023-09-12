@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:id="@+id/header_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" layout="@layout/guided_workout_browse_plan_tile_header"/>
+    <include android:id="@+id/this_workout_is_on_your_band_header" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/header_container" layout="@layout/guided_workout_this_workout_is_on_your_band_header"/>
+    <RelativeLayout android:id="@+id/circuit_holder" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/this_workout_is_on_your_band_header"/>
+    <FrameLayout android:id="@+id/circuit_list" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/circuit_holder"/>
+    <View android:layout_gravity="top|left" android:id="@+id/header_title_arrow" android:background="@drawable/triangle" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginLeft="5dp" android:layout_below="@+id/header_container" android:rotation="180"/>
+    <ScrollView android:orientation="vertical" android:id="@+id/rest_day_image_panel" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/header_container">
+        <LinearLayout android:orientation="vertical" android:id="@+id/rest_day_image_panel_layout" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.microsoft.kapp.views.PicassoImageView android:layout_gravity="center_horizontal" android:id="@+id/rest_day_image" android:layout_width="190dp" android:layout_height="190dp" android:layout_marginTop="40dp" android:scaleType="centerCrop" android:contentDescription="@string/image_description_rest_day_image" app:image_resource_id="@drawable/android_rest_day"/>
+            <com.microsoft.kapp.views.CustomFontTextView android:textSize="@dimen/font_size_title" android:layout_gravity="center_horizontal" android:id="@+id/rest_day_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/guided_workout_rest_day_title"/>
+            <com.microsoft.kapp.views.CustomFontTextView android:textSize="@dimen/font_size_smallBody" android:layout_gravity="center_horizontal" android:id="@+id/rest_day_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/guided_workout_rest_day_message"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

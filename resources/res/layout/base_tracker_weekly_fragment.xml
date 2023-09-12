@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/home_details_background" android:padding="0dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <include layout="@layout/stpes_and_calories_activity_header"/>
+        <com.microsoft.kapp.views.TrackableScrollView android:id="@+id/trackerScrollView" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <FrameLayout android:id="@+id/weekly_chart_fragment" android:layout_width="match_parent" android:layout_height="@dimen/chart_height"/>
+                <com.microsoft.kapp.views.TrackerStatsWidget android:id="@+id/stats" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/fragment_horizontal_margin" android:layout_marginTop="15dp" android:layout_marginRight="@dimen/fragment_horizontal_margin" app:stat_style="@style/TrackerStatStyleV1"/>
+                <com.microsoft.kapp.views.InsightsWidget android:id="@+id/insight_widget" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <com.microsoft.kapp.views.UserActivitySummaryListView android:id="@+id/recent_activities" android:paddingTop="10dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <com.microsoft.kapp.views.ScrollLoadIndicatorView android:id="@+id/scroll_load_indicator" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.microsoft.kapp.views.TrackableScrollView>
+    </LinearLayout>
+    <com.microsoft.kapp.widgets.Interstitial android:layout_gravity="center" android:id="@+id/base_tracker_weekly_interstitial" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</FrameLayout>

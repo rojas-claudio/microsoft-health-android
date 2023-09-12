@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="@color/app_white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp">
+        <include android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/guided_workout_this_is_your_current_plan"/>
+        <com.microsoft.kapp.views.AspectImageView android:id="@+id/workout_summary_image" android:layout_width="match_parent" android:layout_height="0dp" android:scaleType="centerCrop"/>
+        <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/guided_workout_margin_left" android:paddingRight="@dimen/guided_workout_margin_right" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@+id/workout_plan_stats" android:paddingTop="10dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <RelativeLayout android:id="@+id/favorite_unfavorite_button_container" style="@style/ButtonStyle">
+                <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/favorite_text" android:paddingLeft="@dimen/SmallSpace" android:paddingRight="@dimen/SmallSpace" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/guided_workout_favorite" android:layout_centerInParent="true"/>
+                <ProgressBar android:id="@+id/workout_favorite_progress" android:layout_width="@dimen/SmallIconSize" android:layout_height="@dimen/SmallIconSize" android:layout_toRightOf="@+id/favorite_text" android:layout_centerVertical="true"/>
+                <com.microsoft.kapp.views.CustomGlyphView android:textSize="@dimen/SmallIconSize" android:id="@+id/favorite_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@+id/favorite_text" android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/workout_overview" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:layout_marginBottom="15dp" style="@style/PrimaryLightTextStyle"/>
+            <View android:background="@color/LightLineColor" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginBottom="8dp"/>
+            <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/workout_find_other_workouts" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="10dp" android:text="@string/workout_find_other_workouts" style="@style/SubheaderTextStyle"/>
+            <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/remove_workout_plan" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:layout_marginBottom="14dp" android:text="@string/workout_unsubscribe" style="@style/SubheaderTextStyle"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

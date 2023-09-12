@@ -1,0 +1,164 @@
+{
+  "$schema": "http://microsoft.com/health/app/v1/configKeysSchema.json",
+  "id": "http://microsoft.com/health/app/v1/configKeys",
+  "type": "object",
+  "properties": {
+    "oobe": {
+      "id": "http://microsoft.com/health/app/v1/configKeys/oobe",
+      "type": "object",
+      "properties": {
+        "defaults": {
+          "id": "http://microsoft.com/health/app/v1/configKeys/oobe/defaults",
+          "type": "object",
+          "properties": {
+            "distanceUnit": {
+              "id": "http://microsoft.com/health/app/v1/configKeys/oobe/defaults/distanceUnit",
+              "type": "string",              
+              "enum": [
+                "imperial",
+                "metric"
+              ]
+            },
+            "weightUnit": {
+              "id": "http://microsoft.com/health/app/v1/configKeys/oobe/defaults/weightUnit",
+              "type": "string",              
+              "enum": [
+                "imperial",
+                "metric"
+              ]
+            },
+            "temperatureUnit": {
+              "id": "http://microsoft.com/health/app/v1/configKeys/oobe/defaults/temperatureUnit",
+              "type": "string",          
+              "enum": [
+                "fahrenheit",
+                "celsius"
+              ]
+            },
+            "marketingOptIn": {
+              "id": "http://microsoft.com/health/app/v1/configKeys/oobe/defaults/marketingOptIn",
+              "type": "boolean"         
+            }
+          },
+          "required": [
+            "distanceUnit",
+            "weightUnit",
+            "temperatureUnit",
+            "marketingOptIn"
+          ]
+        }
+      },
+      "required": [
+        "defaults"
+      ]
+    },
+    "maps": {
+      "id": "http://microsoft.com/health/app/v1/configKeys/maps",
+      "type": "object",
+      "properties": {
+        "serviceUrl": {
+          "id": "http://microsoft.com/health/app/v1/configKeys/maps/serviceUrl",
+          "type": "string"      
+        },
+        "token": {
+          "id": "http://microsoft.com/health/app/v1/configKeys/maps/token",
+          "type": "string"          
+        },
+        "roadUriFormat": {
+          "id": "http://microsoft.com/health/app/v1/configKeys/maps/roadUriFormat",
+          "type": "string"          
+        }
+      }
+    },
+    "features": {
+      "id": "http://microsoft.com/health/app/v1/configKeys/features",
+      "type": "object",
+      "properties": {
+        "starbucks": {
+          "id": "http://microsoft.com/health/app/v1/configKeys/features/starbucks",
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "id": "http://microsoft.com/health/app/v1/configKeys/features/starbucks/enabled",
+              "type": "boolean"           
+            },
+            "displayUrl": {
+              "id": "http://microsoft.com/health/app/v1/configKeys/features/starbucks/displayUrl",
+              "type": "string"              
+            },
+            "displayUrlString": {
+              "id": "http://microsoft.com/health/app/v1/configKeys/features/starbucks/displayUrlString",
+              "type": "string"
+            },
+            "cardFrontUrl": {
+              "id": "http://microsoft.com/health/app/v1/configKeys/features/starbucks/cardFrontUrl",
+              "type": "string"
+            },
+            "cardBackUrl": {
+              "id": "http://microsoft.com/health/app/v1/configKeys/features/starbucks/cardBackUrl",
+              "type": "string"
+            }
+          }
+        },
+        "facebook": {
+          "id": "http://microsoft.com/health/app/v1/configKeys/features/facebook",
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "id": "http://microsoft.com/health/app/v1/configKeys/features/facebook/enabled",
+              "type": "boolean"              
+            }
+          }
+        },
+        "facebookMessenger": {
+          "id": "http://microsoft.com/health/app/v1/configKeys/features/facebookMessenger",
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "id": "http://microsoft.com/health/app/v1/configKeys/features/facebookMessenger/enabled",
+              "type": "boolean"
+            }
+          }
+        },
+        "twitter": {
+          "id": "http://microsoft.com/health/app/v1/configKeys/features/twitter",
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "id": "http://microsoft.com/health/app/v1/configKeys/features/twitter/enabled",
+              "type": "boolean"
+            }
+          }
+        },
+        "finance": {
+          "id": "http://microsoft.com/health/app/v1/configKeys/features/finance",
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "id": "http://microsoft.com/health/app/v1/configKeys/features/finance/enabled",
+              "type": "boolean"
+            },
+            "serviceUrl": {
+              "id": "http://microsoft.com/health/app/v1/configKeys/features/finance/serviceUrl ",
+              "type": "string"
+            },
+            "defaultStockList": {
+              "id": "http://microsoft.com/health/app/v1/configKeys/features/finance/defaultStockList",
+              "type": "array",
+              "items": [
+                {                 
+                  "type": "object"                 
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "oobe",
+    "maps",
+    "features"
+  ]
+}

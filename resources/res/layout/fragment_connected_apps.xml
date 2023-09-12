@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/settingsBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.microsoft.kapp.widgets.Interstitial android:layout_gravity="center" android:id="@+id/manage_strapps_interstitial" android:background="@color/settingsBackground" android:layout_width="match_parent" android:layout_height="match_parent" style="@style/SettingsInterstitialStyle"/>
+    <ExpandableListView android:id="@+id/app_list_view" android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginLeft="@dimen/fragment_horizontal_margin" android:layout_marginRight="@dimen/fragment_horizontal_margin" android:divider="@null" android:dividerHeight="0dp" android:layout_weight="1" android:headerDividersEnabled="false"/>
+    <com.microsoft.kapp.widgets.ConfirmationBar android:id="@+id/confirmation_bar" android:visibility="gone" app:useDiskSaveIcon="true" style="@style/ConfirmationBarStyle"/>
+</LinearLayout>

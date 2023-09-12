@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/app_white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/guided_workout_this_is_your_current_plan"/>
+    <ExpandableListView android:id="@+id/workout_schedule_list" android:layout_width="match_parent" android:layout_height="match_parent" android:paddingStart="@dimen/guided_workout_margin_left" android:paddingEnd="@dimen/guided_workout_margin_right"/>
+</LinearLayout>

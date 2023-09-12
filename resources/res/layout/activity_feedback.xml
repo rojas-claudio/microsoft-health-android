@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/base_layout" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/feedbackHeaderLayout" android:background="@color/top_menu_color" android:layout_width="match_parent" android:layout_height="@dimen/guided_workout_header_height" android:layout_alignParentTop="true" style="@style/DefaultFragmentStyle">
+        <com.microsoft.kapp.views.CustomGlyphView android:id="@+id/btnBack" android:clickable="true" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/glyph_left_arrow" android:layout_centerInParent="true" android:onClick="onClick" android:layout_alignParentStart="true" style="@style/Font_backArrow"/>
+    </RelativeLayout>
+    <TextView android:id="@+id/txtFeedbackHeaderTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/feedbackHeaderLayout" style="@style/FeedbackHeaderTitleStyle"/>
+    <FrameLayout android:id="@+id/feedbackContainer" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/txtFeedbackHeaderTitle"/>
+    <com.microsoft.kapp.widgets.Interstitial android:id="@+id/loading_screen" android:background="@color/black" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:alpha="0.7"/>
+</RelativeLayout>

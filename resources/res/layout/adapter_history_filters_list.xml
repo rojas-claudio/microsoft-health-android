@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.microsoft.kapp.views.CustomFontTextView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/filter_title" android:paddingLeft="@dimen/fragment_horizontal_margin" android:paddingRight="@dimen/fragment_horizontal_margin" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/SubheaderInvertedTextStyle"/>

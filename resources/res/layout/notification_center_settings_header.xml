@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:gravity="left" android:orientation="vertical" android:background="@color/transparent" android:paddingTop="@dimen/fragment_vertical_margin" android:paddingRight="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <com.microsoft.kapp.views.CustomFontTextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/settings_notification_center_title" style="@style/Font_title"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:text="@string/settings_notification_center_subtitle" style="@style/Font_smallBody"/>
+    <View android:background="@color/greyLight" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="27dp"/>
+    <com.microsoft.kapp.views.CustomFontEditText android:id="@+id/notification_apps_search" android:background="@color/device_name_background" android:padding="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:hint="@string/settings_notification_center_search" android:inputType="textNoSuggestions" style="@style/Font_smallBody"/>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp">
+        <com.microsoft.kapp.views.CustomFontTextView android:textColor="@color/primary" android:gravity="center" android:id="@+id/notification_apps_select_all" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/settings_notification_center_select_all" android:layout_weight="1"/>
+        <View android:id="@+id/separator" android:background="@color/primary" android:layout_width="1dp" android:layout_height="match_parent"/>
+        <com.microsoft.kapp.views.CustomFontTextView android:textColor="@color/primary" android:gravity="center" android:id="@+id/notification_apps_select_none" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/settings_notification_center_select_none" android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>

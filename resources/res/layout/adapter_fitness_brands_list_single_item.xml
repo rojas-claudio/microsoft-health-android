@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="115dp">
+    <com.microsoft.kapp.views.PicassoImageView android:id="@+id/background_image" android:layout_width="match_parent" android:layout_height="115dp" android:scaleType="centerCrop" android:contentDescription="fitness brands background image"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:textSize="40dp" android:textColor="@color/white" android:layout_gravity="center" android:id="@+id/brand_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="fitness brand name"/>
+    <ImageView android:layout_gravity="center" android:id="@+id/logo" android:layout_width="@dimen/guided_workout_brand_logo_width" android:layout_height="@dimen/guided_workout_brand_logo_height" android:scaleType="centerInside" android:contentDescription="fitness brands logo image"/>
+</FrameLayout>

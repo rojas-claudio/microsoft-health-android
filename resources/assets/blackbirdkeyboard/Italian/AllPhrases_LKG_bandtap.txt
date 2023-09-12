@@ -1,0 +1,25 @@
+﻿# format - key: value
+# use LogFolder: perftest for the "welcome" test
+LogFolder: data/
+FileMatch: 
+ModelFolder: decode/
+UserLMFolder: userLM
+UserAdaptationWeight: 0.08f
+RepeatPoints: false
+AddDummyPoints: true
+Algorithm: Hmm
+OutputFolder: output
+ScaleFactor: 1
+TopNCutoff: 10
+CharactersToIgnore: 
+Comment: 
+LmWeight: 6
+PixelWidth: 320
+BeamWidth: 400000
+MaxActiveNodes: 2000
+WordBoundaryThreshold: -1200
+Expected-Error %:  12.7168
+Expected-Insertion errors: 1.7341
+Expected-Deletion errors: 0.5780
+Expected-Top 1 Accuracy: 89.7881
+UserAdaptation: false

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="@color/settingsBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/web_tile_title_user_name" android:layout_marginTop="10dp" android:text="@string/web_tile_title_user_name" android:layout_alignParentTop="true" android:labelFor="@+id/web_tile_user_name" style="@style/WebTileLabelStyle"/>
+    <com.microsoft.kapp.views.CustomFontEditText android:id="@+id/web_tile_user_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_below="@+id/web_tile_title_user_name" android:inputType="textNoSuggestions" style="@style/Font_smallBody">
+        <requestFocus/>
+    </com.microsoft.kapp.views.CustomFontEditText>
+    <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/web_tile_title_password" android:text="@string/web_tile_title_password" android:layout_below="@+id/web_tile_user_name" android:labelFor="@+id/web_tile_password_value" style="@style/WebTileLabelStyle"/>
+    <com.microsoft.kapp.views.CustomFontEditText android:id="@+id/web_tile_password_value" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_below="@+id/web_tile_title_password" android:layout_alignLeft="@+id/web_tile_title_password" android:inputType="textPassword" style="@style/Font_smallBody"/>
+</RelativeLayout>

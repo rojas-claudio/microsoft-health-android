@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_gravity="center" android:background="@color/WhiteColor" android:layout_width="match_parent" android:layout_height="match_parent">
+    <WebView android:id="@+id/sign_in_webview" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <com.microsoft.kapp.widgets.Interstitial android:layout_gravity="center" android:id="@+id/sign_in_interstitial" android:layout_width="match_parent" android:layout_height="match_parent" style="@style/InterstitialLight"/>
+</FrameLayout>

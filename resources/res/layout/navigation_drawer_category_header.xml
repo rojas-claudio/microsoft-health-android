@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:paddingLeft="@dimen/sliding_menus_margin_vertical" android:paddingRight="@dimen/sliding_menus_margin_vertical" android:layout_width="match_parent" android:layout_height="24dp">
+    <com.microsoft.kapp.views.CustomFontTextView android:layout_gravity="center_vertical" android:id="@+id/textview_header_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_centerVertical="true" android:paddingStart="10dp" style="@style/SecondaryLightTextStyle"/>
+</RelativeLayout>

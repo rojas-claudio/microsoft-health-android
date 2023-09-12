@@ -1,0 +1,192 @@
+{
+	"DeviceSettings": [
+		{
+			"name": "Version",
+			"cloud": "Version",
+			"type": "UINT32"
+		},
+		{
+			"name": "DefaultBacklightValue",
+			"cloud": "DefaultBacklightValue",
+			"type": "UINT16"
+		},
+		{
+			"name": "AutoBacklightMode",
+			"cloud": "AutoBacklightMode",
+			"type": "BOOL"
+		},
+		{
+			"name": "BTStatusOnBoot",
+			"cloud": "BTStatusOnBoot",
+			"type": "BOOL"
+		},
+		{
+			"name": "AirplaneModeOn",
+			"cloud": "AirplaneModeOn",
+			"type": "BOOL"
+		},
+		{
+			"name": "DoNotDisturbModeOn",
+			"cloud": "DoNotDisturbModeOn",
+			"type": "BOOL"
+		},
+		{
+			"name": "GPSEnabledForRuns",
+			"cloud": "GPSEnabledForRuns",
+			"type": "BOOL"
+		},
+		{
+			"name": "BiometricSensorOn",
+			"cloud": "BiometricSensorOn",
+			"type": "BOOL"
+		},
+		{
+			"name": "GlanceModeOn",
+			"cloud": "GlanceModeOn",
+			"type": "BOOL"
+		},
+		{
+			"name": "OOBECompleted",
+			"cloud": "OOBECompleted",
+			"type": "BOOL"
+		},
+		{
+			"name": "EnableTimeSync",
+			"cloud": "EnableTimeSync",
+			"type": "BOOL"
+		},
+		{
+			"name": "TelementryOn",
+			"cloud": "TelementryOn",
+			"type": "BOOL"
+		},
+		{
+			"name": "MilitaryTimeOn",
+			"cloud": "MilitaryTimeOn",
+			"type": "BOOL"
+		},
+		{
+			"name": "HandsFreeOn",
+			"cloud": "HandsFreeOn",
+			"type": "BOOL"
+		},
+		{
+			"name": "BTLEOn",
+			"cloud": "BTLEOn",
+			"type": "BOOL"
+		},
+		{
+			"name": "TimeZone",
+			"cloud": "TimeZone",
+			"type": "CargoTimeZone",
+			"writable": false
+		},
+		{
+			"name": "DeviceName",
+			"cloud": "DeviceName",
+			"type": "STRING",
+			"len": 16,
+			"writable": false,
+			"default": "Cargo"
+		},
+		{
+			"name": "LoggerSubscriptions",
+			"cloud": "LoggerSubscriptions",
+			"type": "LoggerSubscriptions"
+		},
+		{
+			"name": "MotorGain",
+			"cloud": "MotorGain",
+			"type": "UINT8"
+		}
+	],
+	"LoggerSubscriptions": [
+		{
+			"name": "ActiveSubscriptions",
+			"cloud": "ActiveSubscriptions",
+			"type": "BLOB",
+			"len": 8
+		},
+		{
+			"name": "PassiveSubscriptions",
+			"cloud": "PassiveSubscriptions",
+			"type": "BLOB",
+			"len": 8
+		}
+	],
+	"CargoTimeZone": [
+		{
+			"name": "Name",
+			"cloud": "Name",
+			"type": "STRING",
+			"len": 16,
+			"writable": false
+		},
+		{
+			"name": "ZoneOffsetMinutes",
+			"cloud": "ZoneOffsetMinutes",
+			"type": "UINT16",
+			"writable": false
+		},
+		{
+			"name": "DaylightOffsetMinutes",
+			"cloud": "DaylightOffsetMinutes",
+			"type": "UINT16",
+			"writable": false
+		},
+		{
+			"name": "StandardDate",
+			"cloud": "StandardDate",
+			"type": "CargoSystemTime",
+			"writable": false
+		},
+		{
+			"name": "DaylightDate",
+			"cloud": "DaylightDate",
+			"type": "CargoSystemTime",
+			"writable": false
+		}
+	],
+	"CargoSystemTime": [
+		{
+			"name": "Year",
+			"cloud": "Year",
+			"type": "UINT16"
+		},
+		{
+			"name": "Month",
+			"cloud": "Month",
+			"type": "UINT16"
+		},
+		{
+			"name": "DayOfWeek",
+			"cloud": "DayOfWeek",
+			"type": "UINT16"
+		},
+		{
+			"name": "Day",
+			"cloud": "Day",
+			"type": "UINT16"
+		},
+		{
+			"name": "Hour",
+			"cloud": "Hour",
+			"type": "UINT16"
+		},
+		{
+			"name": "Minute",
+			"cloud": "Minute",
+			"type": "UINT16"
+		},
+		{
+			"name": "Second",
+			"cloud": "Second",
+			"type": "UINT16"
+		},
+		{
+			"name": "Milliseconds",
+			"cloud": "Milliseconds",
+			"type": "UINT16"
+		}
+	]
+}

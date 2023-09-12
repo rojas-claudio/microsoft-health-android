@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:left="0dp" android:right="60dp">
+        <shape android:shape="oval">
+            <solid android:color="@color/connectivity_circle_idle"/>
+            <size android:height="10dp" android:width="10dp"/>
+        </shape>
+    </item>
+    <item android:left="15dp" android:right="45dp">
+        <shape android:shape="oval">
+            <solid android:color="@color/connectivity_circle_idle"/>
+            <size android:height="10dp" android:width="10dp"/>
+        </shape>
+    </item>
+    <item android:left="30dp" android:right="30dp">
+        <shape android:shape="oval">
+            <solid android:color="@color/connectivity_circle_idle"/>
+            <size android:height="10dp" android:width="10dp"/>
+        </shape>
+    </item>
+    <item android:left="45dp" android:right="15dp">
+        <shape android:shape="oval">
+            <solid android:color="@color/connectivity_circle_idle"/>
+            <size android:height="10dp" android:width="10dp"/>
+        </shape>
+    </item>
+    <item android:left="60dp" android:right="0dp">
+        <shape android:shape="oval">
+            <solid android:color="@color/connectivity_circle_idle"/>
+            <size android:height="10dp" android:width="10dp"/>
+        </shape>
+    </item>
+</layer-list>

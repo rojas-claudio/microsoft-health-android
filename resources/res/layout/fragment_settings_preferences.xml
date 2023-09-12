@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="@color/settingsBackground" android:layout_width="match_parent" android:layout_height="match_parent" style="@style/OobeStyle">
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/confirmation_bar">
+        <LinearLayout android:orientation="vertical" android:paddingBottom="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginTop="10dp" android:layout_marginRight="15dp" android:layout_marginBottom="10dp">
+            <com.microsoft.kapp.views.CustomFontTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_preferences_header" style="@style/Font_title"/>
+            <com.microsoft.kapp.views.CustomFontTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:text="@string/settings_preferences_units_section_header" style="@style/Font_smallBody"/>
+            <com.microsoft.kapp.views.CustomFontTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="@string/settings_preferences_units_weight_label" style="@style/SettingsLabelTextStyle"/>
+            <Spinner android:id="@+id/settings_preferences_weight_spinner" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="13dp" style="@style/SettingsSpinnerStyle"/>
+            <com.microsoft.kapp.views.CustomFontTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="@string/settings_preferences_units_temperature_label" style="@style/SettingsLabelTextStyle"/>
+            <Spinner android:id="@+id/settings_preferences_temperature_spinner" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="13dp" style="@style/SettingsSpinnerStyle"/>
+            <com.microsoft.kapp.views.CustomFontTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="@string/settings_preferences_units_distance_height_label" style="@style/SettingsLabelTextStyle"/>
+            <Spinner android:id="@+id/settings_preferences_distance_height_spinner" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="13dp" style="@style/SettingsSpinnerStyle"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/region_format_layout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp">
+                <com.microsoft.kapp.views.CustomFontTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_preferences_region_format_header" style="@style/Font_smallBody"/>
+                <com.microsoft.kapp.views.CustomFontTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_preferences_region_format_subheader" style="@style/SettingsLabelTextStyle"/>
+                <Spinner android:id="@+id/settings_preferences_band_region_spinner" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="13dp" style="@style/SettingsSpinnerStyle"/>
+            </LinearLayout>
+            <com.microsoft.kapp.views.CustomFontTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="@string/settings_preferences_gestures_header" style="@style/Font_smallBody"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp">
+                <com.microsoft.kapp.views.CustomFontTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_preferences_shake_to_send_feedback" android:layout_weight="1" style="@style/SettingsLabelTextStyle"/>
+                <Space android:layout_width="0dp" android:layout_height="match_parent"/>
+                <Switch android:id="@+id/shake_to_send_feedback_switch" style="@style/SwitchStyle"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <com.microsoft.kapp.widgets.ConfirmationBar android:id="@+id/confirmation_bar" android:visibility="gone" android:layout_alignParentBottom="true" app:useDiskSaveIcon="true" style="@style/ConfirmationBarStyle"/>
+    <include layout="@layout/progress_container"/>
+</RelativeLayout>

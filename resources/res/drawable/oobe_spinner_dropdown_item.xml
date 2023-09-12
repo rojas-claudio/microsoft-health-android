@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.microsoft.kapp.views.CustomFontTextView xmlns:android="http://schemas.android.com/apk/res/android" android:textColor="@color/oobe_text" android:ellipsize="marquee" android:id="@android:id/text1" android:background="@color/oobe_spinner_item_background" android:padding="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:singleLine="true" style="?android:attr/spinnerDropDownItemStyle"/>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/WhiteColor" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.microsoft.kapp.views.CustomFontTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/oobe_firmware_updating_title" app:custom_font_family="SegoeUISemiBold" style="@style/OobeHeaderTitleStyle"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/oobe_firmware_updating_subtext" style="@style/OobeHeaderSubtitleStyle"/>
+    <Space android:layout_width="0dp" android:layout_height="100dp"/>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.microsoft.kapp.views.PicassoImageView android:background="@color/device_personalization_background" android:layout_width="@dimen/device_representation_width" android:layout_height="130dp" android:scaleType="centerCrop" android:layout_centerHorizontal="true" android:contentDescription="@string/empty" app:image_resource_id="@drawable/oobe_device_empty"/>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:paddingTop="15dp" android:paddingBottom="15dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <View android:id="@+id/stat_divider" android:layout_width="match_parent" android:layout_height="1dp"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/txt_stat_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/font_extra_padding_adjustment" android:includeFontPadding="false" style="@style/SecondaryLightTextStyle"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/txtStatValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:includeFontPadding="false" style="@style/MetricTextStyle"/>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.microsoft.kapp.views.CustomGlyphView android:id="@+id/txt_stat_title_symbol" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5dp" style="@style/PrimaryLightTextStyle"/>
+        <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/txt_stat_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" style="@style/PrimaryLightTextStyle"/>
+    </LinearLayout>
+</LinearLayout>

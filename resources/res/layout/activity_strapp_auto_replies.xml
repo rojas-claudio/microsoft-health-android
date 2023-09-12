@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="@color/blackHigh" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="15dp" android:layout_marginRight="15dp" android:layout_above="@+id/confirmation_bar">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/strapp_auto_replies_header_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="@string/strapp_auto_replies_generic_header" style="@style/Font_title"/>
+            <com.microsoft.kapp.views.CustomFontTextView android:textColor="@color/error" android:id="@+id/strapp_auto_replies_error_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" style="@style/Font_smallBody"/>
+            <com.microsoft.kapp.views.CustomFontTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25dp" android:text="@string/strapp_auto_replies_reply_1" style="@style/Font_smallBody"/>
+            <EditText android:id="@+id/strapp_auto_replies_reply_1_edit" android:layout_marginTop="13dp" android:hint="@string/strapp_auto_replies_missing_text_hint" android:maxLength="@integer/strapp_auto_replies_max_length" style="@style/editControl"/>
+            <com.microsoft.kapp.views.CustomFontTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25dp" android:text="@string/strapp_auto_replies_reply_2" style="@style/Font_smallBody"/>
+            <EditText android:id="@+id/strapp_auto_replies_reply_2_edit" android:layout_marginTop="13dp" android:hint="@string/strapp_auto_replies_missing_text_hint" android:maxLength="@integer/strapp_auto_replies_max_length" style="@style/editControl"/>
+            <com.microsoft.kapp.views.CustomFontTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25dp" android:text="@string/strapp_auto_replies_reply_3" style="@style/Font_smallBody"/>
+            <EditText android:id="@+id/strapp_auto_replies_reply_3_edit" android:layout_marginTop="13dp" android:hint="@string/strapp_auto_replies_missing_text_hint" android:maxLength="@integer/strapp_auto_replies_max_length" style="@style/editControl"/>
+            <com.microsoft.kapp.views.CustomFontTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25dp" android:text="@string/strapp_auto_replies_reply_4" style="@style/Font_smallBody"/>
+            <EditText android:id="@+id/strapp_auto_replies_reply_4_edit" android:layout_marginTop="13dp" android:hint="@string/strapp_auto_replies_missing_text_hint" android:maxLength="@integer/strapp_auto_replies_max_length" style="@style/editControl"/>
+        </LinearLayout>
+    </ScrollView>
+    <com.microsoft.kapp.widgets.ConfirmationBar android:id="@+id/confirmation_bar" android:visibility="gone" android:layout_alignParentBottom="true" style="@style/ConfirmationBarStyle"/>
+    <FrameLayout android:orientation="vertical" android:id="@+id/loading_frame_layout" android:background="@color/fragment_connected_apps_loading_frame_background" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:attr/progressBarStyleLarge"/>
+    </FrameLayout>
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <GridView android:gravity="center" android:id="@+id/glyph_image_grid_view" android:layout_width="match_parent" android:layout_height="match_parent" android:horizontalSpacing="5dp" android:verticalSpacing="5dp" android:numColumns="2" android:alpha="0.25"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/no_filtered_history_title" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/fragment_horizontal_margin" android:layout_marginTop="15dp" android:layout_marginRight="@dimen/fragment_horizontal_margin" style="@style/NoFilteredHistoryTitleTextStyle"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:layout_gravity="center_horizontal" android:id="@+id/no_history_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30dp" android:text="@string/no_history_title" style="@style/NoHistoryTitleTextStyle"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/no_history_subtitle" android:paddingTop="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/no_history_subtitle" style="@style/NoHistorySubTitleTextStyle"/>
+</LinearLayout>

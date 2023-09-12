@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/txtAddImages" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/attachment_add_attachment" android:layout_alignParentStart="true" style="@style/PrimaryTextStyle"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/txtOptional" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/attachment_is_optional" android:layout_below="@+id/txtAddImages" android:layout_alignParentStart="true" style="@style/PrimaryLightTextStyle"/>
+    <com.microsoft.kapp.views.CustomGlyphView android:id="@+id/btnAdd" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/glyph_plus" android:layout_alignParentEnd="true" style="@style/AttachmentGlyphStyle"/>
+    <android.support.v7.widget.RecyclerView android:id="@+id/viewRecycler" android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginTop="10dp" android:layout_below="@+id/txtOptional" style="@style/AllListViews"/>
+</RelativeLayout>

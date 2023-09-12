@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/top_menu_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/search_tile_header"/>
+    <FrameLayout android:id="@+id/list_view_header_plus_arrow" android:background="@color/white" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <include layout="@layout/guided_workout_category_listview_header"/>
+    </FrameLayout>
+    <FrameLayout android:id="@+id/guided_workout_result_listview" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <ListView android:id="@+id/listview" android:background="@color/top_menu_color" android:paddingTop="16dp" android:layout_width="match_parent" android:layout_height="match_parent" android:drawSelectorOnTop="false" android:divider="@null" android:dividerHeight="0dp"/>
+        <com.microsoft.kapp.views.CustomFontTextView android:textAppearance="?android:attr/textAppearanceMedium" android:textSize="24sp" android:gravity="center" android:id="@android:id/empty" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/no_results"/>
+    </FrameLayout>
+</LinearLayout>

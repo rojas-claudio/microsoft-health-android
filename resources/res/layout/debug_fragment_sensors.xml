@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
+    <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ProgressBar android:layout_gravity="center" android:id="@+id/debug_sensor_progress" android:layout_width="200dp" android:layout_height="200dp"/>
+        <LinearLayout android:orientation="vertical" android:id="@+id/debug_sensor_main_layout" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.microsoft.kapp.views.CustomFontTextView android:textSize="18sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pedometer supported :" style="@style/SettingsHeaderTextViewStyle"/>
+                <com.microsoft.kapp.views.CustomFontTextView android:textSize="18sp" android:id="@+id/debug_sensor_supported_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" style="@style/SettingsHeaderTextViewStyle"/>
+            </LinearLayout>
+            <com.microsoft.kapp.views.CustomFontTextView android:textSize="18sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Enable sensor data collection?" style="@style/SettingsHeaderTextViewStyle"/>
+            <Spinner android:entries="@array/on_off_values" android:layout_gravity="center" android:id="@+id/debug_sensor_enable_collection" android:background="@drawable/bordertop" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="10dp"/>
+            <com.microsoft.kapp.views.CustomFontTextView android:textSize="18sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Show steps pending upload in step tile header?" style="@style/SettingsHeaderTextViewStyle"/>
+            <Spinner android:entries="@array/on_off_values" android:layout_gravity="center" android:id="@+id/debug_sensor_enable_local_use" android:background="@drawable/bordertop" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="10dp"/>
+            <com.microsoft.kapp.views.CustomFontTextView android:textSize="18sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Switch app to phone data for steps and cals?" style="@style/SettingsHeaderTextViewStyle"/>
+            <Spinner android:entries="@array/on_off_values" android:layout_gravity="center" android:id="@+id/debug_sensor_enable_phone_view" android:background="@drawable/bordertop" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="10dp"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.microsoft.kapp.views.CustomFontTextView android:textSize="18sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Oldest event in DB:" style="@style/SettingsHeaderTextViewStyle"/>
+                <com.microsoft.kapp.views.CustomFontTextView android:textSize="18sp" android:id="@+id/debug_sensor_oldest_event_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" style="@style/SettingsHeaderTextViewStyle"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.microsoft.kapp.views.CustomFontTextView android:textSize="18sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Total pending events in DB:" style="@style/SettingsHeaderTextViewStyle"/>
+                <com.microsoft.kapp.views.CustomFontTextView android:textSize="18sp" android:id="@+id/debug_sensor_total_events_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" style="@style/SettingsHeaderTextViewStyle"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.microsoft.kapp.views.CustomFontTextView android:textSize="18sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Steps pending upload for today:" style="@style/SettingsHeaderTextViewStyle"/>
+                <com.microsoft.kapp.views.CustomFontTextView android:textSize="18sp" android:id="@+id/debug_sensor_total_steps_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" style="@style/SettingsHeaderTextViewStyle"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.microsoft.kapp.views.CustomFontTextView android:textSize="18sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hardware event queue size :" style="@style/SettingsHeaderTextViewStyle"/>
+                <com.microsoft.kapp.views.CustomFontTextView android:textSize="18sp" android:id="@+id/debug_sensor_queue_size_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" style="@style/SettingsHeaderTextViewStyle"/>
+            </LinearLayout>
+            <Button android:layout_gravity="left" android:id="@+id/debug_sensor_button_sync" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:text="Sync data to cloud"/>
+            <Button android:layout_gravity="left" android:id="@+id/debug_sensor_button_mail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:text="Extract today&apos;s sensor event data(Sends mail)"/>
+        </LinearLayout>
+    </FrameLayout>
+</ScrollView>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:id="@+id/home_tile_container" android:background="@color/top_menu_color" android:paddingLeft="@dimen/home_tile_horizontal_margin" android:paddingTop="@dimen/home_tile_vertical_margin" android:paddingRight="@dimen/home_tile_horizontal_margin" android:paddingBottom="@dimen/home_tile_vertical_margin" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.microsoft.kapp.views.CustomGlyphView android:id="@+id/back" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/NavigationLeftArrowIconStyle"/>
+        <com.microsoft.kapp.views.CustomFontTextView android:textColor="@color/white" android:ellipsize="end" android:id="@+id/golf_course_name" android:paddingBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" style="@style/Font_smallBody"/>
+        <com.microsoft.kapp.views.CustomFontTextView android:textSize="@dimen/font_size_title" android:textColor="@color/white" android:ellipsize="end" android:id="@+id/golf_overview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/golf_overview_locked"/>
+    </LinearLayout>
+    <com.microsoft.kapp.views.SyncToBand android:id="@+id/sync_to_band" android:layout_width="match_parent" android:layout_height="wrap_content" app:syncTitleText="@string/golf_sync_course_to_band" app:onBandTitleText="@string/golf_sync_course_on_band"/>
+    <ScrollView android:background="@color/app_white" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.microsoft.kapp.views.TrackerStatsWidget android:id="@+id/golf_course_details_trackers" android:padding="@dimen/fragment_horizontal_padding" android:layout_width="match_parent" android:layout_height="wrap_content" app:stat_style="@style/TrackerStatStyleV1"/>
+            <RelativeLayout android:id="@+id/golf_course_synced_container" android:paddingLeft="@dimen/home_tile_horizontal_margin" android:paddingRight="@dimen/home_tile_horizontal_margin" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp">
+                <com.microsoft.kapp.views.CustomFontTextView android:textColor="@color/base_tracker_lowlight_color" android:id="@+id/golf_tee_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:layout_alignParentLeft="true" style="@style/GolfTextSpanStyle"/>
+                <com.microsoft.kapp.views.CustomGlyphView android:id="@+id/golf_sync_tee_edit_link" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/glyph_edit" android:layout_alignBaseline="@+id/golf_tee_text" android:layout_alignParentRight="true" style="@style/GolfSyncEditLinkStyle"/>
+            </RelativeLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginRight="15dp">
+                <View android:background="@color/event_options_separator" android:layout_width="match_parent" android:layout_height="@dimen/event_options_separator_size"/>
+                <com.microsoft.kapp.views.CustomFontTextView android:textSize="@dimen/font_size_smallBody" android:id="@+id/golf_course_website" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/event_options_margin_size" android:text="@string/website"/>
+                <com.microsoft.kapp.views.CustomFontTextView android:textSize="@dimen/font_size_smallBody" android:autoLink="phone" android:id="@+id/golf_course_phone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/event_options_margin_size"/>
+                <com.microsoft.kapp.views.CustomFontTextView android:textSize="@dimen/font_size_smallBody" android:id="@+id/golf_course_address" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/event_options_margin_size"/>
+                <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/golf_find_other_courses" android:paddingTop="6dp" android:paddingBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/golf_find_other_courses" style="@style/PrimaryTextStyle"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

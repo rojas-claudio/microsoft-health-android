@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="@color/settingsBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:paddingLeft="@dimen/fragment_horizontal_margin" android:paddingRight="@dimen/fragment_horizontal_margin" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:paddingBottom="@dimen/confirmation_bar_height" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/web_tile_auth_header" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="83dp" android:text="@string/web_tile_auth_header" style="@style/WebtileAddTileStyle"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/web_tile_auth_resource_details" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/web_tile_auth_resource_index" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/WebTileLabelStyle"/>
+                <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/web_tile_auth_resource_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" style="@style/WebTileLabelStyle"/>
+            </LinearLayout>
+            <include layout="@layout/webtile_header"/>
+            <View android:background="#ffffff" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="20dp"/>
+            <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/web_tile_auth_resource_error" android:visibility="gone" android:text="@string/web_tile_auth_resource_error" style="@style/WebTileAuthErrorStyle"/>
+            <include layout="@layout/webtile_auth"/>
+        </LinearLayout>
+    </ScrollView>
+    <com.microsoft.kapp.widgets.ConfirmationBar android:id="@+id/confirmation_bar" android:visibility="visible" android:layout_alignParentBottom="true" app:useDiskSaveIcon="true" style="@style/ConfirmationBarStyle"/>
+</RelativeLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="@color/settingsBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:orientation="vertical" android:paddingTop="20dp" android:paddingBottom="16dp" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.microsoft.kapp.views.CustomFontTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/activity_horizontal_padding" android:text="@string/settings_my_band_header" style="@style/Font_title"/>
+                <include layout="@layout/battery_gauge_layout"/>
+            </LinearLayout>
+            <include layout="@layout/device_representation_layout"/>
+            <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/activity_horizontal_padding" android:paddingRight="@dimen/activity_horizontal_padding" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.microsoft.kapp.views.CustomFontTextView android:textColor="@color/error" android:id="@+id/settings_my_band_error_message" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/name_device_error_message" android:labelFor="@+id/my_band_name" style="@style/Font_smallBody"/>
+                <com.microsoft.kapp.views.CustomFontTextView android:textColor="@color/GreyColor" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/settings_my_band_name_prompt" android:labelFor="@+id/my_band_name" style="@style/Font_smallBody"/>
+                <com.microsoft.kapp.views.CustomFontEditText android:textColor="@color/primary" android:id="@+id/my_band_name" android:background="@color/device_name_background" android:padding="6dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="13dp" android:maxLines="1" android:singleLine="true" android:maxLength="@integer/max_band_name_length" android:inputType="textNoSuggestions" style="@style/Font_smallBody"/>
+                <View android:background="@color/WhiteColor" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="22dp" android:layout_marginBottom="27dp"/>
+                <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/my_band_firmware_version" android:layout_width="match_parent" android:layout_height="wrap_content" android:color="@color/primary" style="@style/Font_smallBody"/>
+                <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/my_band_serial_no" android:layout_width="match_parent" android:layout_height="wrap_content" android:color="@color/primary" style="@style/Font_smallBody"/>
+                <com.microsoft.kapp.views.CustomFontButton android:layout_gravity="left" android:id="@+id/firmware_update_button" android:padding="10dp" android:visibility="gone" android:layout_height="wrap_content" android:layout_marginTop="27dp" android:text="@string/label_apply_update" android:maxLines="1" style="@style/pushButtons"/>
+                <com.microsoft.kapp.views.CustomFontButton android:gravity="center" android:layout_gravity="left" android:id="@+id/my_band_unregister_button" android:layout_marginTop="10dp" android:text="@string/settings_my_band_unregister_button_label" android:maxLines="1" android:includeFontPadding="false" style="@style/pushButtons"/>
+                <Space android:layout_width="match_parent" android:layout_height="@dimen/confirmation_bar_height"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <com.microsoft.kapp.widgets.Interstitial android:id="@+id/settings_my_band_sync_indicator" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent" style="@style/SettingsInterstitialStyle"/>
+    <com.microsoft.kapp.widgets.ConfirmationBar android:layout_gravity="bottom" android:id="@+id/confirmation_bar" android:visibility="gone" app:useDiskSaveIcon="true" style="@style/ConfirmationBarStyle"/>
+</FrameLayout>

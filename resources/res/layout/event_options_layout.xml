@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="@dimen/event_options_margin_size">
+    <View android:background="@color/event_options_separator" android:layout_width="match_parent" android:layout_height="@dimen/event_options_separator_size"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:textSize="@dimen/event_options_text_size" android:textColor="@color/event_options_text_color" android:id="@+id/event_rename_button" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/event_options_margin_size" android:text="@string/rename_event"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:textSize="@dimen/event_options_text_size" android:textColor="@color/event_options_text_color" android:id="@+id/event_delete_button" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/event_options_margin_size" android:text="@string/delete_event"/>
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="@color/settingsBackground" android:paddingTop="@dimen/fragment_vertical_padding" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_alignParentTop="true" android:paddingStart="@dimen/fragment_horizontal_padding" android:paddingEnd="@dimen/fragment_horizontal_padding" android:layout_alignParentStart="true">
+        <TextView android:id="@+id/txtMotionTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/motion_settings_title" android:layout_alignParentTop="true" android:layout_alignParentStart="true" style="@style/Font_title"/>
+        <TextView android:id="@+id/txtMotionEnabled" android:paddingTop="40dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/motion_settings_enabled" android:layout_below="@+id/txtMotionTitle" android:layout_alignParentStart="true" style="@style/Font_title"/>
+        <Switch android:id="@+id/switchMotionEnabled" android:layout_alignBottom="@+id/txtMotionEnabled" android:layout_alignParentEnd="true" style="@style/SwitchStyle"/>
+        <TextView android:id="@+id/txtMotionCaptureDescription" android:paddingTop="50dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/txtMotionEnabled" android:layout_alignParentStart="true" style="@style/Font_smallBody"/>
+    </RelativeLayout>
+    <com.microsoft.kapp.widgets.ConfirmationBar android:id="@+id/confirmation_bar" android:visibility="gone" android:layout_alignParentBottom="true" android:layout_alignParentStart="true" app:useDiskSaveIcon="true" style="@style/ConfirmationBarStyle"/>
+</RelativeLayout>

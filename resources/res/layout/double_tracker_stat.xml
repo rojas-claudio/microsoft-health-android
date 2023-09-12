@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:paddingTop="10dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <include layout="@layout/tracker_stats_header"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/txtStatValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:includeFontPadding="false" style="@style/MetricTextStyle"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/txtSubStatTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:includeFontPadding="false" style="@style/SecondaryLightTextStyle"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/txtSubStatValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:includeFontPadding="false" style="@style/SecondaryAccentTextStyle"/>
+</LinearLayout>

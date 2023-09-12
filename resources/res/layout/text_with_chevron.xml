@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/titleText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/browse_plans_by_the_pros" style="@style/GolfLandingPageItemStyle"/>
+    <com.microsoft.kapp.views.CustomGlyphView android:id="@+id/plan_by_pros_chevron_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/fragment_horizontal_margin" android:text="@string/glyph_chevron" android:layout_alignBaseline="@+id/titleText" android:layout_alignParentRight="true" android:contentDescription="@string/empty" style="@style/GuidedWorkoutItemRightArrowIconStyle"/>
+    <View android:background="@color/LightLineColor" android:layout_width="match_parent" android:layout_height="@dimen/SmallLineSize" android:layout_marginLeft="@dimen/fragment_horizontal_margin" android:layout_marginRight="@dimen/fragment_horizontal_margin" android:layout_below="@+id/titleText"/>
+</RelativeLayout>

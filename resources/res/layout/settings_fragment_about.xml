@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/settingsBackground" android:paddingLeft="@dimen/fragment_horizontal_padding" android:paddingTop="@dimen/fragment_vertical_padding" android:paddingRight="@dimen/fragment_horizontal_padding" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/about_header" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/about_header" style="@style/Font_title"/>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+        <com.microsoft.kapp.views.CustomFontTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/app_name" style="@style/Font_smallBody"/>
+        <Space android:layout_width="5dp" android:layout_height="wrap_content"/>
+        <com.microsoft.kapp.views.CustomFontTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/about_version_title" style="@style/Font_smallBody"/>
+        <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/about_version" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" style="@style/Font_smallBody"/>
+    </LinearLayout>
+    <com.microsoft.kapp.views.CustomFontTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/about_company_name" style="@style/Font_smallBody"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:textColorLink="@color/secondaryLow" android:linksClickable="true" android:id="@+id/about_terms" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="60dp" style="@style/Font_smallBody"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:textColorLink="@color/secondaryLow" android:linksClickable="true" android:id="@+id/about_privacy" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" style="@style/Font_smallBody"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:textColorLink="@color/secondaryLow" android:linksClickable="true" android:id="@+id/about_third_party" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" style="@style/Font_smallBody"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:textColorLink="@color/secondaryLow" android:id="@+id/about_feedback" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25dp" style="@style/Font_smallBody"/>
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <ImageView android:id="@+id/tile_icon" android:background="@color/PrimaryColor" android:layout_width="60dp" android:layout_height="60dp" android:layout_marginTop="10dp" android:scaleType="centerCrop" android:layout_alignParentLeft="true" android:contentDescription="@string/webtile_add_image_description"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/add_tile_app_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_toRightOf="@+id/tile_icon" style="@style/WebtileAddTileStyle"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/add_tile_app_description" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_toRightOf="@+id/tile_icon" android:layout_below="@+id/add_tile_app_name" android:layout_alignLeft="@+id/add_tile_app_name" style="@style/Font_smallBody"/>
+</RelativeLayout>

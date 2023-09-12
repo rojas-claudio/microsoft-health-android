@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="sc_chartTitleColor" format="color">
+    </attr>
+    <attr name="sc_chartBackgroundColor" format="color">
+    </attr>
+    <attr name="sc_plotAreaColor" format="color">
+    </attr>
+    <attr name="sc_titlePadding" format="float">
+    </attr>
+    <attr name="sc_titleMargin" format="float">
+    </attr>
+    <attr name="sc_axisTitleColor" format="color">
+    </attr>
+    <attr name="sc_axisTitleTextSize" format="float">
+    </attr>
+    <attr name="sc_axisLineColor" format="color">
+    </attr>
+    <attr name="sc_tickLineColor" format="color">
+    </attr>
+    <attr name="sc_tickLabelColor" format="color">
+    </attr>
+    <attr name="sc_gridLineColor" format="color">
+    </attr>
+    <attr name="sc_showGridLines" format="boolean">
+    </attr>
+    <attr name="sc_dashedGridLines" format="boolean">
+    </attr>
+    <attr name="sc_showGridStripes" format="boolean">
+    </attr>
+    <attr name="sc_gridStripeColor" format="color">
+    </attr>
+    <attr name="sc_alternateGridStripeColor" format="color">
+    </attr>
+    <attr name="sc_legendTextColor" format="color">
+    </attr>
+    <attr name="sc_legendBorderColor" format="color">
+    </attr>
+    <attr name="sc_legendBackgroundColor" format="color">
+    </attr>
+    <attr name="sc_crosshairLineColor" format="color">
+    </attr>
+    <attr name="sc_crosshairTooltipTextColor" format="color">
+    </attr>
+    <attr name="sc_crosshairTooltipLabelBackgroundColor" format="color">
+    </attr>
+    <attr name="sc_crosshairTooltipBackgroundColor" format="color">
+    </attr>
+    <attr name="sc_crosshairTooltipBorderColor" format="color">
+    </attr>
+    <attr name="sc_crosshairLineWidth" format="float">
+    </attr>
+    <attr name="sc_crosshairPadding" format="float">
+    </attr>
+    <attr name="sc_crosshairTooltipTextSize" format="float">
+    </attr>
+    <attr name="sc_crosshairTooltipCornerRadius" format="float">
+    </attr>
+    <attr name="sc_crosshairTooltipBorderWidth" format="float">
+    </attr>
+    <attr name="sc_lineWidth" format="float">
+    </attr>
+    <attr name="sc_defaultSelectedSeriesColor" format="color">
+    </attr>
+    <attr name="sc_columnLineWidth" format="float">
+    </attr>
+    <attr name="sc_barLineWidth" format="float">
+    </attr>
+    <attr name="sc_seriesLineColor1" format="color">
+    </attr>
+    <attr name="sc_seriesAreaColor1" format="color">
+    </attr>
+    <attr name="sc_seriesAreaGradientColor1" format="color">
+    </attr>
+    <attr name="sc_seriesAreaGradientTransparentColor1" format="color">
+    </attr>
+    <attr name="sc_seriesLineColor2" format="color">
+    </attr>
+    <attr name="sc_seriesAreaColor2" format="color">
+    </attr>
+    <attr name="sc_seriesAreaGradientColor2" format="color">
+    </attr>
+    <attr name="sc_seriesAreaGradientTransparentColor2" format="color">
+    </attr>
+    <attr name="sc_seriesLineColor3" format="color">
+    </attr>
+    <attr name="sc_seriesAreaColor3" format="color">
+    </attr>
+    <attr name="sc_seriesAreaGradientColor3" format="color">
+    </attr>
+    <attr name="sc_seriesAreaGradientTransparentColor3" format="color">
+    </attr>
+    <attr name="sc_seriesLineColor4" format="color">
+    </attr>
+    <attr name="sc_seriesAreaColor4" format="color">
+    </attr>
+    <attr name="sc_seriesAreaGradientColor4" format="color">
+    </attr>
+    <attr name="sc_seriesAreaGradientTransparentColor4" format="color">
+    </attr>
+    <attr name="sc_seriesLineColor5" format="color">
+    </attr>
+    <attr name="sc_seriesAreaColor5" format="color">
+    </attr>
+    <attr name="sc_seriesAreaGradientColor5" format="color">
+    </attr>
+    <attr name="sc_seriesAreaGradientTransparentColor5" format="color">
+    </attr>
+    <attr name="sc_seriesLineColor6" format="color">
+    </attr>
+    <attr name="sc_seriesAreaColor6" format="color">
+    </attr>
+    <attr name="sc_seriesAreaGradientColor6" format="color">
+    </attr>
+    <attr name="sc_seriesAreaGradientTransparentColor6" format="color">
+    </attr>
+    <attr name="sc_pieDonutFlavorColor1" format="color">
+    </attr>
+    <attr name="sc_pieDonutFlavorColor2" format="color">
+    </attr>
+    <attr name="sc_pieDonutFlavorColor3" format="color">
+    </attr>
+    <attr name="sc_pieDonutFlavorColor4" format="color">
+    </attr>
+    <attr name="sc_pieDonutFlavorColor5" format="color">
+    </attr>
+    <attr name="sc_pieDonutFlavorColor6" format="color">
+    </attr>
+    <attr name="sc_defaultCrustColor" format="color">
+    </attr>
+    <attr name="sc_donutCrustThickness" format="float">
+    </attr>
+    <attr name="sc_pieDonutLabelColor" format="color">
+    </attr>
+    <attr name="sc_financialRisingColor" format="color">
+    </attr>
+    <attr name="sc_financialFallingColor" format="color">
+    </attr>
+    <attr name="sc_bandSeriesHighColor" format="color">
+    </attr>
+    <attr name="sc_bandSeriesLowColor" format="color">
+    </attr>
+    <attr name="sc_bandSeriesAreaColor" format="color">
+    </attr>
+    <attr name="sc_bandSeriesAreaInvertedColor" format="color">
+    </attr>
+    <attr name="sc_annotationBackgroundColor" format="color">
+    </attr>
+    <attr name="sc_annotationTextColor" format="color">
+    </attr>
+    <attr name="sc_annotationTextSize" format="float">
+    </attr>
+    <attr name="mode">
+        <enum name="left" value="0" />
+        <enum name="right" value="1" />
+    </attr>
+    <attr name="viewAbove" format="reference">
+    </attr>
+    <attr name="viewBehind" format="reference">
+    </attr>
+    <attr name="behindOffset" format="dimension">
+    </attr>
+    <attr name="behindWidth" format="dimension">
+    </attr>
+    <attr name="behindScrollScale" format="float">
+    </attr>
+    <attr name="touchModeAbove">
+        <enum name="margin" value="0" />
+        <enum name="fullscreen" value="1" />
+        <enum name="none" value="2" />
+    </attr>
+    <attr name="touchModeBehind">
+        <enum name="margin" value="0" />
+        <enum name="fullscreen" value="1" />
+        <enum name="none" value="2" />
+    </attr>
+    <attr name="shadowDrawable" format="reference">
+    </attr>
+    <attr name="shadowWidth" format="dimension">
+    </attr>
+    <attr name="fadeEnabled" format="boolean">
+    </attr>
+    <attr name="fadeDegree" format="float">
+    </attr>
+    <attr name="selectorEnabled" format="boolean">
+    </attr>
+    <attr name="selectorDrawable" format="reference">
+    </attr>
+    <attr name="adSize" format="string">
+    </attr>
+    <attr name="adUnitId" format="string">
+    </attr>
+    <attr name="mapType">
+        <enum name="none" value="0" />
+        <enum name="normal" value="1" />
+        <enum name="satellite" value="2" />
+        <enum name="terrain" value="3" />
+        <enum name="hybrid" value="4" />
+    </attr>
+    <attr name="cameraBearing" format="float">
+    </attr>
+    <attr name="cameraTargetLat" format="float">
+    </attr>
+    <attr name="cameraTargetLng" format="float">
+    </attr>
+    <attr name="cameraTilt" format="float">
+    </attr>
+    <attr name="cameraZoom" format="float">
+    </attr>
+    <attr name="uiCompass" format="boolean">
+    </attr>
+    <attr name="uiRotateGestures" format="boolean">
+    </attr>
+    <attr name="uiScrollGestures" format="boolean">
+    </attr>
+    <attr name="uiTiltGestures" format="boolean">
+    </attr>
+    <attr name="uiZoomControls" format="boolean">
+    </attr>
+    <attr name="uiZoomGestures" format="boolean">
+    </attr>
+    <attr name="useViewLifecycle" format="boolean">
+    </attr>
+    <attr name="zOrderOnTop" format="boolean">
+    </attr>
+    <attr name="headerBarStyle" format="reference">
+    </attr>
+    <attr name="pagerIconStripStyle" format="reference">
+    </attr>
+    <attr name="confirmationBarStyle" format="reference">
+    </attr>
+    <attr name="goalProgressWheelStyle" format="reference">
+    </attr>
+    <attr name="image_resource_id" format="reference">
+    </attr>
+    <attr name="glyph_resource_id" format="reference">
+    </attr>
+    <attr name="telemetry_name" format="string">
+    </attr>
+    <attr name="text_line1" format="string">
+    </attr>
+    <attr name="text_line2" format="string">
+    </attr>
+    <attr name="titleSize" format="dimension">
+    </attr>
+    <attr name="subtitleSize" format="dimension">
+    </attr>
+    <attr name="titleColor" format="color">
+    </attr>
+    <attr name="subtitleColor" format="color">
+    </attr>
+    <attr name="geo_route_path_color" format="color">
+    </attr>
+    <attr name="geo_route_circle_marker_fill_color" format="color">
+    </attr>
+    <attr name="geo_route_circle_marker_stroke_thickness" format="dimension">
+    </attr>
+    <attr name="geo_route_path_thickness" format="dimension">
+    </attr>
+    <attr name="geo_route_circle_marker_radius" format="dimension">
+    </attr>
+    <attr name="geo_route_path_animation_duration_milliseconds" format="integer">
+    </attr>
+    <attr name="gauge_outer_circle_stroke_color" format="color">
+    </attr>
+    <attr name="gauge_arrow_color" format="color">
+    </attr>
+    <attr name="gauge_outer_circle_stroke_thickness" format="dimension">
+    </attr>
+    <attr name="gauge_arrow_length" format="dimension">
+    </attr>
+    <attr name="gauge_arrow_radius" format="dimension">
+    </attr>
+    <attr name="gauge_arrow_vertical_offset" format="dimension">
+    </attr>
+    <attr name="gauge_sector_padding" format="dimension">
+    </attr>
+    <attr name="gauge_sector_unselected_color" format="color">
+    </attr>
+    <attr name="gauge_sector_selected_color" format="color">
+    </attr>
+    <attr name="gauge_inner_circle_scale" format="float">
+    </attr>
+    <attr name="gauge_arrow_animation_duration_milliseconds" format="integer">
+    </attr>
+    <attr name="chart_legend_labels" format="reference">
+    </attr>
+    <attr name="chart_legend_colors" format="reference">
+    </attr>
+    <attr name="chart_type">
+        <enum name="line" value="0" />
+        <enum name="bar" value="1" />
+        <enum name="time" value="2" />
+    </attr>
+    <attr name="animation_properties" format="reference">
+    </attr>
+    <attr name="chart_grid_color" format="color">
+    </attr>
+    <attr name="chart_background_color" format="color">
+    </attr>
+    <attr name="chart_label_text_color" format="color">
+    </attr>
+    <attr name="chart_series_line_color" format="reference">
+    </attr>
+    <attr name="chart_series_fill_color" format="reference">
+    </attr>
+    <attr name="chart_marker_line_color" format="color">
+    </attr>
+    <attr name="chart_annotation_text_color" format="color">
+    </attr>
+    <attr name="chart_animation_length_ms" format="integer">
+    </attr>
+    <attr name="chart_bar_size" format="dimension">
+    </attr>
+    <attr name="chart_grid_size" format="dimension">
+    </attr>
+    <attr name="chart_margin_top" format="dimension">
+    </attr>
+    <attr name="chart_margin_left" format="dimension">
+    </attr>
+    <attr name="chart_margin_right" format="dimension">
+    </attr>
+    <attr name="chart_margin_bottom" format="dimension">
+    </attr>
+    <attr name="chart_label_text_size" format="dimension">
+    </attr>
+    <attr name="chart_series_line_width" format="dimension">
+    </attr>
+    <attr name="chart_marker_line_width" format="dimension">
+    </attr>
+    <attr name="chart_annotation_text_size" format="dimension">
+    </attr>
+    <attr name="chart_y_label_vertical_padding" format="dimension">
+    </attr>
+    <attr name="chart_y_label_horizontal_padding" format="dimension">
+    </attr>
+    <attr name="chart_header_background" format="color">
+    </attr>
+    <attr name="chart_footer_background" format="color">
+    </attr>
+    <attr name="chart_text_primary_color" format="color">
+    </attr>
+    <attr name="chart_text_secondary_color" format="color">
+    </attr>
+    <attr name="chart_footer_options" format="string">
+    </attr>
+    <attr name="chart_header_sub_title" format="integer">
+    </attr>
+    <attr name="chart_header_icon" format="integer">
+    </attr>
+    <attr name="options" format="string">
+    </attr>
+    <attr name="text_color_selected" format="color">
+    </attr>
+    <attr name="text_color_unselected" format="color">
+    </attr>
+    <attr name="background_color_selected" format="reference">
+    </attr>
+    <attr name="background_color_unselected" format="reference">
+    </attr>
+    <attr name="container_height" format="dimension">
+    </attr>
+    <attr name="container_margin" format="dimension">
+    </attr>
+    <attr name="icon_width_height" format="dimension">
+    </attr>
+    <attr name="line_height" format="dimension">
+    </attr>
+    <attr name="line_color" format="color">
+    </attr>
+    <attr name="title_glyph_size" format="dimension">
+    </attr>
+    <attr name="title_glyph_color" format="color">
+    </attr>
+    <attr name="title_text_style" format="reference">
+    </attr>
+    <attr name="title_value_padding_bottom" format="dimension">
+    </attr>
+    <attr name="value_text_style" format="reference">
+    </attr>
+    <attr name="date_text_style" format="reference">
+    </attr>
+    <attr name="sub_title_text_style" format="reference">
+    </attr>
+    <attr name="sub_value_text_style" format="reference">
+    </attr>
+    <attr name="emoticons_icon_width" format="dimension">
+    </attr>
+    <attr name="emoticons_icon_height" format="dimension">
+    </attr>
+    <attr name="insights_text_style" format="reference">
+    </attr>
+    <attr name="heart_rate_text_color" format="color">
+    </attr>
+    <attr name="heart_rate_text_size" format="dimension">
+    </attr>
+    <attr name="heart_rate_padding" format="dimension">
+    </attr>
+    <attr name="heart_rate_title_text_size" format="dimension">
+    </attr>
+    <attr name="heart_rate_title_text_color" format="color">
+    </attr>
+    <attr name="header_text_color" format="color">
+    </attr>
+    <attr name="header_title_text_size" format="dimension">
+    </attr>
+    <attr name="header_text_size" format="dimension">
+    </attr>
+    <attr name="header_padding" format="dimension">
+    </attr>
+    <attr name="item_header_text_color" format="color">
+    </attr>
+    <attr name="item_details_text_color" format="color">
+    </attr>
+    <attr name="item_background_color" format="reference">
+    </attr>
+    <attr name="run_item_detail_text_color" format="color">
+    </attr>
+    <attr name="stat_style" format="reference">
+    </attr>
+    <attr name="colorGridWidth" format="dimension">
+    </attr>
+    <attr name="colorGridHeight" format="dimension">
+    </attr>
+    <attr name="wallpaperGridWidth" format="dimension">
+    </attr>
+    <attr name="wallpaperGridHeight" format="dimension">
+    </attr>
+    <attr name="iconWidth" format="dimension">
+    </attr>
+    <attr name="iconHeight" format="dimension">
+    </attr>
+    <attr name="circleColor" format="color">
+    </attr>
+    <attr name="circleOutlineWidth" format="dimension">
+    </attr>
+    <attr name="circleOutlineColor" format="color">
+    </attr>
+    <attr name="icon" format="integer">
+    </attr>
+    <attr name="iconSize" format="dimension">
+    </attr>
+    <attr name="valueText" format="string">
+    </attr>
+    <attr name="valueTextSize" format="dimension">
+    </attr>
+    <attr name="valueTextColor" format="color">
+    </attr>
+    <attr name="unitText" format="string">
+    </attr>
+    <attr name="unitTextSize" format="dimension">
+    </attr>
+    <attr name="unitTextColor" format="color">
+    </attr>
+    <attr name="progress" format="float">
+    </attr>
+    <attr name="animationDuration" format="integer">
+    </attr>
+    <attr name="progress_color" format="color">
+    </attr>
+    <attr name="error_color" format="color">
+    </attr>
+    <attr name="arc_width" format="dimension">
+    </attr>
+    <attr name="success_color" format="color">
+    </attr>
+    <attr name="start_color" format="color">
+    </attr>
+    <attr name="text_color" format="color">
+    </attr>
+    <attr name="text_size" format="dimension">
+    </attr>
+    <attr name="backgroundColor" format="color">
+    </attr>
+    <attr name="leftButtonType">
+        <enum name="none" value="0" />
+        <enum name="menu" value="1" />
+        <enum name="back" value="2" />
+    </attr>
+    <attr name="titleHeaderText" format="string">
+    </attr>
+    <attr name="titleHeaderTextSize" format="dimension">
+    </attr>
+    <attr name="titleHeaderTextColor" format="color">
+    </attr>
+    <attr name="disableSyncButton" format="boolean">
+    </attr>
+    <attr name="glyphId" format="string">
+    </attr>
+    <attr name="shadow_view_alpha" format="float">
+    </attr>
+    <attr name="strapp_view_width_height" format="dimension">
+    </attr>
+    <attr name="strapp_view_margin" format="dimension">
+    </attr>
+    <attr name="strapp_view_padding" format="dimension">
+    </attr>
+    <attr name="strapp_view_glyph_size" format="integer">
+    </attr>
+    <attr name="no_histry_strapp_view_width_height" format="dimension">
+    </attr>
+    <attr name="no_histry_grid_view_width_height" format="dimension">
+    </attr>
+    <attr name="no_histry_strapp_view_glyph_size" format="integer">
+    </attr>
+    <attr name="pager_title_text_selected_style" format="reference">
+    </attr>
+    <attr name="pager_title_text_unselected_style" format="reference">
+    </attr>
+    <attr name="pager_title_arrow_animation_duration_milliseconds" format="integer">
+    </attr>
+    <attr name="custom_font_family">
+        <enum name="SegoeUIRegular" value="0" />
+        <enum name="SegoeUIBold" value="1" />
+        <enum name="SegoeUISemiBold" value="2" />
+        <enum name="SegoeUILight" value="3" />
+    </attr>
+    <attr name="ring_color" format="color">
+    </attr>
+    <attr name="ring_width" format="dimension">
+    </attr>
+    <attr name="increment" format="integer">
+    </attr>
+    <attr name="max" format="integer">
+    </attr>
+    <attr name="min_start_value" format="integer">
+    </attr>
+    <attr name="seek_arc_color" format="color">
+    </attr>
+    <attr name="seek_arc_width" format="dimension">
+    </attr>
+    <attr name="seek_color" format="color">
+    </attr>
+    <attr name="seek_outer_radius" format="dimension">
+    </attr>
+    <attr name="seek_inner_radius" format="dimension">
+    </attr>
+    <attr name="central_text_color" format="color">
+    </attr>
+    <attr name="central_text_size" format="dimension">
+    </attr>
+    <attr name="seek_touch_margin" format="dimension">
+    </attr>
+    <attr name="animation_frame_delay" format="integer">
+    </attr>
+    <attr name="useDiskSaveIcon" format="boolean">
+    </attr>
+    <attr name="findTitleText" format="string">
+    </attr>
+    <attr name="syncTitleText" format="string">
+    </attr>
+    <attr name="onBandTitleText" format="string">
+    </attr>
+    <attr name="filterHeaderText" format="string">
+    </attr>
+    <attr name="filterSubHeaderText" format="string">
+    </attr>
+    <attr name="closeButtonAlignment">
+        <enum name="left" value="1" />
+        <enum name="right" value="0" />
+    </attr>
+    <attr name="titleText" format="string">
+    </attr>
+    <attr name="glyph" format="string">
+    </attr>
+    <attr name="spanDimension" format="float">
+    </attr>
+</resources>

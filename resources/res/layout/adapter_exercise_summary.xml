@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:paddingTop="2dp" android:paddingBottom="2dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:id="@+id/exercise_summary_container" android:background="@drawable/exercise_summary_background" android:padding="7dp" android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.microsoft.kapp.views.CustomFontTextView android:textSize="14sp" android:textColor="@color/exercise_summary_header_text" android:gravity="center" android:id="@+id/exercise_summary_header" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+        <com.microsoft.kapp.views.CustomFontTextView android:textSize="18sp" android:textColor="@color/exercise_text" android:gravity="center" android:id="@+id/exercise_summary_details" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="2"/>
+    </LinearLayout>
+</FrameLayout>

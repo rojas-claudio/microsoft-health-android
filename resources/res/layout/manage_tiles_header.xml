@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:gravity="left" android:orientation="vertical" android:background="@color/transparent" android:paddingTop="@dimen/fragment_vertical_margin" android:paddingRight="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/strapps_manage_strapps" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:text="@string/strapps_manage_strapps_text" style="@style/SubheaderInvertedTextStyle"/>
+    <FrameLayout android:id="@+id/strapps_image_layout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp">
+        <com.microsoft.kapp.views.PicassoImageView android:id="@+id/strapps_image" android:background="@color/theme" android:layout_width="244dp" android:layout_height="78dp" android:alpha="0.6" app:image_resource_id="@drawable/icon_android_manage_tiles"/>
+        <RelativeLayout android:id="@+id/strapps_image_tile" android:background="@color/theme" android:layout_width="34dp" android:layout_height="34dp" android:layout_marginLeft="84dp" android:layout_marginTop="10dp">
+            <com.microsoft.kapp.views.CustomGlyphView android:id="@+id/strapps_image_glyph" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="@string/glyph_messaging" android:layout_centerInParent="true" style="@style/Font_table"/>
+        </RelativeLayout>
+    </FrameLayout>
+    <RelativeLayout android:id="@+id/strapps_reorder_layout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="30dp">
+        <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/strapps_arrange_strapps" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="50dp" android:text="@string/strapps_arrange_strapps_text" android:layout_alignParentLeft="true" style="@style/PrimaryInvertedTextStyle"/>
+        <com.microsoft.kapp.views.CustomGlyphView android:id="@+id/right_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/glyph_chevron" android:layout_alignParentRight="true" android:layout_centerVertical="true" app:custom_font_family="SegoeUIBold" style="@style/Font_title"/>
+    </RelativeLayout>
+    <View android:id="@+id/separator" android:background="@color/primary" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginBottom="25dp"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/strapp_choose_strapps_message" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/LargeSpace" android:text="@string/strapp_choose_strapps_message" style="@style/PrimaryInvertedTextStyle"/>
+</LinearLayout>

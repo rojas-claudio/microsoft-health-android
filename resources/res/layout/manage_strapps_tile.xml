@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/manage_strapps_tile_container" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.microsoft.kapp.views.CustomGlyphView android:textSize="@dimen/XLargeIconSize" android:textColor="@color/TextOnPrimaryMedColor" android:id="@+id/manage_strapps_tile_image_view" android:layout_marginTop="48dp" android:text="@string/glyph_plus" android:layout_centerHorizontal="true" style="@style/base_app_glyph_style"/>
+    <View android:id="@+id/one_ring_to_rule_them_all" android:background="@drawable/shape_ring" android:layout_width="60dp" android:layout_height="60dp" android:layout_marginTop="30dp" android:layout_centerHorizontal="true"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:textColor="@color/TextOnPrimaryMedColor" android:id="@+id/manage_strapps_tile_text_line" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/tile_manage_strapps_text" android:layout_below="@+id/one_ring_to_rule_them_all" android:layout_centerHorizontal="true" style="@style/MetadataTextStyle"/>
+</RelativeLayout>

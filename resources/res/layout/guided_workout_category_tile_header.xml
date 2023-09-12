@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="@color/top_menu_color" android:paddingLeft="@dimen/guided_workout_margin_left" android:paddingRight="@dimen/guided_workout_margin_right" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="@dimen/guided_workout_category_header_height">
+    <com.microsoft.kapp.views.CustomGlyphView android:id="@+id/back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" style="@style/NavigationLeftArrowIconStyle"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/category_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" style="@style/FindTitleTextStyle"/>
+    <com.microsoft.kapp.views.CustomGlyphView android:id="@+id/find_a_workout_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:contentDescription="@string/empty" style="@style/FindIconStyle"/>
+</RelativeLayout>

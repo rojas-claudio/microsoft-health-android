@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="@dimen/guided_workout_featured_workout_image_height">
+    <com.microsoft.kapp.views.PicassoImageView android:id="@+id/featured_workout_image" android:layout_width="match_parent" android:layout_height="@dimen/guided_workout_featured_workout_image_height" android:scaleType="centerCrop"/>
+    <RelativeLayout android:layout_gravity="bottom" android:id="@+id/workout_image_text_overlay" android:background="@drawable/guided_workout_carousel_gradient" android:paddingLeft="@dimen/guided_workout_margin_left" android:paddingRight="@dimen/guided_workout_margin_right" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/featured_workout_header" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/FeaturedWorkoutHeaderTextStyle"/>
+        <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/featured_workout_name" android:paddingBottom="@dimen/carousel_page_indicator_height" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="190dp" android:layout_below="@+id/featured_workout_header" android:layout_alignLeft="@+id/featured_workout_header" style="@style/FeaturedWorkoutNameTextStyle"/>
+    </RelativeLayout>
+    <ProgressBar android:layout_gravity="center" android:id="@+id/featured_workout_load_progress" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+</FrameLayout>

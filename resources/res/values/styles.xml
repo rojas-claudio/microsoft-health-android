@@ -1,0 +1,1519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TreeNodeStyle" parent="">
+        <item name="android:paddingLeft">20dp</item>
+    </style>
+    <style name="AppBaseTheme" parent="@android:style/Theme.Light">
+    </style>
+    <style name="Theme.Default" parent="@android:style/Theme">
+        <item name="sc_titlePadding">@dimen/sc_defaultTitlePadding</item>
+        <item name="sc_titleMargin">@dimen/sc_defaultTitleMargin</item>
+        <item name="sc_showGridLines">@bool/sc_defaultShowGridLines</item>
+        <item name="sc_dashedGridLines">@bool/sc_dashedGridLines</item>
+        <item name="sc_showGridStripes">@bool/sc_showGridStripes</item>
+        <item name="sc_gridStripeColor">@color/sc_defaultGridStripeColor</item>
+        <item name="sc_alternateGridStripeColor">@color/sc_defaultAlternateGridStripeColor</item>
+        <item name="sc_defaultSelectedSeriesColor">@color/sc_defaultSelectedSeriesColor</item>
+        <item name="sc_seriesLineColor1">@color/sc_purpleDark</item>
+        <item name="sc_seriesAreaColor1">@color/sc_purpleLightFill</item>
+        <item name="sc_seriesAreaGradientColor1">@color/sc_purpleDarkFill</item>
+        <item name="sc_seriesAreaGradientTransparentColor1">@color/sc_purpleDarkFillAlpha</item>
+        <item name="sc_seriesLineColor2">@color/sc_blueDark</item>
+        <item name="sc_seriesAreaColor2">@color/sc_blueLightFill</item>
+        <item name="sc_seriesAreaGradientColor2">@color/sc_blueDarkFill</item>
+        <item name="sc_seriesAreaGradientTransparentColor2">@color/sc_blueDarkFillAlpha</item>
+        <item name="sc_seriesLineColor3">@color/sc_orangeDark</item>
+        <item name="sc_seriesAreaColor3">@color/sc_orangeLightFill</item>
+        <item name="sc_seriesAreaGradientColor3">@color/sc_orangeDarkFill</item>
+        <item name="sc_seriesAreaGradientTransparentColor3">@color/sc_orangeDarkFillAlpha</item>
+        <item name="sc_seriesLineColor4">@color/sc_greenDark</item>
+        <item name="sc_seriesAreaColor4">@color/sc_greenLightFill</item>
+        <item name="sc_seriesAreaGradientColor4">@color/sc_greenDarkFill</item>
+        <item name="sc_seriesAreaGradientTransparentColor4">@color/sc_greenDarkFillAlpha</item>
+        <item name="sc_seriesLineColor5">@color/sc_yellowDark</item>
+        <item name="sc_seriesAreaColor5">@color/sc_yellowLightFill</item>
+        <item name="sc_seriesAreaGradientColor5">@color/sc_yellowDarkFill</item>
+        <item name="sc_seriesAreaGradientTransparentColor5">@color/sc_yellowDarkFillAlpha</item>
+        <item name="sc_seriesLineColor6">@color/sc_pinkDark</item>
+        <item name="sc_seriesAreaColor6">@color/sc_pinkLightFill</item>
+        <item name="sc_seriesAreaGradientColor6">@color/sc_pinkDarkFill</item>
+        <item name="sc_seriesAreaGradientTransparentColor6">@color/sc_pinkDarkFillAlpha</item>
+        <item name="sc_pieDonutFlavorColor1">@color/sc_radialPurple</item>
+        <item name="sc_pieDonutFlavorColor2">@color/sc_radialBlue</item>
+        <item name="sc_pieDonutFlavorColor3">@color/sc_radialOrange</item>
+        <item name="sc_pieDonutFlavorColor4">@color/sc_radialGreen</item>
+        <item name="sc_pieDonutFlavorColor5">@color/sc_radialYellow</item>
+        <item name="sc_pieDonutFlavorColor6">@color/sc_radialPink</item>
+        <item name="sc_defaultCrustColor">@color/sc_crustColor</item>
+        <item name="sc_financialRisingColor">@color/sc_financialGreen</item>
+        <item name="sc_financialFallingColor">@color/sc_financialRed</item>
+        <item name="sc_bandSeriesHighColor">@color/sc_financialBlue</item>
+        <item name="sc_bandSeriesLowColor">@color/sc_financialBlue</item>
+        <item name="sc_bandSeriesAreaColor">@color/sc_financialBlueAlpha</item>
+        <item name="sc_bandSeriesAreaInvertedColor">@color/sc_financialBlueAlpha</item>
+        <item name="sc_annotationBackgroundColor">@color/sc_annotationDefaultBackgroundColor</item>
+        <item name="sc_annotationTextColor">@color/sc_annotationDefaultTextColor</item>
+        <item name="sc_annotationTextSize">@dimen/sc_defaultAnnotationTextSize</item>
+    </style>
+    <style name="Theme.Default.Light" parent="@style/Theme.Default">
+        <item name="sc_chartTitleColor">@color/sc_chartDefaultTitleColor</item>
+        <item name="sc_chartBackgroundColor">@color/sc_chartDefaultBackgroundColor</item>
+        <item name="sc_plotAreaColor">@color/sc_plotDefaultAreaColor</item>
+        <item name="sc_axisTitleColor">@color/sc_axisDefaultTitleColor</item>
+        <item name="sc_tickLineColor">@color/sc_tickDefaultLineColor</item>
+        <item name="sc_tickLabelColor">@color/sc_tickDefaultLabelColor</item>
+        <item name="sc_gridLineColor">@color/sc_gridDefaultLineColor</item>
+        <item name="sc_showGridLines">@bool/sc_defaultShowGridLines</item>
+        <item name="sc_legendTextColor">@color/sc_legendDefaultTextColor</item>
+        <item name="sc_legendBorderColor">@color/sc_legendDefaultBorderColor</item>
+        <item name="sc_legendBackgroundColor">@color/sc_legendDefaultBackgroundColor</item>
+        <item name="sc_crosshairLineColor">@color/sc_crosshairDefaultLineColor</item>
+        <item name="sc_crosshairTooltipTextColor">@color/sc_crosshairTooltipDefaultTextColor</item>
+        <item name="sc_crosshairTooltipLabelBackgroundColor">@color/sc_crosshairTooltipDefaultLabelBackgroundColor</item>
+        <item name="sc_crosshairTooltipBackgroundColor">@color/sc_crosshairTooltipDefaultBackgroundColor</item>
+        <item name="sc_crosshairTooltipBorderColor">@color/sc_crosshairTooltipDefaultBorderColor</item>
+        <item name="sc_pieDonutLabelColor">@color/sc_pieDonutLabelDefaultColor</item>
+    </style>
+    <style name="Theme.Default.Dark" parent="@style/Theme.Default">
+        <item name="sc_chartTitleColor">@color/sc_chartDarkTitleColor</item>
+        <item name="sc_chartBackgroundColor">@color/sc_chartDarkBackgroundColor</item>
+        <item name="sc_plotAreaColor">@color/sc_plotDarkAreaColor</item>
+        <item name="sc_axisTitleColor">@color/sc_axisDarkTitleColor</item>
+        <item name="sc_tickLineColor">@color/sc_tickDarkLineColor</item>
+        <item name="sc_tickLabelColor">@color/sc_tickDarkLabelColor</item>
+        <item name="sc_gridLineColor">@color/sc_gridDarkLineColor</item>
+        <item name="sc_showGridLines">@bool/sc_darkShowGridLines</item>
+        <item name="sc_gridStripeColor">@color/sc_darkGridStripeColor</item>
+        <item name="sc_alternateGridStripeColor">@color/sc_darkAlternateGridStripeColor</item>
+        <item name="sc_legendTextColor">@color/sc_legendDarkTextColor</item>
+        <item name="sc_legendBorderColor">@color/sc_legendDarkBorderColor</item>
+        <item name="sc_legendBackgroundColor">@color/sc_legendDarkBackgroundColor</item>
+        <item name="sc_crosshairLineColor">@color/sc_crosshairDarkLineColor</item>
+        <item name="sc_crosshairTooltipTextColor">@color/sc_crosshairTooltipDarkTextColor</item>
+        <item name="sc_crosshairTooltipLabelBackgroundColor">@color/sc_crosshairTooltipDarkLabelBackgroundColor</item>
+        <item name="sc_crosshairTooltipBackgroundColor">@color/sc_crosshairTooltipDarkBackgroundColor</item>
+        <item name="sc_crosshairTooltipBorderColor">@color/sc_crosshairTooltipDarkBorderColor</item>
+        <item name="sc_pieDonutLabelColor">@color/sc_pieDonutLabelDarkColor</item>
+        <item name="sc_annotationBackgroundColor">@color/sc_annotationDarkBackgroundColor</item>
+        <item name="sc_annotationTextColor">@color/sc_annotationDarkTextColor</item>
+    </style>
+    <style name="AppTheme" parent="@style/AppBaseTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:checkboxStyle">@style/DefaultCheckboxStyle</item>
+        <item name="android:expandableListViewStyle">@style/AllExpandableListViews</item>
+        <item name="android:listViewStyle">@style/AllListViews</item>
+        <item name="android:scrollViewStyle">@style/AllScrollViews</item>
+        <item name="android:windowAnimationStyle">@style/ActivityTransitionAnimations</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="headerBarStyle">@style/HeaderBarStyle</item>
+        <item name="pagerIconStripStyle">@style/PagerIconStripStyle</item>
+        <item name="goalProgressWheelStyle">@style/GoalProgressWheelStyle</item>
+    </style>
+    <style name="shinobicharts_AppBaseTheme" parent="@android:style/Theme.Light">
+    </style>
+    <style name="base_app_glyph_style" parent="">
+        <item name="android:textSize">32dp</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">3dp</item>
+    </style>
+    <style name="AllListViews" parent="@android:style/Widget.Holo.ListView">
+        <item name="android:overScrollMode">never</item>
+    </style>
+    <style name="AllExpandableListViews" parent="@android:style/Widget.Holo.Light.ExpandableListView">
+        <item name="android:drawSelectorOnTop">false</item>
+        <item name="android:groupIndicator">@null</item>
+        <item name="android:divider">@null</item>
+        <item name="android:dividerHeight">0dp</item>
+        <item name="android:overScrollMode">never</item>
+    </style>
+    <style name="AllScrollViews" parent="@android:style/Widget.Holo.Light.ListView">
+        <item name="android:overScrollMode">never</item>
+    </style>
+    <style name="ActivityTransitionAnimations" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_out_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_in_left</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_right</item>
+    </style>
+    <style name="Font_base" parent="">
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="custom_font_family">SegoeUIRegular</item>
+    </style>
+    <style name="Font_metricLarge" parent="@style/Font_base">
+        <item name="android:textSize">@dimen/font_size_metricLarge</item>
+        <item name="custom_font_family">SegoeUISemiBold</item>
+    </style>
+    <style name="Font_metricExtraLarge" parent="@style/Font_base">
+        <item name="android:textSize">@dimen/font_size_metricExtraLarge</item>
+        <item name="custom_font_family">SegoeUISemiBold</item>
+    </style>
+    <style name="Font_smallBody" parent="@style/Font_base">
+        <item name="android:textSize">@dimen/font_size_smallBody</item>
+    </style>
+    <style name="Font_navigation" parent="@style/Font_base">
+        <item name="android:textSize">@dimen/font_size_navigation</item>
+        <item name="custom_font_family">SegoeUILight</item>
+    </style>
+    <style name="Font_title" parent="@style/Font_base">
+        <item name="android:textSize">@dimen/font_size_title</item>
+    </style>
+    <style name="Font_oobeTitle" parent="@style/Font_base">
+        <item name="android:textSize">@dimen/font_size_oobeTitle</item>
+    </style>
+    <style name="Font_oobeSmall" parent="@style/Font_base">
+        <item name="android:textSize">@dimen/font_size_oobeSmall</item>
+    </style>
+    <style name="Font_label" parent="@style/Font_base">
+        <item name="android:textSize">@dimen/font_size_label</item>
+    </style>
+    <style name="Font_labelSemibold" parent="@style/Font_label">
+        <item name="custom_font_family">SegoeUISemiBold</item>
+    </style>
+    <style name="Font_table" parent="@style/Font_base">
+        <item name="android:textSize">@dimen/font_size_table</item>
+        <item name="custom_font_family">SegoeUISemiBold</item>
+    </style>
+    <style name="Font_link" parent="@style/Font_base">
+        <item name="android:textSize">@dimen/font_size_link</item>
+    </style>
+    <style name="Font_buttonOobe" parent="@style/Font_base">
+        <item name="android:textSize">@dimen/font_size_buttonOobe</item>
+    </style>
+    <style name="Font_deviceTime" parent="@style/Font_base">
+        <item name="android:textSize">@dimen/font_size_deviceTime</item>
+    </style>
+    <style name="Font_deviceDate" parent="@style/Font_base">
+        <item name="android:textSize">@dimen/font_size_deviceDate</item>
+    </style>
+    <style name="Font_largeGlyph" parent="">
+        <item name="android:textSize">@dimen/font_size_largeGlyph</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="custom_font_family">SegoeUILight</item>
+    </style>
+    <style name="Font_backArrow" parent="@style/Font_base">
+        <item name="android:textSize">@dimen/font_size_backArrow</item>
+        <item name="custom_font_family">SegoeUILight</item>
+    </style>
+    <style name="SwitchStyle" parent="">
+        <item name="android:focusable">false</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textOn" />
+        <item name="android:textOff" />
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:switchMinWidth">50dp</item>
+        <item name="android:thumbTextPadding">15dp</item>
+    </style>
+    <style name="PagerIconStripStyle" parent="">
+        <item name="iconWidth">30dp</item>
+        <item name="iconHeight">30dp</item>
+    </style>
+    <style name="OOBEColorGridStyle" parent="">
+        <item name="colorGridWidth">100dp</item>
+        <item name="colorGridHeight">100dp</item>
+    </style>
+    <style name="OOBEWallpaperGridStyle" parent="">
+        <item name="wallpaperGridWidth">100dp</item>
+        <item name="wallpaperGridHeight">50dp</item>
+    </style>
+    <style name="OOBESelectWallpaperTitle" parent="@style/Font_title">
+        <item name="android:textColor">@color/device_personalization_text</item>
+    </style>
+    <style name="DefaultFragmentStyle" parent="">
+        <item name="android:paddingLeft">@dimen/fragment_horizontal_margin</item>
+        <item name="android:paddingTop">@dimen/fragment_vertical_margin</item>
+        <item name="android:paddingRight">@dimen/fragment_horizontal_margin</item>
+        <item name="android:paddingBottom">@dimen/fragment_vertical_margin</item>
+    </style>
+    <style name="WorkoutFilterFragmentStyle" parent="">
+        <item name="android:paddingLeft">@dimen/fragment_horizontal_margin</item>
+        <item name="android:paddingTop">@dimen/fragment_vertical_margin</item>
+        <item name="android:paddingRight">@dimen/fragment_horizontal_margin</item>
+        <item name="android:paddingBottom">@dimen/fragment_vertical_margin</item>
+    </style>
+    <style name="FeedbackFragmentStyle" parent="@style/DefaultFragmentStyle">
+        <item name="android:background">@color/feedback_fragment_background</item>
+    </style>
+    <style name="FeedbackButtonTextStyle" parent="@style/Font_label">
+        <item name="android:textSize">@dimen/feedback_title_size</item>
+        <item name="android:textColor">@color/feedback_header_title_text</item>
+        <item name="android:gravity">left</item>
+    </style>
+    <style name="FeedbackHeaderTitleStyle" parent="@style/SubheaderInvertedTextStyle">
+        <item name="android:gravity">left</item>
+        <item name="android:background">@color/top_menu_color</item>
+        <item name="android:paddingLeft">@dimen/fragment_horizontal_margin</item>
+        <item name="android:paddingTop">@dimen/fragment_vertical_margin</item>
+        <item name="android:paddingRight">@dimen/fragment_horizontal_margin</item>
+        <item name="android:paddingBottom">@dimen/fragment_vertical_margin</item>
+    </style>
+    <style name="WorkoutFilterFragmentSubtitleStyle" parent="@style/Font_table">
+        <item name="android:textColor">@color/exercise_text</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="custom_font_family">SegoeUISemiBold</item>
+    </style>
+    <style name="WorkoutFilterSelectedStyle" parent="@style/Font_table">
+        <item name="android:textColor">@color/secondaryBackground</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="custom_font_family">SegoeUISemiBold</item>
+    </style>
+    <style name="FiltersCheckboxGlyphStyle" parent="">
+        <item name="android:textSize">@dimen/font_size_table</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:text">@string/glyph_check</item>
+        <item name="custom_font_family">SegoeUISemiBold</item>
+    </style>
+    <style name="AttachmentGlyphStyle" parent="">
+        <item name="android:textSize">@dimen/font_size_attachment_glyph</item>
+        <item name="android:textColor">@color/greyDark</item>
+        <item name="android:layout_marginTop">@dimen/padding_attachment_glyph</item>
+    </style>
+    <style name="ActivityProfileTitle" parent="">
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:layout_marginBottom">-6dp</item>
+    </style>
+    <style name="workout_schedule_page_title_bar" parent="">
+        <item name="android:textSize">10sp</item>
+    </style>
+    <style name="HomeFragmentInsightStyle" parent="">
+        <item name="android:textColor">@color/fragment_home_insights_text</item>
+        <item name="android:layout_height">150dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+    <style name="PagerTitleStripStyle" parent="">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="pager_title_text_selected_style">@style/PivotActiveTextStyle</item>
+        <item name="pager_title_text_unselected_style">@style/PivotTextStyle</item>
+        <item name="pager_title_arrow_animation_duration_milliseconds">150</item>
+    </style>
+    <style name="MePageRowStyle" parent="">
+        <item name="android:layout_height">150dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+    <style name="ViewPagerTitleStripStyle" parent="">
+        <item name="android:textColor">#fff</item>
+        <item name="android:layout_gravity">top</item>
+        <item name="android:background">@color/title_strip_background</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="RunDetailViewPagerTitleStripStyle" parent="">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:layout_gravity">top</item>
+        <item name="android:background">@color/run_details_view_pager_title_strip</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="SleepDetailViewPagerTitleStripStyle" parent="">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:layout_gravity">top</item>
+        <item name="android:background">@color/sleep_details_view_pager_title_strip</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="RunFragmentStyle" parent="">
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingTop">@dimen/fragment_vertical_margin</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:paddingBottom">@dimen/fragment_vertical_margin</item>
+    </style>
+    <style name="TrackerLayoutContainerStyle" parent="">
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">20dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+    <style name="TrackerHeaderStyle" parent="">
+        <item name="header_text_color">#ffffff</item>
+        <item name="header_text_size">24sp</item>
+        <item name="header_padding">20dp</item>
+    </style>
+    <style name="TrackerStatStyle" parent="">
+        <item name="line_height">1dp</item>
+        <item name="line_color">@color/tracker_page_stat_line</item>
+        <item name="title_text_style">@style/PrimaryLightTextStyle</item>
+        <item name="value_text_style">@style/MetricTextStyle</item>
+    </style>
+    <style name="TrackerStatStyleV1" parent="">
+        <item name="line_height">1dp</item>
+        <item name="line_color">@color/wf_tracker_page_stat_line</item>
+        <item name="title_text_style">@style/PrimaryLightTextStyle</item>
+        <item name="value_text_style">@style/MetricTextStyle</item>
+        <item name="date_text_style">@style/SecondaryLightTextStyle</item>
+        <item name="sub_title_text_style">@style/SecondaryLightTextStyle</item>
+        <item name="sub_value_text_style">@style/SecondaryAccentTextStyle</item>
+    </style>
+    <style name="PersonalBestStyleV1" parent="">
+        <item name="line_height">1dp</item>
+        <item name="line_color">@color/wf_tracker_page_stat_line</item>
+        <item name="title_glyph_size">@dimen/font_size_metricSmall</item>
+        <item name="title_glyph_color">@color/personal_best_title_light_color</item>
+        <item name="title_text_style">@style/PrimaryLightTextStyle</item>
+        <item name="value_text_style">@style/MetricTextStyle</item>
+        <item name="date_text_style">@style/SecondaryLightTextStyle</item>
+        <item name="sub_title_text_style">@style/SecondaryLightTextStyle</item>
+        <item name="sub_value_text_style">@style/SecondaryAccentTextStyle</item>
+    </style>
+    <style name="RunStatStyle" parent="@style/TrackerStatStyle">
+        <item name="line_height">2dp</item>
+        <item name="line_color">@color/my_runs_line_color</item>
+        <item name="emoticons_icon_width">30dp</item>
+        <item name="emoticons_icon_height">30dp</item>
+    </style>
+    <style name="SmallTitleTrackerStatStyle" parent="@style/TrackerStatStyle">
+        <item name="line_height">1dp</item>
+        <item name="line_color">@color/wf_tracker_page_stat_line</item>
+        <item name="title_value_padding_bottom">4dp</item>
+        <item name="value_text_style">@style/CategoricalMetricTextStyle</item>
+    </style>
+    <style name="RunFragmentStatStyle" parent="@style/TrackerStatStyle">
+        <item name="line_height">2dp</item>
+        <item name="line_color">@color/my_runs_line_color</item>
+        <item name="emoticons_icon_width">30dp</item>
+        <item name="emoticons_icon_height">30dp</item>
+    </style>
+    <style name="RunInsightsWidgetStyle" parent="">
+        <item name="line_height">2dp</item>
+        <item name="line_color">@color/my_runs_line_color</item>
+        <item name="title_text_style">@style/SubheaderTextStyle</item>
+        <item name="insights_text_style">@style/PrimaryLightTextStyle</item>
+    </style>
+    <style name="RunChartSwitcherStyle" parent="">
+        <item name="background_color_selected">@drawable/run_chart_tab_selected</item>
+        <item name="background_color_unselected">@drawable/run_chart_tab_unselected</item>
+    </style>
+    <style name="RunListTitleStyle" parent="">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/my_runs_text_color_2_alpha</item>
+    </style>
+    <style name="RunListDetailStyle" parent="">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/my_runs_text_color_2_solid</item>
+    </style>
+    <style name="BestBannerTextStyle" parent="@style/Font_smallBody">
+        <item name="android:background">@color/PrimaryColor</item>
+        <item name="android:padding">@dimen/fragment_horizontal_padding</item>
+    </style>
+    <style name="RunSplitListRowGlyphStyle" parent="">
+        <item name="android:textSize">@dimen/SmallIconSize</item>
+        <item name="android:textColor">@color/PrimaryColor</item>
+    </style>
+    <style name="EventRenameEditTextStyle" parent="@style/SettingsEditTextStyle">
+        <item name="android:hint">@string/event_rename_hint</item>
+        <item name="android:maxLength">@integer/settings_profile_name_max_length</item>
+    </style>
+    <style name="EventRenameStateGlyphStyle" parent="">
+        <item name="android:textSize">@dimen/font_size_oobeTitle</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/circle_fill_primary</item>
+        <item name="android:padding">1dp</item>
+    </style>
+    <style name="EventOptionTextStyle" parent="@style/Font_base">
+        <item name="android:textSize">@dimen/event_options_text_size</item>
+        <item name="android:textColor">@color/event_options_text_color</item>
+    </style>
+    <style name="L2HeaderStyle" parent="">
+        <item name="header_text_color">#ffffff</item>
+        <item name="header_title_text_size">36sp</item>
+        <item name="header_text_size">24sp</item>
+        <item name="header_padding">20dp</item>
+    </style>
+    <style name="SingleRunHeaderTitleStyle" parent="">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/my_runs_text_color_1_solid</item>
+    </style>
+    <style name="SingleRunHeaderValueStyle" parent="">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">@color/my_runs_text_color_1_solid</item>
+    </style>
+    <style name="SingleRunHeaderValueStyleLarge" parent="@style/SingleRunHeaderValueStyle">
+        <item name="android:textSize">50sp</item>
+    </style>
+    <style name="SingleRunHeaderValueStyleSmall" parent="@style/SingleRunHeaderValueStyle">
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="SingleRunHeaderFooterContainerStyle" parent="">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/my_runs_text_color_2_solid</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+    </style>
+    <style name="SingleRunTitleStyle" parent="">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/my_runs_text_color_2_alpha</item>
+        <item name="android:paddingTop">7dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="SingleRunValueStyle" parent="">
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="BaseNavigationDrawerStyle" parent="">
+        <item name="android:divider">@null</item>
+        <item name="android:dividerHeight">0dp</item>
+    </style>
+    <style name="NavigationDrawerHeaderStyle" parent="@style/BaseNavigationDrawerStyle">
+        <item name="android:background">@color/navigation_drawer_item_background</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:paddingBottom">20dp</item>
+    </style>
+    <style name="NavigationDrawerItemStyle" parent="@style/BaseNavigationDrawerStyle">
+        <item name="android:background">@color/navigation_drawer_item_background</item>
+        <item name="android:padding">12dp</item>
+    </style>
+    <style name="NavigationDrawerCategoryTextStyle" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/navigation_drawer_category_text</item>
+        <item name="android:background">@color/navigation_drawer_category_background</item>
+        <item name="android:paddingLeft">9dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="custom_font_family">SegoeUISemiBold</item>
+    </style>
+    <style name="NavigationDrawerItemTextStyle" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/navigation_drawer_title_text</item>
+        <item name="android:paddingLeft">12dp</item>
+    </style>
+    <style name="NavigationDrawerItemTextStyleV1" parent="@style/Font_navigation">
+        <item name="android:textColor">@color/drawer_menu_text</item>
+    </style>
+    <style name="NavigationDrawerHeaderSmallTextStyle" parent="@style/NavigationDrawerItemTextStyle">
+        <item name="android:textSize">12sp</item>
+        <item name="android:paddingBottom">10dp</item>
+    </style>
+    <style name="NavigationDrawerHeaderMediumTextStyle" parent="@style/NavigationDrawerItemTextStyle">
+        <item name="android:textSize">22sp</item>
+        <item name="custom_font_family">SegoeUIRegular</item>
+    </style>
+    <style name="BaseChartStyle" parent="">
+        <item name="chart_label_text_color">@color/chart_text_color_primary_default</item>
+        <item name="chart_series_line_color">@array/chart_default_line_colors</item>
+        <item name="chart_series_fill_color">@array/chart_default_fill_colors</item>
+        <item name="chart_animation_length_ms">700</item>
+        <item name="chart_grid_size">0.8dp</item>
+        <item name="chart_margin_top">10dp</item>
+        <item name="chart_margin_left">50dp</item>
+        <item name="chart_margin_right">30dp</item>
+        <item name="chart_label_text_size">10.5sp</item>
+        <item name="chart_annotation_text_size">16dp</item>
+        <item name="chart_y_label_vertical_padding">-3.3dp</item>
+        <item name="chart_y_label_horizontal_padding">7dp</item>
+        <item name="chart_text_primary_color">@color/chart_text_color_primary_default</item>
+        <item name="chart_text_secondary_color">@color/chart_text_color_secondary_default</item>
+    </style>
+    <style name="StepsChartStyle" parent="@style/BaseChartStyle">
+        <item name="chart_grid_color">@color/steps_secondary</item>
+        <item name="chart_background_color">@color/steps_primary</item>
+        <item name="chart_header_background">@color/steps_dark</item>
+        <item name="chart_footer_background">@color/steps_primary</item>
+        <item name="chart_footer_options">@array/chart_footer_options_time</item>
+    </style>
+    <style name="BaseChartStyleV1" parent="">
+        <item name="chart_grid_color">@color/wf_chart_secondary</item>
+        <item name="chart_background_color">@color/wf_chart_primary</item>
+        <item name="chart_label_text_color">@color/wf_chart_text_color_primary_default</item>
+        <item name="chart_series_line_color">@array/wf_chart_default_line_colors</item>
+        <item name="chart_series_fill_color">@array/wf_chart_default_fill_colors</item>
+        <item name="chart_animation_length_ms">700</item>
+        <item name="chart_grid_size">0.8dp</item>
+        <item name="chart_margin_top">10dp</item>
+        <item name="chart_margin_left">50dp</item>
+        <item name="chart_margin_right">30dp</item>
+        <item name="chart_label_text_size">10.5sp</item>
+        <item name="chart_annotation_text_size">16dp</item>
+        <item name="chart_y_label_vertical_padding">-3.3dp</item>
+        <item name="chart_y_label_horizontal_padding">7dp</item>
+        <item name="chart_header_background">@color/wf_chart_primary</item>
+        <item name="chart_footer_background">@color/wf_chart_primary</item>
+        <item name="chart_text_primary_color">@color/wf_chart_text_color_primary_default</item>
+        <item name="chart_text_secondary_color">@color/wf_chart_text_color_secondary_default</item>
+        <item name="chart_footer_options">@array/chart_footer_options_time</item>
+    </style>
+    <style name="StepsChartStyleV1" parent="@style/BaseChartStyleV1">
+    </style>
+    <style name="RunPaceChartStyleV1" parent="@style/BaseChartStyleV1">
+        <item name="chart_series_line_color">@array/run_chart_line_colors_v1</item>
+        <item name="chart_series_fill_color">@array/run_chart_colors_v1</item>
+    </style>
+    <style name="CaloriesChartStyleV2" parent="@style/BaseChartStyleV1">
+    </style>
+    <style name="ExerciseLightChartStyleV2" parent="@style/BaseChartStyleV1">
+    </style>
+    <style name="HeartRateChartStyle" parent="@style/BaseChartStyle">
+        <item name="chart_grid_color">@color/bpm_secondary</item>
+        <item name="chart_background_color">@color/bpm_primary</item>
+        <item name="chart_margin_left">30dp</item>
+        <item name="chart_header_background">@color/bpm_dark</item>
+        <item name="chart_footer_background">@color/bpm_primary</item>
+        <item name="chart_footer_options">@array/chart_footer_options_activity</item>
+    </style>
+    <style name="CaloriesChartStyle" parent="@style/BaseChartStyle">
+        <item name="chart_grid_color">@color/calories_secondary</item>
+        <item name="chart_background_color">@color/calories_primary</item>
+        <item name="chart_header_background">@color/calories_dark</item>
+        <item name="chart_footer_background">@color/calories_primary</item>
+        <item name="chart_footer_options">@array/chart_footer_options_time</item>
+    </style>
+    <style name="SleepChartStyle" parent="@style/BaseChartStyle">
+        <item name="chart_legend_labels">@array/sleep_chart_legend_labels</item>
+        <item name="chart_grid_color">@color/sleep_secondary</item>
+        <item name="chart_background_color">@color/sleep_primary</item>
+        <item name="chart_header_background">@color/sleep_dark</item>
+        <item name="chart_footer_background">@color/sleep_primary</item>
+        <item name="chart_footer_options">@array/chart_footer_options_time</item>
+    </style>
+    <style name="SleepChartStyleV1" parent="@style/BaseChartStyle">
+        <item name="chart_legend_labels">@array/sleep_chart_legend_labels</item>
+        <item name="chart_grid_color">@color/sleep_secondary</item>
+        <item name="chart_background_color">@color/wf_chart_primary</item>
+        <item name="chart_label_text_color">@color/chart_text_color_primary_default</item>
+        <item name="chart_header_background">@color/sleep_dark</item>
+        <item name="chart_footer_background">@color/sleep_primary</item>
+        <item name="chart_text_primary_color">@color/wf_chart_text_color_primary_default</item>
+        <item name="chart_text_secondary_color">@color/wf_chart_text_color_secondary_default</item>
+        <item name="chart_footer_options">@array/chart_footer_options_time</item>
+    </style>
+    <style name="ExerciseChartStyle" parent="@style/BaseChartStyle">
+        <item name="chart_grid_color">@color/exercise_grid</item>
+        <item name="chart_background_color">@color/exercise_background_dark</item>
+        <item name="chart_header_background">@color/exercise_background_light</item>
+        <item name="chart_footer_background">@color/exercise_background_light</item>
+        <item name="chart_footer_options">@array/chart_footer_options_time</item>
+    </style>
+    <style name="ExerciseLightChartStyle" parent="@style/ExerciseChartStyle">
+        <item name="chart_grid_color">@color/exercise_grid_light</item>
+        <item name="chart_background_color">@color/exercise_background_light</item>
+    </style>
+    <style name="RunPerformanceChartStyle" parent="@style/BaseChartStyle">
+        <item name="chart_background_color">@color/my_runs_secondary_color</item>
+        <item name="chart_header_background">@color/my_runs_primary_color</item>
+        <item name="chart_footer_background">@color/my_runs_secondary_color</item>
+        <item name="chart_footer_options">@array/run_performance_chart_options</item>
+    </style>
+    <style name="RunChartStyle" parent="@style/BaseChartStyle">
+        <item name="chart_grid_color">@color/run_chart_divider_line_color</item>
+        <item name="chart_background_color">@color/my_runs_secondary_color</item>
+        <item name="chart_annotation_text_color">@color/my_runs_text_color_1_alpha</item>
+        <item name="chart_grid_size">1.5dp</item>
+        <item name="chart_annotation_text_size">7sp</item>
+    </style>
+    <style name="RunPaceChartStyle" parent="@style/RunChartStyle">
+        <item name="chart_series_line_color">@array/run_chart_line_colors</item>
+        <item name="chart_series_fill_color">@array/run_chart_colors</item>
+        <item name="chart_margin_left">60dp</item>
+    </style>
+    <style name="RunHRChartStyle" parent="@style/RunChartStyle">
+        <item name="chart_margin_left">90dp</item>
+    </style>
+    <style name="ChartLoadErrorTextStyle" parent="">
+        <item name="android:textColor">@color/my_runs_text_color_1_solid</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:text">@string/single_run_chart_error</item>
+    </style>
+    <style name="editControl" parent="@style/Font_smallBody">
+        <item name="android:background">@color/greyDark</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:selectAllOnFocus">true</item>
+        <item name="android:inputType">textMultiLine</item>
+    </style>
+    <style name="OobeStyle" parent="">
+        <item name="android:textColor">@color/oobe_text</item>
+        <item name="android:background">@color/WhiteColor</item>
+    </style>
+    <style name="OobeStartupSplashTextStyle" parent="">
+        <item name="android:textSize">@dimen/font_size_brandName</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:gravity">left</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="custom_font_family">SegoeUIRegular</item>
+    </style>
+    <style name="OobeStartupSplashSubTextStyle" parent="">
+        <item name="android:textSize">@dimen/font_size_companyName</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:gravity">left</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="custom_font_family">SegoeUISemiBold</item>
+    </style>
+    <style name="OobeRootLayoutStyle" parent="">
+        <item name="android:textColor">@color/oobe_text</item>
+        <item name="android:background">@color/oobe_root_background</item>
+        <item name="android:paddingLeft">@dimen/oobe_screen_horizontal_padding</item>
+        <item name="android:paddingTop">@dimen/oobe_screen_vertical_padding</item>
+        <item name="android:paddingRight">@dimen/oobe_screen_horizontal_padding</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_margin">0dp</item>
+    </style>
+    <style name="OobeLayoutBaseStyle" parent="">
+        <item name="android:background">@color/oobe_root_background</item>
+        <item name="android:paddingLeft">@dimen/oobe_screen_horizontal_padding</item>
+        <item name="android:paddingRight">@dimen/oobe_screen_horizontal_padding</item>
+    </style>
+    <style name="OobeLayoutFullWidthStyle" parent="">
+        <item name="android:textColor">@color/oobe_text</item>
+        <item name="android:background">@color/oobe_root_background</item>
+        <item name="android:paddingTop">@dimen/oobe_screen_vertical_padding</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_margin">0dp</item>
+    </style>
+    <style name="OobeMarketingHeaderTitleStyle" parent="@style/Font_labelSemibold">
+    </style>
+    <style name="OobeMarketingSubHeaderTitleStyle" parent="@style/Font_oobeTitle">
+    </style>
+    <style name="OobeHeaderTitleStyle" parent="@style/Font_oobeTitle">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:lineSpacingMultiplier">0.8</item>
+    </style>
+    <style name="OobeHeaderSubtitleStyle" parent="@style/Font_oobeSmall">
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="OobeBottomButtonContainerStyle" parent="">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/oobe_bottom_container_height</item>
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
+    <style name="OobeBottomTextStyle" parent="@style/OobeHeaderSubtitleStyle">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+    <style name="OobeProgressUpdateTextStyle" parent="@style/Font_oobeSmall">
+        <item name="android:textColor">@color/white</item>
+        <item name="custom_font_family">SegoeUISemiBold</item>
+    </style>
+    <style name="OobePersonalizeLabelTextStyle" parent="@style/Font_oobeSmall">
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="OobeEditTextStyle" parent="@style/Font_oobeSmall">
+        <item name="android:textColor">@color/BlackColor</item>
+        <item name="android:background">@drawable/oobe_edit_text_background_selector</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+    <style name="OobeEditTextErrorStyle" parent="">
+        <item name="android:textColor">@color/BlackColor</item>
+        <item name="android:background">@drawable/oobe_edit_text_background_selector_error</item>
+        <item name="android:padding">5dp</item>
+    </style>
+    <style name="OobeSpinnerStyle" parent="">
+        <item name="android:textAppearance">@style/SettingsEditTextStyle</item>
+        <item name="android:textColor">@color/BlackColor</item>
+        <item name="android:background">@drawable/oobe_spinner_background_selector</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingBottom">8dp</item>
+    </style>
+    <style name="SettingsProgressUpdateTextStyle" parent="@style/Font_oobeSmall">
+        <item name="android:textColor">@color/oobe_text_dim</item>
+        <item name="custom_font_family">SegoeUISemiBold</item>
+    </style>
+    <style name="SettingsPersonalizeLabelTextStyle" parent="@style/Font_oobeSmall">
+        <item name="android:textColor">@color/oobe_text</item>
+    </style>
+    <style name="SettingsPersonalizeStepIconStyle" parent="">
+        <item name="android:textSize">@dimen/personalize_step_icon_size</item>
+        <item name="android:textColor">@color/primary</item>
+    </style>
+    <style name="SettingsLabelStyle" parent="@style/Font_oobeSmall">
+        <item name="android:textColor">@color/secondaryBackground</item>
+    </style>
+    <style name="SettingsSubheaderLabelStyle" parent="@style/Font_smallBody">
+    </style>
+    <style name="OobeSubheaderLabelStyle" parent="@style/Font_smallBody">
+    </style>
+    <style name="SettingsErrorTextStyle" parent="@style/Font_oobeSmall">
+        <item name="android:textColor">@color/oobe_text_error</item>
+    </style>
+    <style name="SettingsEditTextStyle" parent="@style/Font_oobeSmall">
+        <item name="android:textColor">@drawable/settings_edit_text_text_color_selector</item>
+        <item name="android:background">@drawable/settings_edit_text_background_selector</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+    <style name="SettingsEditTextErrorStyle" parent="">
+        <item name="android:textColor">@drawable/settings_edit_text_text_color_selector</item>
+        <item name="android:background">@drawable/settings_edit_text_background_selector_error</item>
+        <item name="android:padding">5dp</item>
+    </style>
+    <style name="SettingsLabelTextStyle" parent="@style/Font_oobeSmall">
+        <item name="android:textColor">@color/GreyColor</item>
+    </style>
+    <style name="DefaultCheckboxStyle" parent="@android:style/Widget.Holo.Light.CompoundButton.CheckBox">
+        <item name="android:textSize">@dimen/font_size_oobeSmall</item>
+        <item name="android:textColor">@color/oobe_text_dim</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:button">@drawable/checkbox_selector</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="custom_font_family">SegoeUIRegular</item>
+    </style>
+    <style name="SettingsSpinnerStyle" parent="">
+        <item name="android:textAppearance">@style/SettingsEditTextStyle</item>
+        <item name="android:textColor">@color/WhiteColor</item>
+        <item name="android:background">@drawable/settings_spinner_background_selector</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingBottom">8dp</item>
+    </style>
+    <style name="pushButtons" parent="@style/Font_smallBody">
+        <item name="android:textColor">@drawable/push_button_text_color_selector</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/settings_button_background</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:layout_width">182dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="starbucksPushButtton" parent="@style/pushButtons">
+        <item name="android:background">@drawable/starbucks_button_background</item>
+    </style>
+    <style name="pushButtonsSmall" parent="@style/pushButtons">
+        <item name="android:layout_width">100dp</item>
+    </style>
+    <style name="pushButtonsOOBE" parent="@style/pushButtons">
+        <item name="android:textSize">@dimen/font_size_buttonOobe</item>
+        <item name="android:layout_width">197dp</item>
+        <item name="android:layout_height">51dp</item>
+    </style>
+    <style name="OobeButtonStyle" parent="@style/pushButtons">
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="custom_font_family">SegoeUIRegular</item>
+    </style>
+    <style name="FreButtonStyle" parent="">
+        <item name="android:textColor">@color/oobe_text</item>
+        <item name="android:background">@drawable/fre_button</item>
+    </style>
+    <style name="DisconnectButtonStyle" parent="@style/pushButtons">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_width">197dp</item>
+    </style>
+    <style name="FreInputStyle" parent="">
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="FreProfileUnit" parent="">
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_gravity">bottom</item>
+        <item name="android:layout_marginLeft">4dp</item>
+        <item name="android:layout_marginBottom">3dp</item>
+    </style>
+    <style name="FirmwareUpdateTextStyle" parent="">
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="AppTextStyle" parent="">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+    <style name="SettingsHeaderTextViewStyle" parent="">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_margin">10dp</item>
+    </style>
+    <style name="HeaderDefaultStyle" parent="">
+        <item name="header_text_color">#ffffff</item>
+        <item name="header_title_text_size">12sp</item>
+        <item name="header_text_size">8sp</item>
+        <item name="header_padding">20dp</item>
+    </style>
+    <style name="ConnectedAppsErrorStyle" parent="">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">#ff0000</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:drawablePadding">10dp</item>
+    </style>
+    <style name="SyncProgressStyle" parent="">
+        <item name="progress_color">#aaaaaa</item>
+        <item name="error_color">#f26d6f</item>
+        <item name="arc_width">4dp</item>
+        <item name="success_color">#74c151</item>
+        <item name="start_color">#101010</item>
+        <item name="text_color">#ffffff</item>
+        <item name="text_size">10sp</item>
+    </style>
+    <style name="SyncDebugProgressStyle" parent="">
+        <item name="progress_color">#666666</item>
+        <item name="error_color">#f26d6f</item>
+        <item name="arc_width">10dp</item>
+        <item name="success_color">#74c151</item>
+        <item name="start_color">#bbbbbb</item>
+        <item name="text_color">#000000</item>
+        <item name="text_size">20sp</item>
+    </style>
+    <style name="GoalProgressWheelStyle" parent="">
+        <item name="android:layout_width">120dp</item>
+        <item name="android:layout_height">125dp</item>
+        <item name="valueTextSize">23sp</item>
+        <item name="unitTextSize">17sp</item>
+    </style>
+    <style name="HeaderBarStyle" parent="">
+        <item name="backgroundColor">@android:color/black</item>
+        <item name="titleHeaderText">@string/app_name</item>
+        <item name="titleHeaderTextSize">20sp</item>
+        <item name="titleHeaderTextColor">#ffffff</item>
+        <item name="disableSyncButton">false</item>
+    </style>
+    <style name="ConfirmationBarStyle" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/confirmation_bar_height</item>
+    </style>
+    <style name="ConfirmationBarButtonStyle" parent="">
+        <item name="android:textSize">40dp</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="EditGoalLinkStyle" parent="">
+        <item name="android:textSize">@dimen/font_size_smallBody</item>
+        <item name="android:textColor">@color/base_tracker_highlight_color</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+    </style>
+    <style name="GoalTextSpanStyle" parent="">
+        <item name="android:textSize">@dimen/font_size_oobeSmall</item>
+        <item name="android:textColor">@color/base_tracker_lowlight_color</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+    <style name="GoalEditDialogFragmentTitleTextStyle" parent="">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/edit_goal_dialog_fragment_text_color</item>
+    </style>
+    <style name="GoalEditDialogFragmentEditTextStyle" parent="">
+        <item name="android:textSize">70sp</item>
+        <item name="android:textColor">@drawable/fragment_edit_goal_text_edit_text</item>
+        <item name="android:gravity">right</item>
+        <item name="android:background">@drawable/fragment_edit_goal_text_edit_background</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginBottom">20dp</item>
+    </style>
+    <style name="GoalEditDialogFragmentEstimateTextStyle" parent="">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/edit_goal_dialog_fragment_text_color</item>
+    </style>
+    <style name="InterstitialDefault" parent="">
+        <item name="titleSize">@dimen/LargeTextSize</item>
+        <item name="subtitleSize">@dimen/SmallTextSize</item>
+        <item name="titleColor">@color/WhiteColor</item>
+        <item name="subtitleColor">@color/secondaryMed</item>
+    </style>
+    <style name="InterstitialLight" parent="">
+        <item name="titleSize">@dimen/LargeTextSize</item>
+        <item name="subtitleSize">@dimen/SmallTextSize</item>
+        <item name="titleColor">@color/GreyColor</item>
+        <item name="subtitleColor">@color/GreyColor</item>
+    </style>
+    <style name="WorkoutHeadingTextStyle" parent="">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/exercise_tracker_header</item>
+    </style>
+    <style name="WorkoutButtonStyle" parent="">
+        <item name="android:textColor">#000000</item>
+        <item name="android:background">@drawable/workout_button</item>
+    </style>
+    <style name="WorkoutButtonStyleV1" parent="">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/workout_button_text_color</item>
+        <item name="android:background">@drawable/workout_button_v1</item>
+        <item name="android:layout_width">120dp</item>
+        <item name="android:layout_height">44dp</item>
+    </style>
+    <style name="NewBaseChartStyle" parent="">
+        <item name="chart_label_text_color">@color/chart_text_color_primary_default</item>
+        <item name="chart_series_line_color">@array/chart_default_line_colors</item>
+        <item name="chart_series_fill_color">@array/chart_default_fill_colors</item>
+        <item name="chart_animation_length_ms">700</item>
+        <item name="chart_grid_size">0.8dp</item>
+        <item name="chart_margin_top">10dp</item>
+        <item name="chart_margin_left">50dp</item>
+        <item name="chart_margin_right">30dp</item>
+        <item name="chart_label_text_size">10.5sp</item>
+        <item name="chart_annotation_text_size">16dp</item>
+        <item name="chart_y_label_vertical_padding">-3.3dp</item>
+        <item name="chart_y_label_horizontal_padding">7dp</item>
+        <item name="chart_text_primary_color">@color/chart_text_color_primary_default</item>
+        <item name="chart_text_secondary_color">@color/chart_text_color_secondary_default</item>
+    </style>
+    <style name="StepsDailyChartStyle" parent="@style/NewBaseChartStyle">
+        <item name="chart_grid_color">@color/steps_secondary</item>
+        <item name="chart_background_color">@color/steps_chart_primary</item>
+        <item name="chart_header_background">@color/steps_chart_primary</item>
+        <item name="chart_footer_background">@color/steps_chart_primary</item>
+        <item name="chart_footer_options">@array/chart_footer_options_time</item>
+    </style>
+    <style name="GoalProgressBarHorizontal" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:maxHeight">10dp</item>
+        <item name="android:progressDrawable">@drawable/calories_goal_progress_bar</item>
+        <item name="android:minHeight">10dp</item>
+    </style>
+    <style name="SyncProgressBarHorizontal" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:maxHeight">3dp</item>
+        <item name="android:max">100</item>
+        <item name="android:progressDrawable">@drawable/sync_progress_bar_horizontal</item>
+        <item name="android:minHeight">3dp</item>
+    </style>
+    <style name="UpdateProgressBarHorizontal" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:maxHeight">6dp</item>
+        <item name="android:max">100</item>
+        <item name="android:progressDrawable">@drawable/update_progress_bar_horizontal</item>
+        <item name="android:minHeight">6dp</item>
+    </style>
+    <style name="NoFilteredHistoryTitleTextStyle" parent="@style/Font_table">
+        <item name="android:textColor">@color/greyLight</item>
+    </style>
+    <style name="NoHistoryTitleTextStyle" parent="@style/Font_table">
+        <item name="android:textColor">@color/greyDark</item>
+    </style>
+    <style name="NoHistorySubTitleTextStyle" parent="@style/Font_label">
+        <item name="android:textColor">@color/greyDark</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+    <style name="EventListHeaderGlyphStyle" parent="">
+        <item name="android:textSize">@dimen/font_size_link</item>
+        <item name="android:textColor">@color/history_filter_glyh_color</item>
+        <item name="android:gravity">right</item>
+        <item name="android:padding">3dp</item>
+        <item name="custom_font_family">SegoeUIRegular</item>
+    </style>
+    <style name="UserEventSummaryHeaderTextStyle" parent="@style/Font_table">
+        <item name="android:textColor">@color/history_text</item>
+        <item name="android:gravity">left</item>
+    </style>
+    <style name="shinobicharts_AppTheme" parent="@style/shinobicharts_AppBaseTheme">
+    </style>
+    <style name="FindTitleTextStyle" parent="@style/Font_title">
+        <item name="custom_font_family">SegoeUISemiBold</item>
+    </style>
+    <style name="FindIconStyle" parent="@style/Font_title">
+        <item name="android:textColor">@color/button_feedback</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:text">@string/glyph_search</item>
+    </style>
+    <style name="FeaturedWorkoutHeaderTextStyle" parent="@style/Font_oobeSmall">
+        <item name="android:gravity">left</item>
+        <item name="android:lines">1</item>
+        <item name="custom_font_family">SegoeUISemiBold</item>
+    </style>
+    <style name="FeaturedWorkoutNameTextStyle" parent="@style/Font_link">
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">left</item>
+        <item name="custom_font_family">SegoeUISemiBold</item>
+    </style>
+    <style name="FeaturedWorkoutdDefaultTextStyle" parent="@style/Font_smallBody">
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">left</item>
+        <item name="custom_font_family">SegoeUISemiBold</item>
+    </style>
+    <style name="FeaturedWorkoutIconStyle" parent="">
+        <item name="android:textSize">@dimen/font_size_largeGlyph</item>
+        <item name="android:textColor">@color/primary</item>
+    </style>
+    <style name="GuidedWorkoutItemTitleTextStyle" parent="@style/Font_table">
+        <item name="android:textColor">@color/greyDark</item>
+        <item name="android:lines">1</item>
+    </style>
+    <style name="GuidedWorkoutItemIconStyle" parent="">
+        <item name="android:textSize">@dimen/font_size_table</item>
+        <item name="android:textColor">@color/guided_workout_list_item_glyh_color</item>
+    </style>
+    <style name="GuidedWorkoutItemRightArrowIconStyle" parent="">
+        <item name="android:textSize">@dimen/SmallIconSize</item>
+        <item name="android:textColor">@color/GreyColor</item>
+    </style>
+    <style name="NavigationLeftArrowIconStyle" parent="@style/Font_backArrow">
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">@dimen/navigation_left_arrow_margin_top</item>
+        <item name="android:paddingRight">@dimen/navigation_left_arrow_margin_right</item>
+        <item name="android:paddingBottom">@dimen/navigation_left_arrow_margin_bottom</item>
+        <item name="android:text">@string/glyph_left_arrow</item>
+    </style>
+    <style name="FitnessGoalHeaderTextStyle" parent="@style/Font_title">
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">2</item>
+        <item name="custom_font_family">SegoeUISemiBold</item>
+    </style>
+    <style name="FitnessGoalListItemTextStyle" parent="@style/Font_table">
+    </style>
+    <style name="FitnessFindBrowseListItemTextStyle" parent="@style/Font_table">
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="FitnessSearchListHeaderTextStyle" parent="@style/Font_smallBody">
+        <item name="android:textColor">@color/guided_workout_search_result_header</item>
+        <item name="android:lines">1</item>
+    </style>
+    <style name="WorkoutBrowseSummaryTitleTextStyle" parent="@style/Font_table">
+        <item name="android:textColor">@color/greyDark</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">2</item>
+    </style>
+    <style name="WorkoutBrowseSummarySubTitleTextStyle" parent="@style/Font_smallBody">
+        <item name="android:textColor">@color/workout_browse_subtitle</item>
+    </style>
+    <style name="NoResultFoundTextStyle" parent="">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/greyHigh</item>
+        <item name="android:paddingLeft">@dimen/guided_workout_margin_left</item>
+        <item name="android:paddingRight">@dimen/guided_workout_margin_right</item>
+    </style>
+    <style name="WorkoutNameTextStyle" parent="@style/Font_link">
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">2</item>
+    </style>
+    <style name="WorkoutOverviewTextStyle" parent="@style/Font_smallBody">
+        <item name="android:textColor">@color/greyDark</item>
+    </style>
+    <style name="FindOtherWorkoutsTextStyle" parent="@style/Font_link">
+        <item name="android:textColor">@color/greyDark</item>
+        <item name="custom_font_family">SegoeUIRegular</item>
+    </style>
+    <style name="WorkoutScheduleHeaderTextStyle" parent="@style/Font_label">
+        <item name="android:textColor">@color/greyDark</item>
+    </style>
+    <style name="WorkoutScheduleListItemTextStyle" parent="@style/Font_table">
+        <item name="android:textColor">@color/greyDark</item>
+        <item name="android:lines">1</item>
+    </style>
+    <style name="WorkoutScheduleListItemOnBandTextStyle" parent="@style/Font_oobeSmall">
+        <item name="android:textColor">@color/themeHigh</item>
+        <item name="android:lines">1</item>
+    </style>
+    <style name="WorkoutStepHeaderTextStyle" parent="@style/Font_label">
+        <item name="android:textColor">@color/greyDark</item>
+    </style>
+    <style name="CircuitDescriptionTextStyle" parent="@style/Font_smallBody">
+        <item name="android:textColor">@color/guided_workout_steps_circuit_desc</item>
+    </style>
+    <style name="WorkoutStepListItemTextStyle" parent="@style/Font_table">
+        <item name="android:textColor">@color/greyDark</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">2</item>
+    </style>
+    <style name="FilterSubTitleTextStyle" parent="@style/Font_smallBody">
+        <item name="android:textColor">@color/guided_workout_filters_sub_title_text</item>
+    </style>
+    <style name="FilterTitleTextStyle" parent="@style/Font_oobeTitle">
+        <item name="android:textColor">@color/guided_workout_filters_title_text</item>
+        <item name="android:gravity">left</item>
+        <item name="custom_font_family">SegoeUISemiBold</item>
+    </style>
+    <style name="FilterClearAllTextStyle" parent="@style/Font_smallBody">
+        <item name="android:textColor">@color/guided_workout_filters_title_text</item>
+        <item name="android:gravity">right</item>
+    </style>
+    <style name="WorkoutCurrentPlanTextStyle" parent="@style/Font_smallBody">
+        <item name="android:textColor">@color/greyDark</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="GuidedWorkoutRoundHeaderTextStyle" parent="@style/Font_smallBody">
+        <item name="android:textColor">@color/themeHigh</item>
+        <item name="android:gravity">left</item>
+        <item name="custom_font_family">SegoeUISemiBold</item>
+    </style>
+    <style name="GuidedWorkoutPostDetailsListItem" parent="@style/Font_table">
+        <item name="android:textColor">@color/greyDark</item>
+        <item name="android:lines">1</item>
+    </style>
+    <style name="GuidedWorkoutPostDetailsListItemSubTitle" parent="@style/Font_smallBody">
+        <item name="android:textColor">@color/greyDark</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">2</item>
+    </style>
+    <style name="InsightsMsgTextStyle" parent="">
+        <item name="android:textSize">@dimen/MediumTextSize</item>
+        <item name="android:textColor">@color/BlackColor</item>
+        <item name="android:lineSpacingMultiplier">0.9</item>
+        <item name="custom_font_family">SegoeUIRegular</item>
+    </style>
+    <style name="InsightsActionMsgTextStyle" parent="">
+        <item name="android:textSize">@dimen/SmallTextSize</item>
+        <item name="android:textColor">@color/GreyColor</item>
+        <item name="android:lineSpacingMultiplier">0.9</item>
+        <item name="custom_font_family">SegoeUIRegular</item>
+    </style>
+    <style name="GolfLegendHeaderBoldTextStyle" parent="@style/Font_table">
+        <item name="android:textSize">@dimen/golf_font_size_legend</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="GolfLegendHeaderTextStyle" parent="@style/Font_base">
+        <item name="android:textSize">@dimen/golf_font_size_legend</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="GolfTotalsRowTextStyle" parent="@style/Font_base">
+        <item name="android:textSize">@dimen/golf_font_size_legend</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="GolfParItemsHeaderTextStyle" parent="@style/Font_base">
+        <item name="android:textSize">@dimen/golf_font_size_par_header</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    <style name="GolfParItemsValueTextStyle" parent="@style/Font_table">
+        <item name="android:textSize">@dimen/golf_font_size_par_item</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    <style name="GolfConnectTaylormadeLinkStyle" parent="@style/Font_table">
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">@color/greyDark</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
+    <style name="preview_banner" parent="">
+        <item name="android:textSize">16dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@color/yellow</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:text">@string/preview</item>
+    </style>
+    <style name="GolfLandingPageItemStyle" parent="">
+        <item name="android:textSize">@dimen/SmallTextSize</item>
+        <item name="android:textColor">@color/BlackColor</item>
+        <item name="android:paddingLeft">@dimen/guided_workout_margin_left</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingRight">@dimen/guided_workout_margin_right</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:lines">1</item>
+        <item name="custom_font_family">SegoeUIRegular</item>
+    </style>
+    <style name="GolfSearchItemsValueTextStyle" parent="@style/Font_base">
+        <item name="android:textSize">@dimen/golf_font_size_search_item_values</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">left</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="GolfTextSpanStyle" parent="">
+    </style>
+    <style name="GolfSyncEditLinkStyle" parent="">
+    </style>
+    <style name="GolfConnectButtonStyle" parent="">
+        <item name="android:textSize">@dimen/golf_font_size_search_item_values</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="GolfConnectStyle" parent="">
+        <item name="android:textSize">@dimen/font_size_smallBody</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="GolfConnectCheckStyle" parent="">
+        <item name="android:textSize">15dp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="SettingsInterstitialStyle" parent="">
+        <item name="titleSize">@dimen/LargeTextSize</item>
+        <item name="subtitleSize">@dimen/SmallTextSize</item>
+        <item name="titleColor">@color/WhiteColor</item>
+        <item name="subtitleColor">@color/GreyColor</item>
+    </style>
+    <style name="WebtileAddTileStyle" parent="">
+        <item name="android:textSize">@dimen/personalize_step_icon_size</item>
+        <item name="android:textColor">@color/primary</item>
+    </style>
+    <style name="WebtileAddTileDialogStyle" parent="@style/AppBaseTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+    <style name="WhatsNewButtonLayoutStyle" parent="@style/Font_base">
+        <item name="android:paddingLeft">@dimen/fragment_horizontal_padding</item>
+        <item name="android:paddingRight">@dimen/fragment_horizontal_padding</item>
+        <item name="android:paddingBottom">@dimen/whatsnew_margin_button_pad_bottom</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="WhatsNewSecondaryTitleTextStyle" parent="@style/Font_base">
+        <item name="android:textSize">@dimen/font_size_metricLarge</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:gravity">left</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="WhatsNewSecondarySubtitleTextStyle" parent="@style/Font_base">
+        <item name="android:textSize">@dimen/font_size_link</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">left</item>
+    </style>
+    <style name="ProTipTextStyle" parent="@style/Font_base">
+        <item name="android:textSize">@dimen/font_size_label</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="GuidedWorkoutSpinnerStyle" parent="">
+        <item name="android:textAppearance">@style/GuidedWorkoutSpinnerTextStyle</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingBottom">8dp</item>
+    </style>
+    <style name="GuidedWorkoutSpinnerTextStyle" parent="">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+    <style name="WebTileLabelStyle" parent="@style/Font_smallBody">
+        <item name="android:textColor">@color/greyHigh</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_alignParentLeft">true</item>
+    </style>
+    <style name="WebTileValueStyle" parent="@style/Font_smallBody">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_alignParentLeft">true</item>
+    </style>
+    <style name="WebTileAuthErrorStyle" parent="@style/Font_label">
+        <item name="android:textColor">@color/red</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_alignParentLeft">true</item>
+    </style>
+    <style name="MetricUnit" parent="">
+    </style>
+    <style name="MetricValue" parent="">
+    </style>
+    <style name="marketing_opt_in" parent="@style/DefaultCheckboxStyle">
+        <item name="android:button">@drawable/oobe_checkbox_selector</item>
+    </style>
+    <style name="MetricTextStyle" parent="">
+        <item name="android:textSize">@dimen/XLargeTextSize</item>
+        <item name="android:textColor">@color/PrimaryColor</item>
+        <item name="custom_font_family">SegoeUILight</item>
+    </style>
+    <style name="MetricIconStyle" parent="">
+        <item name="android:textSize">@dimen/XLargeIconSize</item>
+        <item name="android:textColor">@color/WhiteColor</item>
+    </style>
+    <style name="SectionHeaderTextStyle" parent="">
+        <item name="android:textSize">@dimen/MediumTextSize</item>
+        <item name="android:textColor">@color/BlackColor</item>
+        <item name="custom_font_family">SegoeUIRegular</item>
+    </style>
+    <style name="PivotActiveTextStyle" parent="">
+        <item name="android:textSize">@dimen/MediumTextSize</item>
+        <item name="android:textColor">@color/WhiteColor</item>
+        <item name="custom_font_family">SegoeUIRegular</item>
+    </style>
+    <style name="PivotTextStyle" parent="">
+        <item name="android:textSize">@dimen/MediumTextSize</item>
+        <item name="android:textColor">@color/TextOnPrimaryMedColor</item>
+        <item name="custom_font_family">SegoeUIRegular</item>
+    </style>
+    <style name="MetricUnitTextStyle" parent="">
+        <item name="android:textSize">@dimen/SmallTextSize</item>
+        <item name="android:textColor">@color/PrimaryLightColor</item>
+        <item name="custom_font_family">SegoeUIRegular</item>
+    </style>
+    <style name="MetadataTextStyle" parent="">
+        <item name="android:textSize">@dimen/SmallTextSize</item>
+        <item name="custom_font_family">SegoeUIRegular</item>
+    </style>
+    <style name="PrimaryLabelTextStyle" parent="">
+        <item name="android:textSize">@dimen/SmallTextSize</item>
+        <item name="android:textColor">@color/GreyColor</item>
+        <item name="custom_font_family">SegoeUIRegular</item>
+    </style>
+    <style name="BodyTextStyle" parent="">
+        <item name="android:textSize">@dimen/SmallTextSize</item>
+        <item name="android:textColor">@color/GreyColor</item>
+        <item name="custom_font_family">SegoeUIRegular</item>
+    </style>
+    <style name="BodyAccentTextStyle" parent="">
+        <item name="android:textSize">@dimen/SmallTextSize</item>
+        <item name="android:textColor">@color/PrimaryLightColor</item>
+        <item name="custom_font_family">SegoeUIRegular</item>
+    </style>
+    <style name="ButtonLabelTextStyle" parent="">
+        <item name="android:textSize">@dimen/XSmallTextSize</item>
+        <item name="android:textColor">@color/BlackColor</item>
+        <item name="custom_font_family">SegoeUIRegular</item>
+    </style>
+    <style name="MenuItemTextStyle" parent="">
+        <item name="android:textSize">@dimen/XSmallTextSize</item>
+        <item name="android:textColor">@color/WhiteColor</item>
+        <item name="custom_font_family">SegoeUIRegular</item>
+    </style>
+    <style name="SmallLabelTextStyle" parent="">
+        <item name="android:textSize">@dimen/XSmallTextSize</item>
+        <item name="android:textColor">@color/GreyColor</item>
+        <item name="custom_font_family">SegoeUIRegular</item>
+    </style>
+    <style name="SmallMetricTextStyle" parent="">
+        <item name="android:textSize">@dimen/XSmallTextSize</item>
+        <item name="android:textColor">@color/PrimaryLightColor</item>
+        <item name="custom_font_family">SegoeUIRegular</item>
+    </style>
+    <style name="MetricInvertedTextStyle" parent="">
+        <item name="android:textSize">@dimen/XLargeTextSize</item>
+        <item name="android:textColor">@color/WhiteColor</item>
+        <item name="custom_font_family">SegoeUILight</item>
+    </style>
+    <style name="MenuLabelTextStyle" parent="">
+        <item name="android:textSize">@dimen/XSmallTextSize</item>
+        <item name="android:textColor">@color/GreyColor</item>
+        <item name="custom_font_family">SegoeUIRegular</item>
+    </style>
+    <style name="PrimaryLightTextStyle" parent="">
+        <item name="android:textSize">@dimen/SmallTextSize</item>
+        <item name="android:textColor">@color/GreyColor</item>
+        <item name="custom_font_family">SegoeUIRegular</item>
+    </style>
+    <style name="SecondaryAccentTextStyle" parent="">
+        <item name="android:textSize">@dimen/XSmallTextSize</item>
+        <item name="android:textColor">@color/PrimaryColor</item>
+        <item name="custom_font_family">SegoeUIRegular</item>
+    </style>
+    <style name="TertiaryErrorTextStyle" parent="">
+        <item name="android:textSize">@dimen/XXSmallTextSize</item>
+        <item name="android:textColor">@color/ErrorColor</item>
+        <item name="custom_font_family">SegoeUIRegular</item>
+    </style>
+    <style name="PrimaryTextStyle" parent="">
+        <item name="android:textSize">@dimen/SmallTextSize</item>
+        <item name="android:textColor">@color/BlackColor</item>
+        <item name="custom_font_family">SegoeUIRegular</item>
+    </style>
+    <style name="HeaderTextStyle" parent="">
+        <item name="android:textSize">@dimen/LargeTextSize</item>
+        <item name="android:textColor">@color/BlackColor</item>
+        <item name="custom_font_family">SegoeUIRegular</item>
+    </style>
+    <style name="SecondaryLightTextStyle" parent="">
+        <item name="android:textSize">@dimen/XSmallTextSize</item>
+        <item name="android:textColor">@color/GreyColor</item>
+        <item name="custom_font_family">SegoeUIRegular</item>
+    </style>
+    <style name="LightLineStyle" parent="">
+        <item name="android:textSize">@dimen/SmallLineSize</item>
+        <item name="android:textColor">@color/LightLineColor</item>
+    </style>
+    <style name="MediumLineStyle" parent="">
+        <item name="android:textSize">@dimen/SmallLineSize</item>
+        <item name="android:textColor">@color/MediumLineColor</item>
+    </style>
+    <style name="ForegroundLineStyle" parent="">
+        <item name="android:textSize">@dimen/LargeLineSize</item>
+        <item name="android:textColor">@color/ForegroundLineColor</item>
+    </style>
+    <style name="BackgroundLineStyle" parent="">
+        <item name="android:textSize">@dimen/LargeLineSize</item>
+        <item name="android:textColor">@color/BackgroundLineColor</item>
+    </style>
+    <style name="AverageLineStyle" parent="">
+        <item name="android:textSize">@dimen/SmallLineSize</item>
+        <item name="android:textColor">@color/AverageLineColor</item>
+    </style>
+    <style name="SubheaderTextStyle" parent="">
+        <item name="android:textSize">@dimen/MediumTextSize</item>
+        <item name="android:textColor">@color/BlackColor</item>
+        <item name="custom_font_family">SegoeUIRegular</item>
+    </style>
+    <style name="SubheaderInvertedTextStyle" parent="">
+        <item name="android:textSize">@dimen/MediumTextSize</item>
+        <item name="android:textColor">@color/WhiteColor</item>
+        <item name="custom_font_family">SegoeUIRegular</item>
+    </style>
+    <style name="PrimaryInvertedTextStyle" parent="">
+        <item name="android:textSize">@dimen/SmallTextSize</item>
+        <item name="android:textColor">@color/WhiteColor</item>
+        <item name="custom_font_family">SegoeUIRegular</item>
+    </style>
+    <style name="LinkStyle" parent="">
+        <item name="android:textSize">@dimen/SmallTextSize</item>
+        <item name="android:textColor">@color/PrimaryLightColor</item>
+        <item name="custom_font_family">SegoeUIRegular</item>
+    </style>
+    <style name="CategoricalMetricTextStyle" parent="">
+        <item name="android:textSize">@dimen/MediumTextSize</item>
+        <item name="android:textColor">@color/PrimaryColor</item>
+        <item name="custom_font_family">SegoeUIRegular</item>
+    </style>
+    <style name="ButtonStyle" parent="">
+        <item name="android:textSize">@dimen/SmallTextSize</item>
+        <item name="android:textColor">@color/BlackColor</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/button_background</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">48dp</item>
+    </style>
+    <style name="PrimaryAccentTextStyle" parent="">
+        <item name="android:textSize">@dimen/SmallTextSize</item>
+        <item name="android:textColor">@color/PrimaryColor</item>
+        <item name="custom_font_family">SegoeUIRegular</item>
+    </style>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="@drawable/shinobicharts_rectangle" android:paddingLeft="@dimen/shinobicharts_flag_padding_left" android:paddingTop="@dimen/shinobicharts_flag_padding_top" android:paddingRight="@dimen/shinobicharts_flag_padding_right" android:paddingBottom="@dimen/shinobicharts_flag_padding_bottom" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/flag_text_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Title"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/flag_text_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Value" android:layout_toRightOf="@+id/flag_text_symbol" android:layout_below="@+id/flag_text_title"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/flag_text_symbol" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/shinobicharts_flag_symbol_right_margin" android:text="S" android:layout_below="@+id/flag_text_title" android:layout_alignBaseline="@+id/flag_text_value" android:layout_alignParentLeft="@+id/flag_text_symbol"/>
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.microsoft.kapp.views.PicassoImageView android:gravity="center" android:id="@+id/background_image" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="10dp" android:layout_centerVertical="true"/>
+    <com.microsoft.kapp.views.CustomGlyphView android:gravity="center" android:id="@+id/background_glyph" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_centerVertical="true"/>
+    <com.microsoft.kapp.views.CustomGlyphView android:gravity="center" android:id="@+id/front_glyph" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_centerVertical="true"/>
+</RelativeLayout>

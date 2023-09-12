@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.microsoft.kapp.views.CustomFontTextView android:textSize="20sp" android:textColor="@color/app_white" android:gravity="left" android:id="@+id/stock_company_ticker_symbol" android:paddingRight="5dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+        <com.microsoft.kapp.views.CustomFontTextView android:textSize="20sp" android:textColor="@color/app_white" android:gravity="right" android:id="@+id/stock_company_exchange" android:paddingLeft="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.microsoft.kapp.views.CustomFontTextView android:textSize="12sp" android:textColor="@color/app_white" android:gravity="left" android:id="@+id/stock_company_name" android:paddingRight="5dp" android:layout_width="0dp" android:layout_height="wrap_content" android:includeFontPadding="false" android:layout_weight="2"/>
+        <com.microsoft.kapp.views.CustomFontTextView android:textSize="12sp" android:textColor="@color/app_white" android:gravity="right" android:id="@+id/stock_company_type" android:paddingLeft="5dp" android:layout_width="0dp" android:layout_height="wrap_content" android:includeFontPadding="false" android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>

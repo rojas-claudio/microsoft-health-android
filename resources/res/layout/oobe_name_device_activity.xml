@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="@color/WhiteColor" android:layout_width="match_parent" android:layout_height="match_parent" style="@style/OobeLayoutFullWidthStyle">
+    <com.microsoft.kapp.views.CustomFontTextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/oobe_screen_horizontal_padding" android:layout_marginTop="10dp" android:layout_marginRight="@dimen/oobe_screen_horizontal_padding" android:text="@string/oobe_personalization_message" android:layout_alignParentTop="true" style="@style/OobeHeaderTitleStyle"/>
+    <LinearLayout android:orientation="vertical" android:paddingTop="30dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <com.microsoft.kapp.views.CustomFontTextView android:textColor="@color/ErrorColor" android:id="@+id/oobe_name_device_error_message" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/oobe_screen_horizontal_padding" android:layout_marginRight="@dimen/oobe_screen_horizontal_padding" android:text="@string/name_device_error_message" style="@style/PrimaryTextStyle"/>
+        <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/oobe_name_device_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/oobe_screen_horizontal_padding" android:layout_marginRight="@dimen/oobe_screen_horizontal_padding" android:text="@string/oobe_personalization_name_device" style="@style/PrimaryTextStyle"/>
+        <com.microsoft.kapp.views.CustomFontEditText android:id="@+id/oobe_name_device" android:nextFocusDown="@+id/oobe_next_button" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/oobe_screen_horizontal_padding" android:layout_marginTop="6dp" android:layout_marginRight="@dimen/oobe_screen_horizontal_padding" android:layout_marginBottom="30dp" android:maxLines="1" android:singleLine="true" android:selectAllOnFocus="true" android:maxLength="@integer/max_band_name_length" android:inputType="textNoSuggestions" style="@style/SettingsEditTextStyle"/>
+        <include layout="@layout/device_representation_layout"/>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/settings_profile_oobe_button_group" style="@style/OobeBottomButtonContainerStyle">
+        <com.microsoft.kapp.views.CustomFontButton android:id="@+id/oobe_next_button" android:text="@string/label_next" style="@style/OobeButtonStyle"/>
+    </LinearLayout>
+</RelativeLayout>

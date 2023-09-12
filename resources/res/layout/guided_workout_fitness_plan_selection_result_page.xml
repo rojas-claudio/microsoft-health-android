@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:id="@+id/root_view" android:background="@color/WhiteColor" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/activity_discovery_page_header"/>
+    <FrameLayout android:id="@+id/guided_workout_category_framelayout" android:background="@color/primary" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <ProgressBar android:layout_gravity="center" android:id="@+id/guided_workout_load_progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <com.microsoft.kapp.views.CustomFontTextView android:gravity="center" android:layout_gravity="center" android:id="@+id/guided_workout_load_error" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/guided_workout_load_error" style="@style/Font_title"/>
+        <ListView android:id="@+id/listview" android:layout_width="match_parent" android:layout_height="match_parent" android:drawSelectorOnTop="false" android:divider="@null" android:dividerHeight="0dp"/>
+        <com.microsoft.kapp.views.CustomFontTextView android:textAppearance="?android:attr/textAppearanceMedium" android:layout_gravity="center" android:id="@android:id/empty" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/no_results" style="@style/NoResultFoundTextStyle"/>
+    </FrameLayout>
+</LinearLayout>

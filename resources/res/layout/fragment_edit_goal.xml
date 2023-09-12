@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/edit_goal_dialog_fragment_background_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.microsoft.kapp.widgets.HeaderBar android:id="@+id/header_bar" android:layout_width="match_parent" android:layout_height="@dimen/header_bar_height" app:leftButtonType="none" app:titleHeaderText="@string/edit_goal_dialog_header_title" app:disableSyncButton="true"/>
+    <FrameLayout android:orientation="vertical" android:id="@+id/progress_frame_layout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:attr/progressBarStyleLarge"/>
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/content_linear_layout" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" style="@style/DefaultFragmentStyle">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.microsoft.kapp.views.CustomFontTextView android:gravity="center_vertical" android:id="@+id/goal_title_text_view" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/edit_goal_dialog_fragment_calories_title" style="@style/GoalEditDialogFragmentTitleTextStyle"/>
+            <Switch android:id="@+id/enabled_switch" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+        </LinearLayout>
+        <EditText android:id="@+id/goal_value_edit_text" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="number" style="@style/GoalEditDialogFragmentEditTextStyle"/>
+        <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/estimate_text_view" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/GoalEditDialogFragmentEstimateTextStyle"/>
+    </LinearLayout>
+    <com.microsoft.kapp.widgets.ConfirmationBar android:id="@+id/confirmation_bar" android:visibility="gone" style="@style/ConfirmationBarStyle"/>
+</LinearLayout>

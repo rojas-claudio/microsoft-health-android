@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:kapp="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <FrameLayout android:id="@+id/run_map_container" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="240dp">
+        <com.microsoft.kapp.views.PicassoImageView android:id="@+id/run_no_map" android:layout_width="match_parent" android:layout_height="match_parent" kapp:image_resource_id="@drawable/android_run_nogps"/>
+        <LinearLayout android:gravity="center_horizontal" android:layout_gravity="bottom|center_horizontal" android:orientation="vertical" android:id="@+id/run_no_map_string" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="40dp">
+            <com.microsoft.kapp.views.CustomFontTextView android:textColor="@color/greyDark" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/home_tile_run_enable_gps_line1" style="@style/Font_title"/>
+            <com.microsoft.kapp.views.CustomFontTextView android:textColor="@color/greyDark" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/home_tile_run_enable_gps_line2" style="@style/Font_title"/>
+        </LinearLayout>
+        <com.microsoft.kapp.views.BingMapView android:id="@+id/run_map_view" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        <include layout="@layout/bing_map_legend"/>
+    </FrameLayout>
+    <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/runBestBanner" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/BestBannerTextStyle"/>
+    <com.microsoft.kapp.views.TrackerStatsWidget android:id="@+id/run_details_tracker_widget" android:paddingLeft="@dimen/fragment_horizontal_padding" android:paddingRight="@dimen/fragment_horizontal_padding" android:layout_width="match_parent" android:layout_height="wrap_content" kapp:stat_style="@style/TrackerStatStyleV1"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/txtUVDisclaimer" android:paddingLeft="@dimen/fragment_horizontal_padding" android:paddingTop="@dimen/XLargeSpace" android:paddingRight="@dimen/fragment_horizontal_padding" android:paddingBottom="@dimen/XLargeSpace" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/disclaimer_uv" style="@style/SecondaryLightTextStyle"/>
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingTop="7dp" android:paddingBottom="7dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginRight="15dp" android:weightSum="4">
+        <LinearLayout android:gravity="left" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2">
+            <com.microsoft.kapp.views.CustomFontTextView android:gravity="left" android:id="@+id/run_split_distance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="20dp" style="@style/PrimaryTextStyle"/>
+            <com.microsoft.kapp.views.CustomGlyphView android:id="@+id/run_split_glyph" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/RunSplitListRowGlyphStyle"/>
+        </LinearLayout>
+        <com.microsoft.kapp.views.CustomFontTextView android:gravity="left" android:id="@+id/run_split_duration" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" style="@style/PrimaryAccentTextStyle"/>
+        <com.microsoft.kapp.views.CustomFontTextView android:gravity="left" android:id="@+id/run_split_bpm" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" style="@style/PrimaryAccentTextStyle"/>
+    </LinearLayout>
+    <View android:layout_gravity="center_vertical" android:background="@color/LightLineColor" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginLeft="@dimen/fragment_horizontal_margin" android:layout_marginTop="2dp" android:layout_marginRight="@dimen/fragment_horizontal_margin" android:layout_marginBottom="2dp"/>
+</LinearLayout>

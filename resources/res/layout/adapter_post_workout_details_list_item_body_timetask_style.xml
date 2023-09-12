@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:paddingTop="4dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.microsoft.kapp.views.CustomFontTextView android:textSize="15sp" android:textColor="@color/purple" android:id="@+id/description" android:paddingBottom="6dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <View android:background="@color/graphite_secondary_text_color" android:paddingTop="@dimen/fragment_vertical_padding" android:paddingBottom="1dp" android:layout_width="match_parent" android:layout_height="1dp"/>
+</LinearLayout>

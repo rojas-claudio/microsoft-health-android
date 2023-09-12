@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:paddingTop="10dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <include layout="@layout/tracker_stats_header"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/txtStatValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="1" android:includeFontPadding="false" style="@style/MetricTextStyle"/>
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4dp" android:baselineAligned="false">
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/txtLeftSubStatTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/font_extra_padding_adjustment" android:includeFontPadding="false" style="@style/SecondaryLightTextStyle"/>
+            <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/txtLeftSubStatValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:includeFontPadding="false" style="@style/SecondaryAccentTextStyle"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp">
+            <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/txtRightSubStatTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/font_extra_padding_adjustment" android:includeFontPadding="false" style="@style/SecondaryLightTextStyle"/>
+            <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/txtRightSubStatValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:includeFontPadding="false" style="@style/SecondaryAccentTextStyle"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

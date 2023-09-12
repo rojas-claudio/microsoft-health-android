@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:paddingLeft="10dp" android:paddingTop="10dp" android:paddingRight="10dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:layout_gravity="fill" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="0dp" android:columnCount="2" android:columnOrderPreserved="false" android:useDefaultMargins="true">
+            <com.microsoft.kapp.views.CustomFontTextView android:textStyle="bold" android:textColor="#ffff0000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Last Error Time"/>
+            <com.microsoft.kapp.views.CustomFontTextView android:textColor="#ffff0000" android:id="@+id/last_error_time" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <com.microsoft.kapp.views.CustomFontTextView android:textStyle="bold" android:textColor="#ffff0000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="Last Error Message"/>
+            <com.microsoft.kapp.views.CustomFontTextView android:textColor="#ffff0000" android:id="@+id/last_error_message" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <com.microsoft.kapp.views.CustomFontTextView android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="Last Sent Time"/>
+            <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/last_sent_time" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <com.microsoft.kapp.views.CustomFontTextView android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="Last Sent Events"/>
+            <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/last_sent_events" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </ScrollView>
+    <Button android:layout_gravity="right" android:id="@+id/refresh_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Refresh"/>
+</LinearLayout>

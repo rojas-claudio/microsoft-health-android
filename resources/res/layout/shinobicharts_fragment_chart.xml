@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:shinobi="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/icons_group" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/shinobicharts_chart_horizontal_margin" android:layout_marginTop="@dimen/shinobicharts_icon_group_top_margin" android:layout_marginBottom="@dimen/shinobicharts_icon_group_bottom_margin" android:layout_alignParentTop="true">
+        <LinearLayout android:orientation="horizontal" android:id="@+id/icon_group" android:layout_width="wrap_content" android:layout_height="wrap_content" android:divider="@drawable/shinobicharts_icon_divider" android:layout_alignParentTop="true" android:layout_centerVertical="true" android:showDividers="middle"/>
+        <FrameLayout android:id="@+id/icon_legend" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/shinobicharts_icon_text_padding_left" android:layout_centerVertical="true" android:layout_toEndOf="@+id/icon_group"/>
+        <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/icon_text" android:paddingLeft="@dimen/shinobicharts_icon_text_padding_left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toEndOf="@+id/icon_legend"/>
+    </RelativeLayout>
+    <FrameLayout android:id="@+id/chart_holder" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/icons_group">
+        <com.shinobicontrols.charts.ChartView android:id="@+id/chart" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="@dimen/shinobicharts_chart_horizontal_margin" android:layout_marginRight="@dimen/shinobicharts_chart_horizontal_margin"/>
+    </FrameLayout>
+</RelativeLayout>

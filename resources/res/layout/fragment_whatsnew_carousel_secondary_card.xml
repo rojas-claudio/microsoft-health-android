@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/white" android:paddingLeft="@dimen/whatsnew_margin_left" android:paddingTop="@dimen/whatsnew_margin_top" android:paddingRight="@dimen/whatsnew_margin_right" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/whatsnew_secondary_card_title" style="@style/WhatsNewSecondaryTitleTextStyle"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/whatsnew_secondary_card_subtitle" android:layout_width="wrap_content" android:layout_height="0dp" android:layout_weight="1" style="@style/WhatsNewSecondarySubtitleTextStyle"/>
+</LinearLayout>

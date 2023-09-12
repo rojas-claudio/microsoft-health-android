@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:layout_width="match_parent" android:layout_height="@dimen/guided_workout_plan_header_height" layout="@layout/guided_workout_browse_plan_overview_tile_header"/>
+    <FrameLayout android:id="@+id/view_pager_framelayout" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <Space android:layout_width="match_parent" android:layout_height="40dp"/>
+            <android.support.v4.view.ViewPager android:id="@+id/pager" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        </LinearLayout>
+        <com.microsoft.kapp.widgets.PagerTitleStrip android:id="@+id/pager_title_strip" style="@style/PagerTitleStripStyle"/>
+    </FrameLayout>
+</LinearLayout>

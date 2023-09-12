@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/mini_home_tile_container" android:layout_width="match_parent" android:layout_height="match_parent">
+    <View android:id="@+id/mini_home_tile_divider" android:background="@color/BlackColor" android:layout_width="match_parent" android:layout_height="1dp" android:layout_alignParentBottom="true"/>
+    <com.microsoft.kapp.views.CustomGlyphView android:gravity="center_vertical" android:id="@+id/mini_home_tile_glyph" android:paddingRight="@dimen/home_tile_horizontal_margin" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_alignParentRight="true" style="@style/Font_largeGlyph"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/mini_home_tile_event_name" android:paddingLeft="@dimen/home_tile_horizontal_margin" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginBottom="3dp" android:maxLines="4" style="@style/Font_smallBody"/>
+</RelativeLayout>

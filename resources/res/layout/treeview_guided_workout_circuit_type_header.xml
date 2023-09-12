@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="168dp">
+    <com.microsoft.kapp.views.CustomGlyphView android:textSize="@dimen/font_size_table" android:textColor="@color/white" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@+id/txtCircuitHeaderExpandIcon" android:paddingLeft="15dp" android:layout_width="@dimen/guided_workout_expand_glyph_width" android:layout_height="match_parent"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:textSize="@dimen/font_size_table" android:textColor="@color/white" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@+id/txtCircuitHeaderTitle" android:paddingLeft="5dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_toRightOf="@+id/txtCircuitHeaderExpandIcon"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:textSize="@dimen/font_size_smallBody" android:textColor="@color/black" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@+id/txtCircuitHeaderUnit" android:paddingRight="20dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_alignParentEnd="true"/>
+</RelativeLayout>

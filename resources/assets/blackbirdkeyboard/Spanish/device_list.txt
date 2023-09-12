@@ -1,0 +1,7 @@
+// Known device list
+// Format: brand,model,name
+
+samsung,Gear Live,gearlive
+motorola,Moto 360,moto360
+asus,ASUS ZenWatch,asuszen
+lge,G Watch R,gwatchr

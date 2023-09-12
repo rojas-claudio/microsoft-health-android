@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" style="@style/OobeLayoutFullWidthStyle">
+    <com.microsoft.kapp.views.CustomFontTextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/oobe_screen_horizontal_padding" android:layout_marginRight="@dimen/oobe_screen_horizontal_padding" android:text="@string/oobe_personalization_message" android:layout_alignParentTop="true" style="@style/OobeHeaderTitleStyle"/>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <LinearLayout android:paddingLeft="@dimen/oobe_screen_horizontal_padding" android:paddingRight="@dimen/oobe_screen_horizontal_padding" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:layout_marginBottom="5dp" android:weightSum="2">
+            <com.microsoft.kapp.views.CustomGlyphView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginRight="7dp" android:text="@string/glyph_circle_1" android:layout_weight="1" style="@style/SettingsPersonalizeStepIconStyle"/>
+            <com.microsoft.kapp.views.CustomGlyphView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="7dp" android:text="@string/glyph_circle_2" android:layout_weight="1" style="@style/SettingsPersonalizeStepIconStyle"/>
+        </LinearLayout>
+        <LinearLayout android:paddingLeft="@dimen/oobe_screen_horizontal_padding" android:paddingRight="@dimen/oobe_screen_horizontal_padding" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:weightSum="2">
+            <com.microsoft.kapp.views.CustomFontTextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginRight="7dp" android:text="@string/oobe_personalization_choose_color" android:layout_weight="1" style="@style/SettingsPersonalizeLabelTextStyle"/>
+            <com.microsoft.kapp.views.CustomFontTextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="7dp" android:text="@string/oobe_personalization_choose_wallpaper" android:layout_weight="1" style="@style/SettingsPersonalizeLabelTextStyle"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/oobe_screen_horizontal_padding" android:paddingRight="@dimen/oobe_screen_horizontal_padding" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="20dp" android:weightSum="2">
+            <FrameLayout android:background="@drawable/selected_grid_item" android:layout_width="0dp" android:layout_height="50dp" android:layout_marginRight="7dp" android:layout_weight="1">
+                <ImageView android:layout_gravity="left" android:id="@+id/oobe_change_color_button" android:layout_width="match_parent" android:layout_height="match_parent" android:contentDescription="@string/empty"/>
+                <ImageView android:layout_gravity="right" android:id="@+id/oobe_change_highlight_color_button" android:layout_width="10dp" android:layout_height="match_parent" android:contentDescription="@string/empty"/>
+            </FrameLayout>
+            <ImageView android:id="@+id/oobe_change_wallpaper" android:background="@drawable/selected_grid_item" android:layout_width="0dp" android:layout_height="50dp" android:layout_marginLeft="7dp" android:scaleType="fitXY" android:layout_weight="1" android:contentDescription="@string/empty"/>
+        </LinearLayout>
+        <include layout="@layout/device_representation_layout"/>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/bottom_container" style="@style/OobeBottomButtonContainerStyle">
+        <com.microsoft.kapp.views.CustomFontButton android:id="@+id/oobe_finish_button" android:text="@string/label_next" style="@style/OobeButtonStyle"/>
+    </LinearLayout>
+</RelativeLayout>

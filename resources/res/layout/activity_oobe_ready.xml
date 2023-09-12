@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:id="@+id/loading_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <ProgressBar android:layout_gravity="center" android:id="@+id/oobe_ready_progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <com.microsoft.kapp.views.CustomFontTextView android:layout_gravity="center_horizontal" android:id="@+id/oobe_ready_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/MediumSpace" android:text="@string/oobe_last_screen_title" style="@style/PrimaryLightTextStyle"/>
+    </LinearLayout>
+    <RelativeLayout android:id="@+id/error_layout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <include android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" layout="@layout/oobe_header"/>
+        <ImageView android:background="@color/transparent" android:layout_width="@dimen/oobe_image_width" android:layout_height="@dimen/oobe_image_height" android:src="@drawable/oobe_error" android:layout_centerInParent="true" android:contentDescription="@string/empty"/>
+        <include android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" layout="@layout/oobe_footer"/>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_horizontal" android:orientation="horizontal" android:id="@+id/confirmation_bar_layout" android:layout_width="match_parent" android:layout_height="@dimen/confirmation_bar_height">
+    <com.microsoft.kapp.views.CustomGlyphView android:id="@+id/confirmation_bar_save" android:paddingRight="36dp" android:text="@string/glyph_arrow_up_circle" style="@style/ConfirmationBarButtonStyle"/>
+    <com.microsoft.kapp.views.CustomGlyphView android:id="@+id/confirmation_bar_cancel" android:text="@string/glyph_x_circle" style="@style/ConfirmationBarButtonStyle"/>
+</LinearLayout>

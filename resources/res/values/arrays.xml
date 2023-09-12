@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="run_chart_line_colors">
+        <item>@color/run_color_1</item>
+        <item>@color/run_color_2</item>
+    </array>
+    <array name="run_chart_colors">
+        <item>@color/run_color_1_alpha</item>
+        <item>@color/run_color_2_alpha</item>
+    </array>
+    <array name="run_chart_line_colors_v1">
+        <item>@color/run_color_1_v1</item>
+        <item>@color/run_color_2_v1</item>
+    </array>
+    <array name="run_chart_colors_v1">
+        <item>@color/run_color_1_alpha_v1</item>
+        <item>@color/run_color_2_alpha_v1</item>
+    </array>
+    <array name="settings_preferences_units_weight">
+        <item>@string/settings_preferences_units_weight_imperial</item>
+        <item>@string/settings_preferences_units_weight_metric</item>
+    </array>
+    <array name="settings_preferences_units_temperature">
+        <item>@string/settings_preferences_units_temperature_imperial</item>
+        <item>@string/settings_preferences_units_temperature_metric</item>
+    </array>
+    <array name="settings_preferences_units_distance_height">
+        <item>@string/settings_preferences_units_distance_height_imperial</item>
+        <item>@string/settings_preferences_units_distance_height_metric</item>
+    </array>
+    <array name="settings_preferences_regions">
+        <item>@string/region_australia</item>
+        <item>@string/region_austria</item>
+        <item>@string/region_belgium</item>
+        <item>@string/region_canada</item>
+        <item>@string/region_denmark</item>
+        <item>@string/region_finland</item>
+        <item>@string/region_france</item>
+        <item>@string/region_germany</item>
+        <item>@string/region_hong_kong</item>
+        <item>@string/region_ireland</item>
+        <item>@string/region_italy</item>
+        <item>@string/region_netherlands</item>
+        <item>@string/region_new_zealand</item>
+        <item>@string/region_norway</item>
+        <item>@string/region_portugal</item>
+        <item>@string/region_singapore</item>
+        <item>@string/region_spain</item>
+        <item>@string/region_sweden</item>
+        <item>@string/region_switzerland</item>
+        <item>@string/region_united_kingdom</item>
+        <item>@string/region_usa</item>
+    </array>
+    <array name="guided_workout_brands_predefined_ordered_list">
+        <item>Microsoft</item>
+        <item>Gold&apos;s Gym</item>
+        <item>SHAPE</item>
+        <item>Men&apos;s Fitness</item>
+        <item>Muscle &amp; Fitness</item>
+        <item>Benchmark WOD</item>
+    </array>
+    <array name="on_off_values">
+        <item>@string/on</item>
+        <item>@string/off</item>
+    </array>
+    <array name="run_performance_chart_options">
+        <item>@string/week</item>
+        <item>@string/month</item>
+    </array>
+    <array name="profile_gender_values">
+        <item>@string/profile_gender_male</item>
+        <item>@string/profile_gender_female</item>
+    </array>
+    <array name="sleep_chart_legend_labels">
+        <item>@string/awake</item>
+        <item>@string/light_sleep</item>
+        <item>@string/restful_sleep</item>
+    </array>
+    <array name="chart_footer_options_time">
+        <item>@string/day</item>
+        <item>@string/week</item>
+        <item>@string/month</item>
+    </array>
+    <array name="chart_footer_options_activity">
+        <item>@string/all_day</item>
+    </array>
+    <array name="cargo_run_metric_values">
+        <item>@string/event_metric_duration</item>
+        <item>@string/event_metric_heart_rate</item>
+        <item>@string/event_metric_calories</item>
+        <item>@string/event_metric_distance</item>
+        <item>@string/event_metric_pace</item>
+    </array>
+    <array name="cargo_bike_metric_values">
+        <item>@string/event_metric_duration</item>
+        <item>@string/event_metric_heart_rate</item>
+        <item>@string/event_metric_calories</item>
+        <item>@string/event_metric_distance</item>
+        <item>@string/event_metric_speed</item>
+    </array>
+    <array name="neon_run_metric_values">
+        <item>@string/event_metric_duration</item>
+        <item>@string/event_metric_heart_rate</item>
+        <item>@string/event_metric_calories</item>
+        <item>@string/event_metric_distance</item>
+        <item>@string/event_metric_pace</item>
+        <item>@string/event_metric_elevation_gain</item>
+        <item>@string/event_metric_average_pace</item>
+        <item>@string/event_metric_time</item>
+    </array>
+    <array name="neon_bike_metric_values">
+        <item>@string/event_metric_duration</item>
+        <item>@string/event_metric_heart_rate</item>
+        <item>@string/event_metric_calories</item>
+        <item>@string/event_metric_distance</item>
+        <item>@string/event_metric_speed</item>
+        <item>@string/event_metric_elevation_gain</item>
+        <item>@string/event_metric_average_speed</item>
+        <item>@string/event_metric_time</item>
+    </array>
+    <array name="feedback_types_array">
+        <item>@string/feedback_report_a_problem</item>
+        <item>@string/feedback_help_and_support</item>
+        <item>@string/feedback_suggest_an_idea</item>
+    </array>
+    <array name="shinobicharts_hours_12">
+        <item>12am</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12pm</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+    </array>
+    <array name="shinobicharts_hours_24">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+    </array>
+    <array name="post_gw_unit">
+        <item>@string/post_gw_unit_time_locked</item>
+        <item>@string/post_gw_unit_calories_locked</item>
+        <item>@string/post_gw_unit_reps_locked</item>
+        <item>@string/post_gw_unit_distance_locked</item>
+    </array>
+    <array name="chart_default_line_colors">
+        <item>0xffffffff</item>
+    </array>
+    <array name="chart_default_fill_colors">
+        <item>0x80ffffff</item>
+    </array>
+    <array name="wf_chart_default_line_colors">
+        <item>0xffb0b0b0</item>
+    </array>
+    <array name="wf_chart_default_fill_colors">
+        <item>0x80b0b0b0</item>
+    </array>
+    <array name="bike_splits_spinner_choices">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>50</item>
+    </array>
+    <array name="MerticFormat">
+        <item>0|MetricValue</item>
+        <item>1|MetricUnit</item>
+    </array>
+    <array name="MerticSmallUnitFormat">
+        <item>0|MetricTextStyle</item>
+        <item>1|PrimaryAccentTextStyle</item>
+    </array>
+    <array name="MerticValueFormat">
+        <item>0|MetricValue</item>
+    </array>
+    <array name="MerticInvertedValueFormat">
+        <item>0|MetricInvertedTextStyle</item>
+        <item>1|PrimaryInvertedTextStyle</item>
+    </array>
+</resources>

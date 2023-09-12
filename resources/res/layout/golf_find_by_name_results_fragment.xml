@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:id="@+id/root_view" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/search_tile_header"/>
+    <include layout="@layout/activity_discovery_page_header"/>
+    <RelativeLayout android:id="@+id/golf_search_results_layout" android:background="@color/primary" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <ListView android:id="@+id/golf_search_results_listview" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="14dp" android:layout_marginRight="14dp" android:drawSelectorOnTop="false" android:divider="@null" android:dividerHeight="0dp"/>
+        <com.microsoft.kapp.views.CustomFontTextView android:textAppearance="?android:attr/textAppearanceMedium" android:gravity="left" android:id="@+id/empty" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="60dp" android:layout_marginRight="10dp" android:text="@string/no_results_golf" style="@style/NoResultFoundTextStyle"/>
+        <com.microsoft.kapp.views.CustomFontTextView android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/black" android:gravity="left" android:id="@+id/find_a_course_link" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="10dp" android:layout_marginTop="5dp" android:layout_marginRight="10dp" android:text="@string/golf_request_a_course" android:layout_below="@+id/empty" style="@style/NoResultFoundTextStyle"/>
+    </RelativeLayout>
+</LinearLayout>

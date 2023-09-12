@@ -1,0 +1,485 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="viewport" content="width=device-width"/>
+        
+        <style>
+            body, html {
+                height: 100%;
+                width: 100%;
+                margin: 0;
+            }
+        
+            #wrapper {
+                min-height:100%;
+                position:relative;
+            }
+        
+            #mapDiv {
+                height: 100%;
+            }
+        
+            #legendWrapper {
+                position: fixed;
+                z-index: 5;
+                bottom: 2px;
+                left: 10px;
+                padding: 0;
+            }
+        </style>
+        
+        <script type="text/javascript" src="http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0"></script>
+        
+        <script type="text/javascript">
+            var map;
+
+            var constants = {
+                'credentials' : 'AlSydTySPNsUkTvrNpbnWbsVWKfufb0b-1Ri-vqCaAixRgNh3qmbb_5a7uihXupa',
+                'latLongUnitsPerDegree' : 10000000,
+                'approx100FeetInDegrees' : 0.0004,
+                'checkAheadForNearbyPoints' : 5,
+                'scaledPaceInterval' : 33,
+                'paceColors' : ['#0083b2', '#ffb900', '#eb1123'],
+                'pausedColor' : '#000000',
+                'nilColor' : '#777777',
+                'strokeThickness' : 5,
+                'splitMarker' : 'Split',
+                'startMarker' : 'Start',
+                'pauseMarker' : 'Pause',
+                'endMarker' : 'End',
+                'speedThreshold' : 30,
+                'gpsErrorThreshold' : 3000,
+                'pushPinHeight' : 46,
+                'pushPinWidth': 31,
+                //Match to height & width if they change!
+                'pushPinAnchorPoint' : new Microsoft.Maps.Point(25 * 0.5, 46 * 0.9),
+                'enableDebug' : false,
+            };
+
+        function Utils() {
+            this.paceColorSize = constants.paceColors.length;
+
+            this.getPaceSegment = function(pace) {
+                var segment = parseInt(pace / constants.scaledPaceInterval, 10);
+                
+                if (segment > this.paceColorSize) {
+                    segment = this.paceColorSize - 1;
+                }
+                
+                return segment;
+            };
+            
+            this.getColorForPace = function(pace) {
+                return constants.paceColors[this.getPaceSegment(pace)];
+            };
+
+            this.getColorForPoint = function(point) {
+                if (point == null) {
+                    return constants.nilColor;
+                } else if (point.IsPaused) {
+                    return constants.pausedColor;
+                } else {
+                    return constants.paceColors[this.getPaceSegment(point.ScaledPace)];
+                }
+            };
+
+            this.arePacesInTheSameZone = function(previousPace, currentPace) {
+                if (point == null) {
+                    return false;
+                }
+                return this.getPaceSegment(previousPace) == this.getPaceSegment(currentPace);
+            };
+
+            this.arePointsInTheSameZone = function(previousPoint, currentPoint) {
+                if (previousPoint.IsPaused != currentPoint.IsPaused) {
+                    return false;
+
+                } else {
+                    return this.getPaceSegment(previousPoint.ScaledPace) == this.getPaceSegment(currentPoint.ScaledPace);
+                }
+            };
+
+            this.createLocation = function(point) {
+                if (point.hasOwnProperty('Location')) {
+                    var location = point.Location;
+
+                    // TODO: Temporary workaround until we can make serializer serialize nil object.
+                    if (location != null && location.hasOwnProperty('Latitude') && location.hasOwnProperty('Longitude')) {
+                        var latitude = location.Latitude / constants.latLongUnitsPerDegree;
+                        var longitude = location.Longitude / constants.latLongUnitsPerDegree;
+
+                        return new Microsoft.Maps.Location(latitude, longitude);
+                    }
+                }
+
+                return null;
+            }
+        }
+
+        if (constants.enableDebug)
+        {
+            window.onerror = function(msg, url, linenumber) {
+                alert('Error message: ' + msg + '\nLine Number: ' + linenumber);
+                return true;
+            }
+        }
+
+        var utils = new Utils();
+
+        function initAndDrawPath(mapPoints, locale, shouldHideMarkers, customSplit, ignoreGpsLoss, enableFiltering) {
+            if (mapPoints == null) {
+                return false;
+            }
+
+            //2 arrays, one for the Full Route (needed to show the correct zoom level) and one for continuous sections,
+            //so maps doesn't auto-connect discontinuous sections where GPS was lost
+            var routePointsFullRoute = new Array();
+            var routePointsSection = new Array();
+            var entities = new Array();
+
+            var startIndex = -1;
+            var previousPoint = null;
+            var addedStartMarker = false;
+            var lastValidLocation = null;
+            
+            mapPoints = filterMapPoints(mapPoints, ignoreGpsLoss, enableFiltering);
+            
+            for (var i = 0; i < mapPoints.length; i++) {
+                var point = mapPoints[i];
+                var isMarker = false;
+
+                var location = utils.createLocation(point);
+
+                if (location) {
+                    if (!addedStartMarker) {
+                        addedStartMarker = true;
+                        // This is a start marker.  Always goes on the First Valid GPS point.
+                        // A final Split time pin may overlap and cover the End pin.
+                        // Most real world runs will be a Loop, where Start and End are the same location (ie Home.)
+                        // Save and add the startPin and endPin last after the for loop finishes.
+                        var pin = new Microsoft.Maps.Pushpin(
+                                                             location,
+                                                             {
+                                                                 text : "",
+                                                                 icon : 'start.png',
+                                                                 height: constants.pushPinHeight,
+                                                                 width: constants.pushPinWidth,
+                                                                 anchor: constants.pushPinAnchorPoint
+                                                             });
+                        entities.push(pin);
+                                                             
+                        isMarker = true;
+                    } else if (point.MapPointType == constants.splitMarker) {
+                        var splitMarkerIndex = point.SplitOrdinal + 1;
+                        
+                        if (splitMarkerIndex % customSplit == 0) {
+                            if (!shouldHideMarkers) {
+                                var pin = new Microsoft.Maps.Pushpin(
+                                                                     location,
+                                                                     {
+                                                                         text : splitMarkerIndex.toString(),
+                                                                         icon : 'pin.png',
+                                                                         height: constants.pushPinHeight,
+                                                                         width: constants.pushPinWidth,
+                                                                         anchor: constants.pushPinAnchorPoint
+                                                                     });
+                                entities.push(pin);
+                                
+                                isMarker = true;
+                            } else {
+                                var pin = new Microsoft.Maps.Pushpin(
+                                                                     location,
+                                                                     {
+                                                                         text : "",
+                                                                         icon : 'dot.png',
+                                                                         height: constants.pushPinHeight,
+                                                                         width: constants.pushPinWidth,
+                                                                         anchor: constants.pushPinAnchorPoint
+                                                                     });
+                                entities.push(pin);
+                                                                     
+                                isMarker = true;
+                            }
+                        }
+                    } else if (point.IsPaused &&
+                               (!previousPoint || !previousPoint.IsPaused || !previousPoint.Location) &&
+                               point.MapPointType != constants.endMarker && point.MapPointType != constants.startMarker) {
+                        // To render a pause marker, it has to meeting the following conditions:
+                        // 1. The point.IsPaused = true.
+                        // 2. The previous point doesn't exist, or if it exists, it's not paused, or if it exists and is paused but has no location.
+                        // 3. The point type is not start or end marker.
+                        var pin = new Microsoft.Maps.Pushpin(
+                                                             location,
+                                                             {
+                                                                 text : "",
+                                                                 icon : 'pause.png',
+                                                                 height: constants.pushPinHeight,
+                                                                 width: constants.pushPinWidth,
+                                                                 anchor: constants.pushPinAnchorPoint
+                                                             });
+                        entities.push(pin);
+                                                             
+                        isMarker = true;
+                    }
+                }
+
+                var shouldCompleteSegment = false;
+
+                if (location) {
+                    var isRendering = startIndex != -1;
+
+                    if (isRendering) {
+                        // We are plotting the route right now and this is a valid GPS point.
+                        routePointsFullRoute.push(location);
+                        routePointsSection.push(location);
+
+                        shouldCompleteSegment = !utils.arePointsInTheSameZone(previousPoint, point);
+                    } else {
+                        // We are not plotting the route right now and this is a valid GPS point.
+                        routePointsFullRoute.push(location);
+                        routePointsSection.push(location);
+
+                        startIndex = routePointsSection.length - 1;
+                    }
+                } else {
+                    // This is not a valid GPS point
+                    shouldCompleteSegment = isRendering;
+                }
+
+                if (shouldCompleteSegment || i == mapPoints.length - 1) {
+                    // Get the color from the point.
+                    var strokeColor = utils.getColorForPoint(previousPoint);
+
+                    // We want to take startIndex - 1 because we want the segments to overlap so that
+                    // it doesn't look disconnected when zoomed in.
+                    var route = new Microsoft.Maps.Polyline(
+                        routePointsSection.slice(startIndex <= 0 ? 0 : startIndex - 1),
+                        {
+                            strokeColor : Microsoft.Maps.Color.fromHex(strokeColor),
+                            strokeThickness : constants.strokeThickness
+                        });
+
+                    entities.push(route);
+
+                    //Start a new route section; with this point in it to overlap to not look disconnected
+                    routePointsSection = new Array();
+                    
+                    if (location) {
+                        routePointsSection.push(location);
+                    }
+                    
+                    startIndex = 0;
+                }
+
+                previousPoint = point;
+                
+                if (location && !isMarker) {
+                    lastValidLocation = location;
+                }
+            }
+
+            //Add End marker on the last GPS point
+            if (lastValidLocation) { 
+                var pin = new Microsoft.Maps.Pushpin(
+                                                     lastValidLocation,
+                                                     {
+                                                        text : "",
+                                                        icon : 'end.png',
+                                                        height: constants.pushPinHeight,
+                                                        width: constants.pushPinWidth,
+                                                        anchor: constants.pushPinAnchorPoint
+                                                     });
+                                                     
+                entities.push(pin);
+            }
+
+            var viewBoundaries = Microsoft.Maps.LocationRect.fromLocations(routePointsFullRoute);
+            //Expand slightly, so space for the legends
+            viewBoundaries.height *= 1.1;
+            viewBoundaries.width *= 1.1;
+
+            // Start building the map
+            Microsoft.Maps.Globals.roadUriFormat = "http://ak.dynamic.t{subdomain}.tiles.virtualearth.net/comp/ch/{quadkey}?mkt=" + locale + "&it=G,VE,L&shading=hill&og=40&n=z&cstl=rd&dpi=d1";
+
+            map = new Microsoft.Maps.Map(
+                      document.getElementById("mapDiv"),
+                      {
+                          credentials : constants.credentials,
+                          disableBirdseye : true,
+                          mapTypeId : Microsoft.Maps.MapTypeId.road,
+                          showDashboard : false,
+                          showMapTypeSelector : false,
+                          enableClickableLogo : false,
+                          enableSearchLogo : false,
+                          bounds : viewBoundaries,
+                      });
+
+            // Pushes the entity to the map.
+            for (var i = 0; i < entities.length; ++i) {
+                map.entities.push(entities[i]);
+            }
+
+            (routePointsFullRoute.length > 0) ? android.onMapLoaded() : android.onMapEmpty();
+        }
+
+        function filterMapPoints(mapPoints, ignoreGpsLoss, enableFiltering) {
+            // Filter the mapPoints if needed.
+            var lastValidLocation = null;
+            
+            var filteredMapPoints = new Array();
+            
+            for (var i = 0; i < mapPoints.length; i++) {
+                var point = mapPoints[i];
+                var location = utils.createLocation(point);
+            
+                var shouldAddMapPoint = false;
+                var isValidPoint = false;
+                        
+                if (location) {
+                    // If latitude and longitude exists, then these should also exists.
+                    if (isValidGpsPoint(point.Location, enableFiltering)) {
+                        // The GPS point is valid.
+                        shouldAddMapPoint = true;
+                        isValidPoint = true;
+                    } else {
+                        // The GPS point is not valid. We will need to clear the location.
+                        point.Location = null;
+                        
+                        if (!ignoreGpsLoss) {
+                            shouldAddMapPoint = true;
+                            isValidPoint = false;
+                        }
+                        
+                        var isSkippingAhead = false;
+                        
+                        if (lastValidLocation) {
+                            //If there is a valid point coming next that's within roughly 100 feet, skip to it to not show short gaps (under a bridge, etc.)
+                            for (var j = i + 1; (j < i + constants.checkAheadForNearbyPoints) && (j < mapPoints.length) && !isSkippingAhead; j++) {
+                                var nextPoint = mapPoints[j];
+                                var nextLocation = utils.createLocation(nextPoint);
+
+                                //! Microsoft.Maps.Location has lowercase .latitude; our mapPoints[] have Uppercase .Latitude
+                                if (nextLocation && isValidGpsPoint(nextPoint.Location)) {
+                                    if (Math.abs(nextLocation.longitude - lastValidLocation.longitude) <= (constants.approx100FeetInDegrees) &&
+                                        Math.abs(nextLocation.latitude - lastValidLocation.latitude) <= (constants.approx100FeetInDegrees)) {
+                                        isSkippingAhead = true;
+                                        //Change i so i++ when loop ends gets to this point
+                                        i = j - 1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                } else {
+                    // No GPS coordinates.
+                    if (!ignoreGpsLoss) {
+                        shouldAddMapPoint = true;
+                    }
+                }
+                
+                if (shouldAddMapPoint) {
+                    filteredMapPoints.push(point);
+                }
+                
+                if (isValidPoint) {
+                    lastValidLocation = location;
+                }
+            }
+            
+            return filteredMapPoints;
+        }
+        
+        function isValidGpsPoint(location, enableFiltering) {
+            if (enableFiltering) {
+                var speedOverGround = location.SpeedOverGround;
+                var ehpe = location.EHPE;
+
+                return (speedOverGround >= constants.speedThreshold && ehpe < constants.gpsErrorThreshold);
+            } else {
+                return true;
+            }
+        }
+        
+        function setupHiDPICanvas(w, h, ratio) {
+            var canvas = document.getElementById("mapLegend");
+            var context = canvas.getContext("2d");
+            
+            if (!ratio) {
+                var devicePixelRatio = window.devicePixelRatio || 1;
+                var browserStorePixel = context.webkitBackingStorePixelRatio ||
+                                        context.mozBackingStorePixelRatio ||
+                                        context.msBackingStorePixelRatio ||
+                                        context.oBackingStorePixelRatio ||
+                                        context.backingStorePixelRatio || 1;
+                                        
+                ratio = devicePixelRatio / browserStorePixel;
+            }
+            
+            canvas.width = w * ratio;
+            canvas.height = h * ratio;
+            canvas.style.width = w + "px";
+            canvas.style.height = h + "px";
+            context.setTransform(ratio, 0, 0, ratio, 0, 0);
+            
+            return context;
+        }
+        
+        function drawLegend() {
+            var legendWidth = 110;
+            var legendHeight = 30;
+            var iconSize = 28;
+            var margin = 5;
+            var lineMargin = 2;
+            var segmentWidth = (legendWidth - (margin * 2)) / 3.0;
+            var lineY = legendHeight - (margin * 2);
+            var lineHeight = 3;
+            
+            var context = setupHiDPICanvas(legendWidth, legendHeight);
+            
+            // Draw the box
+            context.fillStyle = "#000000";
+            context.fillRect(0, 0, legendWidth, legendHeight);
+            
+            // Draw the lines
+            context.fillStyle = constants.paceColors[0];
+            context.fillRect(margin, lineY, segmentWidth, lineHeight);
+
+            context.fillStyle = constants.paceColors[1];
+            context.fillRect(margin + segmentWidth, lineY, segmentWidth, lineHeight);
+
+            context.fillStyle = constants.paceColors[2];
+            context.fillRect(margin + (segmentWidth * 2), lineY, segmentWidth, lineHeight);
+
+            // Draw the icons
+            var cheetah = new Image();
+            
+            cheetah.onload = function() {
+                var scaledHeight = (iconSize / cheetah.width) * cheetah.height;
+                var y = lineY - lineMargin - scaledHeight;
+                
+                context.drawImage(cheetah, legendWidth - (margin + iconSize), y, iconSize, scaledHeight);
+            };
+            
+            cheetah.src = 'cheetah.png';
+
+            var snail = new Image();
+            
+            snail.onload = function() {
+                var scaledHeight = (iconSize / snail.width) * snail.height;
+                var y = lineY - lineMargin - scaledHeight;
+                
+                context.drawImage(snail, margin, y, iconSize, scaledHeight);
+            };
+            
+            snail.src = 'snail.png';
+        }
+        
+        </script>
+    </head>
+    
+    <body>
+            <div id="mapDiv"></div>
+    </body>
+</html>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.microsoft.kapp.views.UserEventSummaryListView android:id="@+id/recent_events" android:layout_width="match_parent" android:layout_height="match_parent" app:item_header_text_color="@color/history_text" app:item_details_text_color="@color/history_text" app:item_background_color="@color/home_details_background"/>
+    <com.microsoft.kapp.views.ScrollLoadIndicatorView android:id="@+id/events_scroll_load_indicator" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <com.microsoft.kapp.widgets.Interstitial android:layout_gravity="center" android:id="@+id/history_summary_interstitial" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</LinearLayout>

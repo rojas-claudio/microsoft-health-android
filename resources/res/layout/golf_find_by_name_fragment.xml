@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/top_menu_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/search_tile_header"/>
+    <FrameLayout android:id="@+id/list_view_header_plus_arrow" android:background="@color/white" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <include layout="@layout/guided_workout_category_listview_header"/>
+        <View android:layout_gravity="top|left" android:id="@+id/arrow" android:background="@drawable/arrow" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginLeft="@dimen/guided_workout_arrow_margin_left" android:color="@color/transparent" android:rotation="180"/>
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:paddingTop="5dp" android:paddingBottom="5dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.microsoft.kapp.views.CustomFontTextView android:ellipsize="end" android:gravity="left" android:id="@+id/header" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="3" style="@style/GuidedWorkoutPostDetailsListItem"/>
+        <com.microsoft.kapp.views.CustomFontTextView android:gravity="left" android:id="@+id/time" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.5" style="@style/GuidedWorkoutPostDetailsListItem"/>
+        <com.microsoft.kapp.views.CustomFontTextView android:gravity="left" android:id="@+id/calories" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" style="@style/GuidedWorkoutPostDetailsListItem"/>
+    </LinearLayout>
+    <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/reps" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/GuidedWorkoutPostDetailsListItemSubTitle"/>
+</LinearLayout>

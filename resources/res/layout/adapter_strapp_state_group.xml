@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/group_text_view" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="2dp" android:layout_marginTop="@dimen/LargeSpace" android:layout_marginBottom="@dimen/SmallSpace" android:singleLine="true" style="@style/SubheaderInvertedTextStyle"/>
+</RelativeLayout>

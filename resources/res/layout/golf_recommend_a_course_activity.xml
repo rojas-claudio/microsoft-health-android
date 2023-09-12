@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/guided_workout_discovery_tile_header"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:textSize="18dp" android:textColor="@color/black_50_percent" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="25dp" android:layout_marginRight="20dp" android:layout_marginBottom="10dp" android:text="@string/golf_request_a_course_page_text"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:textSize="18dp" android:id="@+id/request_a_course" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginRight="20dp" android:text="@string/golf_request_a_course"/>
+</LinearLayout>

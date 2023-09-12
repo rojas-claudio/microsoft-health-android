@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.microsoft.kapp.views.PicassoImageView android:id="@+id/scorecard_hole_item_hole_image" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <FrameLayout android:id="@+id/scorecard_progress_bar_container" android:background="@color/greyLight" android:visibility="gone" android:layout_width="match_parent" android:layout_height="100dp">&quot;\10
+        <ProgressBar android:layout_gravity="center" android:id="@+id/scorecard_progress_bar" android:layout_width="match_parent" android:layout_height="wrap_content" style="@android:style/Widget.ProgressBar.Small"/>
+    </FrameLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="60dp" android:layout_marginLeft="20dp" android:layout_marginTop="15dp" android:layout_marginRight="7dp" android:baselineAligned="false">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+            <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/scorecard_hole_item_duration_header" android:layout_width="match_parent" android:layout_height="25dp" android:text="@string/tracker_header_duration" style="@style/GolfParItemsHeaderTextStyle"/>
+            <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/scorecard_hole_item_duration" android:layout_width="match_parent" android:layout_height="35dp" style="@style/GolfParItemsValueTextStyle"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+            <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/scorecard_hole_item_distance_header" android:layout_width="match_parent" android:layout_height="25dp" android:text="@string/tracker_header_steps_distance" style="@style/GolfParItemsHeaderTextStyle"/>
+            <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/scorecard_hole_item_distance" android:layout_width="match_parent" android:layout_height="35dp" style="@style/GolfParItemsValueTextStyle"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+            <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/scorecard_hole_item_steps_header" android:layout_width="match_parent" android:layout_height="25dp" android:text="@string/header_steps" style="@style/GolfParItemsHeaderTextStyle"/>
+            <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/scorecard_hole_item_steps" android:layout_width="match_parent" android:layout_height="35dp" style="@style/GolfParItemsValueTextStyle"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+            <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/scorecard_hole_item_cals_header" android:layout_width="match_parent" android:layout_height="25dp" android:text="@string/header_calories" style="@style/GolfParItemsHeaderTextStyle"/>
+            <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/scorecard_hole_item_cals" android:layout_width="match_parent" android:layout_height="35dp" style="@style/GolfParItemsValueTextStyle"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="60dp" android:layout_marginLeft="20dp" android:layout_marginTop="15dp" android:layout_marginRight="7dp" android:layout_marginBottom="15dp">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+            <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/scorecard_hole_item_minHR_header" android:layout_width="match_parent" android:layout_height="25dp" android:text="@string/header_min_hr" style="@style/GolfParItemsHeaderTextStyle"/>
+            <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/scorecard_hole_item_minhr" android:layout_width="match_parent" android:layout_height="35dp" style="@style/GolfParItemsValueTextStyle"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+            <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/scorecard_hole_item_maxHR_header" android:layout_width="match_parent" android:layout_height="25dp" android:text="@string/header_max_hr" style="@style/GolfParItemsHeaderTextStyle"/>
+            <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/scorecard_hole_item_maxhr" android:layout_width="match_parent" android:layout_height="35dp" style="@style/GolfParItemsValueTextStyle"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+            <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/scorecard_hole_item_avgHR_header" android:layout_width="match_parent" android:layout_height="25dp" android:text="@string/header_avg_hr" style="@style/GolfParItemsHeaderTextStyle"/>
+            <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/scorecard_hole_item_avghr" android:layout_width="match_parent" android:layout_height="35dp" style="@style/GolfParItemsValueTextStyle"/>
+        </LinearLayout>
+        <Space android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>

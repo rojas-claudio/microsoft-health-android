@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/history_summary_fragment_header" android:background="@color/top_menu_color" android:paddingLeft="@dimen/fragment_horizontal_margin" android:paddingRight="@dimen/fragment_horizontal_margin" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="@dimen/guided_workout_header_height" android:layout_alignParentTop="true">
+        <com.microsoft.kapp.views.CustomFontTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/history_summary_title_sm" android:layout_alignParentBottom="true" android:layout_alignParentStart="true" style="@style/SubheaderInvertedTextStyle"/>
+    </RelativeLayout>
+    <com.microsoft.kapp.views.TrackableScrollView android:id="@+id/history_scroller" android:background="@color/primary" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/history_summary_fragment_header">
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.microsoft.kapp.views.TrackerStatsWidget android:id="@+id/personal_bests_stats" android:background="@color/personal_best_chart_bg" android:paddingLeft="@dimen/fragment_horizontal_margin" android:paddingRight="@dimen/fragment_horizontal_margin" android:layout_width="match_parent" android:layout_height="wrap_content" app:stat_style="@style/PersonalBestStyleV1"/>
+            <RelativeLayout android:id="@+id/event_list_header_layout" android:background="@color/PrimaryLightColor" android:paddingLeft="@dimen/fragment_horizontal_padding" android:paddingTop="15dp" android:paddingRight="@dimen/fragment_horizontal_padding" android:paddingBottom="15dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/personal_bests_stats">
+                <com.microsoft.kapp.views.CustomGlyphView android:textSize="@dimen/SmallIconSize" android:textColor="@color/WhiteColor" android:id="@+id/filter_glyph" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/glyph_search_filter" android:layout_centerVertical="true" android:layout_marginEnd="10dp" android:layout_alignParentStart="true"/>
+                <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/event_list_header" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toEndOf="@+id/filter_glyph" style="@style/PrimaryInvertedTextStyle"/>
+            </RelativeLayout>
+            <FrameLayout android:id="@+id/history_summary_container" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/event_list_header_layout"/>
+            <com.microsoft.kapp.widgets.NoHistoryWidget android:layout_gravity="center" android:id="@+id/no_history_widget" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/event_list_header_layout" app:no_histry_strapp_view_width_height="90dp" app:no_histry_grid_view_width_height="185dp" app:no_histry_strapp_view_glyph_size="45"/>
+        </RelativeLayout>
+    </com.microsoft.kapp.views.TrackableScrollView>
+</RelativeLayout>

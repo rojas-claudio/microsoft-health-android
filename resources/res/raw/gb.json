@@ -1,0 +1,56 @@
+{
+  "$schema": "http://microsoft.com/health/app/v1/configuration",
+  "version": "1.0",
+  "name": "gb",
+  "configuration": {
+    "oobe": {
+      "defaults": {
+        "distanceUnit": "metric",
+        "weightUnit": "metric",
+        "temperatureUnit": "celsius",
+        "marketingOptIn": false
+      }
+    },
+    "maps": {
+      "serviceUrl": "http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0",
+      "token": "AlSydTySPNsUkTvrNpbnWbsVWKfufb0b-1Ri-vqCaAixRgNh3qmbb_5a7uihXupa",
+      "roadUriFormat": "http://ak.dynamic.t{subdomain}.tiles.virtualearth.net/comp/ch/{quadkey}?mkt=en-US&it=G,VE,L&shading=hill&og=40&n=z&cstl=rd&dpi=d1"
+    },
+    "features": {
+      "starbucks": {
+        "enabled": true,
+        "displayUrl": "http://go.microsoft.com/fwlink/?LinkId=615214",
+        "displayUrlString": "starbucks.co.uk",
+        "cardFrontUrl": "http://img.stb.s-msn.com/usappex/tenant/amp/entityid/AAea7Wq.png",
+        "cardBackUrl": "http://img.stb.s-msn.com/usappex/tenant/amp/entityid/AAeakYB.png"
+      },
+      "facebook": {
+        "enabled": true
+      },
+      "facebookMessenger": {
+        "enabled": true
+      },
+      "twitter": {
+        "enabled": true
+      },
+      "finance": {
+        "enabled": true,
+        "serviceUrl": "http://finance.services.appex.bing.com",
+        "defaultStockList": [
+          {
+            "id": "151.10.UKX",
+            "symbol": "FTSE 100"
+          },
+          {
+            "id": "151.10.MCX",
+            "symbol": "FTSE 250"
+          },
+          {
+            "id": "151.10.AXX",
+            "symbol": "FTSE AIM ALL"
+          }
+        ]
+      }
+    }
+  }
+}

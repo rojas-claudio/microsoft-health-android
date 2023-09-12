@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:id="@+id/backLayout" android:background="@color/blackMedium" android:paddingLeft="@dimen/fragment_horizontal_padding" android:paddingRight="@dimen/fragment_horizontal_padding" android:layout_width="match_parent" android:layout_height="@dimen/app_header_bar_height" android:layout_alignParentTop="true">
+        <com.microsoft.kapp.views.CustomGlyphView android:gravity="center" android:id="@+id/back" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/glyph_left_arrow" style="@style/Font_backArrow"/>
+    </LinearLayout>
+    <ScrollView android:background="@color/blackHigh" android:paddingLeft="@dimen/fragment_horizontal_padding" android:paddingTop="6dp" android:paddingRight="@dimen/fragment_horizontal_padding" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/backLayout">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/strapp_settings_header_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/notification_settings_generic_header" style="@style/Font_title"/>
+            <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/notifications_instructional_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:text="@string/notification_settings_notifications_generic_instructions" style="@style/Font_smallBody"/>
+            <RelativeLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp">
+                <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/notifications_switch_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/notification_settings_notification_on" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="@style/Font_title"/>
+                <Switch android:id="@+id/notifications_switch" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/SwitchStyle"/>
+            </RelativeLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/additional_settings_layout" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <View android:background="@color/primary" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="25dp" android:layout_marginBottom="25dp"/>
+                <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/additional_settings_header_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/notification_settings_generic_reply_header" style="@style/Font_smallBody"/>
+                <LinearLayout android:orientation="vertical" android:id="@+id/edit_replies_instructional_text" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp"/>
+                <com.microsoft.kapp.views.CustomFontButton android:gravity="center" android:id="@+id/additional_settings_button" android:paddingTop="4dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="23dp" android:text="@string/notification_settings_edit_replies_label" android:includeFontPadding="false" style="@style/pushButtonsSmall"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <FrameLayout android:orientation="vertical" android:id="@+id/loading_frame_layout" android:background="@color/fragment_connected_apps_loading_frame_background" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_alignParentTop="true">
+        <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:attr/progressBarStyleLarge"/>
+    </FrameLayout>
+</RelativeLayout>

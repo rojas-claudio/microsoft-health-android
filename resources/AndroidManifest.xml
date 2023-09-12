@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="16" android:versionName="1.3.11003.3" package="com.microsoft.kapp">
+    <uses-sdk android:minSdkVersion="17" android:targetSdkVersion="19"/>
+    <permission-group android:label="@string/kdk_permission_group_label" android:name="com.microsoft.band.service.access.BAND_SERVICE_PERMISSIONS" android:description="@string/kdk_permission_group_description"/>
+    <permission android:label="@string/kdk_permission_bind_to_service_label" android:name="com.microsoft.band.service.access.BIND_BAND_SERVICE" android:protectionLevel="normal" android:permissionGroup="com.microsoft.band.service.access.BAND_SERVICE_PERMISSIONS" android:description="@string/kdk_permission_bind_to_service_description"/>
+    <permission android:label="@string/kdk_permission_bind_to_service_admin_label" android:name="com.microsoft.band.service.access.BIND_BAND_SERVICE_ADMIN" android:protectionLevel="signature" android:permissionGroup="com.microsoft.band.service.access.BAND_SERVICE_PERMISSIONS" android:description="@string/kdk_permission_bind_to_service_description"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.READ_CALENDAR"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="com.microsoft.band.service.access.BIND_BAND_SERVICE"/>
+    <uses-permission android:name="com.microsoft.band.service.access.BIND_BAND_SERVICE_ADMIN"/>
+    <application android:theme="@style/AppTheme" android:label="@string/app_name" android:icon="@drawable/ic_launcher" android:name="com.microsoft.kapp.KApplication" android:allowBackup="true">
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <provider android:name="com.facebook.NativeAppCallContentProvider" android:exported="true" android:authorities="com.facebook.app.NativeAppCallContentProvider1537258739822978"/>
+        <activity android:theme="@android:style/Theme.Translucent.NoTitleBar" android:label="@string/app_name" android:name="com.microsoft.kapp.activities.SplashActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/title_activity_bing_map" android:name="com.microsoft.kapp.activities.BingMapActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_edit_goal" android:name="com.microsoft.kapp.activities.CaloriesEditGoalActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_credential_status" android:name="com.microsoft.kapp.activities.DebugActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/debugLogActivity_title" android:name=".activities.DebugLogActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_device_connect" android:name="com.microsoft.kapp.activities.DeviceConnectActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@android:style/Theme.DeviceDefault.Light.Dialog" android:label="@string/app_name" android:name="com.microsoft.kapp.activities.DeviceConnectionErrorActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_device_color_settings" android:name="com.microsoft.kapp.activities.DeviceColorPersonalizationActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_device_wallpaper_settings" android:name="com.microsoft.kapp.activities.DeviceWallpaperPersonalizationActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_edit_goal" android:name="com.microsoft.kapp.activities.EditGoalActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_feedback" android:name="com.microsoft.kapp.activities.FeedbackActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/app_name" android:name="com.microsoft.kapp.activities.HomeActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/app_name" android:name="com.microsoft.kapp.activities.golf.GolfFindCourseByRegionActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/app_name" android:name="com.microsoft.kapp.activities.golf.GolfFindCourseByNameActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize|stateVisible"/>
+        <activity android:label="@string/app_name" android:name="com.microsoft.kapp.activities.HistoryFilterActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_app_name" android:name="com.microsoft.kapp.activities.GolfCourseFilterActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/app_name" android:name="com.microsoft.kapp.activities.LevelTwoBaseActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/app_name" android:name="com.microsoft.kapp.activities.LevelTwoPagesActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/app_name" android:name="com.microsoft.kapp.activities.OobeConnectPhoneActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/app_name" android:name="com.microsoft.kapp.activities.OobeEnableNotificationsActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/app_name" android:name="com.microsoft.kapp.activities.OobeFirmwareUpdateActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/app_name" android:name=".activities.OobeNameDeviceActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/app_name" android:name=".activities.OobePersonalizeDeviceActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/app_name" android:name="com.microsoft.kapp.activities.OobeProfileActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:label="@string/app_name" android:name="com.microsoft.kapp.activities.OobeReadyActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_sign_in" android:name="com.microsoft.kapp.activities.SignInActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_edit_goal" android:name="com.microsoft.kapp.activities.StepsEditGoalActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_user_event_details" android:name="com.microsoft.kapp.activities.TermsOfServiceActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_user_event_details" android:name="com.microsoft.kapp.activities.UserEventDetailsActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/app_name" android:name="com.microsoft.kapp.activities.WorkoutDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/app_name" android:name="com.microsoft.kapp.activities.WorkoutPlanDiscoveryActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_app_name" android:name="com.microsoft.kapp.activities.WorkoutPlanFilterActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_strapp_settings" android:name=".activities.settings.BikeAdvancedSettingsActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_strapp_settings" android:name="com.microsoft.kapp.activities.settings.BikeSettingsActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/app_name" android:name=".activities.settings.BikeSelectMetricsActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_strapp_settings" android:name="com.microsoft.kapp.activities.settings.FinanceSettingsActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/app_name" android:name="com.microsoft.kapp.activities.settings.NotificationCenterSettingsActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_strapp_settings" android:name="com.microsoft.kapp.activities.settings.RunSettingsActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/app_name" android:name=".activities.settings.RunSelectMetricsActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_strapp_settings" android:name="com.microsoft.kapp.activities.settings.StrappSettingsActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_strapp_auto_replies" android:name="com.microsoft.kapp.activities.settings.StrappAutoRepliesActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_strapp_settings" android:name="com.microsoft.kapp.activities.settings.StarbucksStrappSettingsActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/app_name" android:name="com.microsoft.kapp.activities.settings.StrappReorderActivity" android:screenOrientation="landscape"/>
+        <activity android:label="@string/title_activity_app_name" android:name="com.microsoft.kapp.activities.golf.GolfRequestACourseActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/app_name" android:name="com.microsoft.kapp.activities.golf.GolfSearchActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/app_name" android:name="com.microsoft.kapp.activities.TMAGConnectActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@android:style/Theme.Dialog" android:name="org.acra.CrashReportDialog" android:finishOnTaskLaunch="true" android:excludeFromRecents="true" android:launchMode="singleInstance" android:screenOrientation="portrait"/>
+        <activity android:name="com.facebook.LoginActivity"/>
+        <activity android:label="@string/app_name" android:name="com.microsoft.kapp.activities.WhatsNewSecondaryCardActivity" android:screenOrientation="portrait"/>
+        <activity android:name="net.hockeyapp.android.UpdateActivity"/>
+        <activity android:label="@string/app_name" android:name="com.microsoft.kapp.webtiles.WebtileDownloadActivity" android:taskAffinity="com.microsoft.kapp.webtiles" android:finishOnTaskLaunch="true" android:excludeFromRecents="true" android:launchMode="singleInstance" android:screenOrientation="portrait" android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="file"/>
+                <data android:host="*"/>
+                <data android:mimeType="*/*"/>
+                <data android:pathPattern=".*\\.webtile"/>
+                <data android:pathPattern=".*\\..*\\.webtile"/>
+                <data android:pathPattern=".*\\..*\\..*\\.webtile"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\.webtile"/>
+                <data android:pathPattern=".*\\.WEBTILE"/>
+                <data android:pathPattern=".*\\..*\\.WEBTILE"/>
+                <data android:pathPattern=".*\\..*\\..*\\.WEBTILE"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\.WEBTILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="file"/>
+                <data android:host="*"/>
+                <data android:pathPattern=".*\\.webtile"/>
+                <data android:pathPattern=".*\\..*\\.webtile"/>
+                <data android:pathPattern=".*\\..*\\..*\\.webtile"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\.webtile"/>
+                <data android:pathPattern=".*\\.WEBTILE"/>
+                <data android:pathPattern=".*\\..*\\.WEBTILE"/>
+                <data android:pathPattern=".*\\..*\\..*\\.WEBTILE"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\.WEBTILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="mshealth-webtile"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="content"/>
+                <data android:host="*"/>
+                <data android:mimeType="*/*"/>
+                <data android:pathPattern=".*\\.webtile"/>
+                <data android:pathPattern=".*\\..*\\.webtile"/>
+                <data android:pathPattern=".*\\..*\\..*\\.webtile"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\.webtile"/>
+                <data android:pathPattern=".*\\.WEBTILE"/>
+                <data android:pathPattern=".*\\..*\\.WEBTILE"/>
+                <data android:pathPattern=".*\\..*\\..*\\.WEBTILE"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\.WEBTILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="content"/>
+                <data android:host="*"/>
+                <data android:pathPattern=".*\\.webtile"/>
+                <data android:pathPattern=".*\\..*\\.webtile"/>
+                <data android:pathPattern=".*\\..*\\..*\\.webtile"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\.webtile"/>
+                <data android:pathPattern=".*\\.WEBTILE"/>
+                <data android:pathPattern=".*\\..*\\.WEBTILE"/>
+                <data android:pathPattern=".*\\..*\\..*\\.WEBTILE"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\.WEBTILE"/>
+            </intent-filter>
+        </activity>
+        <receiver android:name="com.microsoft.kapp.services.KAppBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED"/>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.microsoft.kapp.services.background.SyncService"/>
+        <service android:name="com.microsoft.kapp.services.background.KAppsService"/>
+        <service android:name="com.microsoft.kapp.services.background.AutoRestartService"/>
+        <service android:name="com.microsoft.kapp.services.background.CacheCleanupService"/>
+        <service android:name="com.microsoft.kapp.logging.LogCleanupService"/>
+        <service android:name="com.microsoft.kapp.services.NotificationIntentService"/>
+        <service android:label="@string/app_name" android:name="com.microsoft.kapp.services.background.NotificationRecieverService" android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.microsoft.kapp.services.background.AppConfigurationService"/>
+        <service android:name="com.microsoft.kapp.sensor.service.SensorService" android:exported="false" android:process=":SensorService">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.microsoft.band.service.BandService" android:permission="android.permission.BLUETOOTH" android:exported="true" android:process=":BandService">
+            <intent-filter>
+                <action android:name="com.microsoft.band.service.action.BIND_BAND_SERVICE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="com.microsoft.band.service.BluetoothWatcher" android:enabled="true" android:exported="true" android:process=":BandService">
+            <intent-filter>
+                <action android:name="android.bluetooth.device.action.ACL_CONNECTED"/>
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

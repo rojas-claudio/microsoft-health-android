@@ -1,0 +1,17 @@
+package com.microsoft.kapp.models;
+/* loaded from: classes.dex */
+public enum FreStatus {
+    NOT_SHOWN,
+    DEVICE_CONNECT_START,
+    LOGGED_IN,
+    TOS_SIGNED,
+    CREATED_PROFILE,
+    PHONE_BIOMETRICS_ESTABLISHED,
+    CONNECTED_DEVICE,
+    DEVICE_CONNECTION_SKIPPED,
+    FIRMWARE_VERSION_CHECKED,
+    NOTIFICATION_ENABLE_COMPLETE,
+    SKIP_REMAINING_OOBE_STEPS,
+    OOBE_READY,
+    SHOWN
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/web_tile_details" android:background="@color/settingsBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/web_tile_author" android:text="@string/web_tile_author" android:layout_alignParentTop="true" style="@style/WebTileLabelStyle"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/web_tile_author_value" android:layout_below="@+id/web_tile_author" style="@style/WebTileValueStyle"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/web_tile_org" android:text="@string/web_tile_organization" android:layout_below="@+id/web_tile_author_value" style="@style/WebTileLabelStyle"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/web_tile_org_value" android:layout_below="@+id/web_tile_org" style="@style/WebTileValueStyle"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/web_tile_version" android:text="@string/web_tile_version" android:layout_below="@+id/web_tile_org_value" style="@style/WebTileLabelStyle"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/web_tile_version_value" android:layout_below="@+id/web_tile_version" android:layout_alignLeft="@+id/web_tile_version" style="@style/WebTileValueStyle"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/web_tile_data_source" android:text="@string/web_tile_data_source" android:layout_below="@+id/web_tile_version_value" style="@style/WebTileLabelStyle"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/web_title_data_source_value" android:layout_below="@+id/web_tile_data_source" android:layout_alignLeft="@+id/web_tile_data_source" style="@style/WebTileValueStyle"/>
+</RelativeLayout>

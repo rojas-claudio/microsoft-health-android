@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@drawable/golf_pro_tip" android:paddingLeft="@dimen/fragment_horizontal_margin" android:paddingRight="@dimen/fragment_horizontal_margin" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.microsoft.kapp.views.CustomFontTextView android:textSize="@dimen/font_size_title" android:textColor="@color/white" android:id="@+id/golf_sync_pro_tip_header" android:paddingTop="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/golf_sync_pro_tip_header" app:custom_font_family="SegoeUIBold"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/golf_sync_pro_tip_text" android:text="@string/golf_sync_pro_tip_text" app:custom_font_family="SegoeUISemiBold" style="@style/ProTipTextStyle"/>
+    <com.microsoft.kapp.views.CustomFontTextView android:id="@+id/golf_sync_pro_tip_text_hint" android:layout_marginBottom="10dp" android:text="@string/golf_sync_pro_tip_text_hint" app:custom_font_family="SegoeUISemiBold" style="@style/ProTipTextStyle"/>
+    <com.microsoft.kapp.views.PicassoImageView android:id="@+id/golf_sync_charge" android:background="@color/transparent" android:layout_width="152dp" android:layout_height="51dp" android:contentDescription="@string/empty" app:image_resource_id="@drawable/golf_sync_charge"/>
+    <com.microsoft.kapp.widgets.Interstitial android:layout_gravity="center_horizontal" android:id="@+id/golf_sync_interstitial" android:paddingTop="100dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+</LinearLayout>
